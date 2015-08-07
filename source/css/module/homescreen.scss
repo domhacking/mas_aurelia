@@ -1,0 +1,13 @@
+/**
+ * @module:   homescreen
+ * @js:       ./source/js/module/homescreen/homescreen.js
+ * @html:     ./source/js/module/homescreen/homescreen.html
+ */
+
+
+@include module("homescreen") { 
+	h1{
+		border: solid 4px $color-background;
+		padding: 5px;
+	}
+}

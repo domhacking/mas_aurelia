@@ -16,8 +16,8 @@
 // Settings
 //////////////////////////////////////////////////
 @import "settings.global";
-@import "settings.typography";
 @import "settings.color";
+@import "settings.typography";
 @import "settings.default";
 @import "inuit-defaults";
 @import "inuit-responsive-settings";
@@ -58,6 +58,7 @@
 @import "inuit-media";
 @import "inuit-flag";
 @import "inuit-list-bare";
+@import "_objects.globalClasses";
 
 //////////////////////////////////////////////////
 // Views/Pages

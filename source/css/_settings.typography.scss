@@ -10,7 +10,63 @@
  * https://github.com/inuitcss/base.headings/blob/master/_base.headings.scss
  */
 $font-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$content-font: "JosefinSans-SemiBold";
+$header-font: "JosefinSans-Bold";
 $font-secondary: Georgia, serif;
 
 $font-size: 16px;
 $font-line-height: 24px;
+
+
+@font-face {
+  font-family: $content-font;
+  src: url("../fonts/JosefinSans-SemiBold.eot");
+  src: url("../fonts/JosefinSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/JosefinSans-SemiBold.woff") format("woff"), url("../fonts/JosefinSans-SemiBold.ttf") format("truetype"), url("../fonts/JosefinSans-SemiBold.svg#fs_joeylight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+
+}
+
+  @font-face {
+  font-family: $header-font;
+  src: url("../fonts/JosefinSans-Bold.eot");
+  src: url("../fonts/JosefinSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/JosefinSans-Bold.woff") format("woff"), url("../fonts/JosefinSans-Bold.ttf") format("truetype"), url("../fonts/JosefinSans-Bold.svg#fs_joeylight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+h1{
+	font-size: 56px;
+	font-family: $header-font;
+	line-height: 58px;
+	color: $color-background;
+	text-transform: uppercase;
+}
+
+h2{
+	font-size: 30px;
+	font-family: $header-font;
+	line-height: 30px;
+	color: $font-color;
+}
+
+li{
+	font-size: 20px;
+	font-family: $header-font;
+	line-height: 20px;
+	color: $font-color;
+	text-transform: uppercase;
+}
+
+
+p{
+	font-size: 20px;
+	font-family: $content-font;
+	line-height: 20px;
+	color: $font-color;
+}
+
+
+

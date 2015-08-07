@@ -1,0 +1,20 @@
+/**
+ * @module:   nav
+ * @js:       ./source/js/module/nav/nav.js
+ * @html:     ./source/js/module/nav/nav.html
+ */
+
+
+@include module("nav") {
+	.nav{
+		background-color: $mainGrey;
+		padding: 10px 0;
+		width: 80%;
+
+		li{
+			display: inline-block;
+			width: 16%;
+			text-decoration: none;
+		}
+	}
+}
