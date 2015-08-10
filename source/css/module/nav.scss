@@ -6,15 +6,30 @@
 
 
 @include module("nav") {
-	.nav{
-		background-color: $mainGrey;
-		padding: 10px 0;
-		width: 80%;
+	background-color: $mainGrey;
+	width: 100%;
+	z-index: 2;
+	box-shadow: 0 2px 3px rgba(0,0,0,.4);
+
+	.navbar--container{
+		width: 85%;
+		margin: 0 auto;
+		text-align: center;
 
 		li{
 			display: inline-block;
-			width: 16%;
+			width: 17%;
+			text-align: center;
 			text-decoration: none;
+			padding: 40px 20px;
+			min-width: 200px;
 		}
+	}
+
+	.main-nav-sccrolled{
+		position: fixed;
+  		width: 100%;
+  		top: 0;
+
 	}
 }

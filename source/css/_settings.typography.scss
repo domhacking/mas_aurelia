@@ -46,10 +46,12 @@ h1{
 }
 
 h2{
+	color: $font-color;
 	font-size: 30px;
 	font-family: $header-font;
+	font-weight: normal;
 	line-height: 30px;
-	color: $font-color;
+	text-align: center;
 }
 
 li{
@@ -58,6 +60,7 @@ li{
 	line-height: 20px;
 	color: $font-color;
 	text-transform: uppercase;
+	list-style-type: none;
 }
 
 

@@ -1,8 +1,23 @@
 
 <ui-homescreen />
 <ui-nav />
-<ui-home>
-<ui-gallery>
-<ui-info>
-<ui-localArea>
-<ui-contact>
+
+{{#view == "home"}}
+	<ui-home />
+{{/}}
+
+{{#view == "gallery"}}
+	<ui-gallery />
+{{/}}
+
+{{#view == "info"}}
+	<ui-info />
+{{/}}
+
+{{#view == "localArea"}}
+	<ui-localArea />
+{{/}}
+
+{{#view == "contact"}}
+	<ui-contact />
+{{/}}

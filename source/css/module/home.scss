@@ -6,5 +6,69 @@
 
 
 @include module("home") { 
-  // :)
+	.imageContainer{
+		height: 390px;
+		width: 100%;
+		padding-bottom: 40px;
+
+		.leftImage{
+			background-image: url('../img/left-home-img.jpg');
+			background-size: cover;
+			height: 100%;
+			width: 49%;
+			float: left;
+		}
+
+		.rightImage{
+			background-image: url('../img/right-home-img.jpg');
+			background-size: cover;
+			height: 100%;
+			width: 49%;
+			float: right;
+		}
+	}
+
+
+	.quotePanel{
+		height: 330px;
+		background-color: $mainBlue;
+		display: table;
+		width: 100%;
+
+		.quotePanel--content{
+			display: table-cell;
+			vertical-align: middle;
+
+			p{
+				color: $color-background;
+				text-align: center;
+				font-size: 30px;
+			}
+		}
+	}
+
+	.whiteStrip{
+		height: 40px;
+		background-color: white;
+		width: 100%;
+	}
+
+	.contactPanel{
+		padding: 70px;
+		text-align: center;
+
+		.email{
+			padding-top:10px;
+		}
+
+		.number{
+			padding-top:10px;
+		}
+	}
+
+	.blueStripe{
+		width: 100%;
+		height: 20px;
+		background-color: $mainBlue;
+	}
 }

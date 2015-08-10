@@ -14,3 +14,20 @@
 	z-index: -1;
 	// z-index: index($bg-elements, fixed-bg);
 }
+
+
+.intro--container{
+	padding: 155px 20px 135px 20px;
+	margin: 0 auto;
+	max-width: 600px;
+	width: 100%;
+}
+
+
+.intro--container__content{
+	border-top: solid 4px $mainBlue;
+	margin-top: 35px;
+	padding-top: 35px;
+	text-align: justify;
+
+}

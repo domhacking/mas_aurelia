@@ -7,4 +7,10 @@
 
 @include module("gallery") { 
   // :)
+	.galleryImages{
+		background-color: red;
+		border: solid red 5px;
+		height: 2000px;
+		width: 300px;
+	}
 }
