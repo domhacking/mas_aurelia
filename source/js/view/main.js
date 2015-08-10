@@ -1,5 +1,6 @@
 var Ractive = require('ractive');
 var page    = require('page');
+var $       = require('jquery');
 Ractive.components = require('../module');
 
 module.exports = function() {
@@ -57,3 +58,19 @@ module.exports = function() {
     });
 
 };
+
+
+$(document).ready(function(){
+   $(window).bind('scroll', function() {
+   var navHeight = $( window ).height();
+         if ($(window).scrollTop() > navHeight) {
+             $('.nav').addClass('fixed');
+             $(".stopthejump").css('display','block');
+
+         }
+         else {
+             $('.nav').removeClass('fixed');
+             $(".stopthejump").css('display','none');
+         }
+    });
+});

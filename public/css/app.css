@@ -49,10 +49,10 @@
   font-style: normal; }
 
 h1 {
+  color: #f3f3f2;
   font-size: 56px;
   font-family: "JosefinSans-Bold";
   line-height: 58px;
-  color: #f3f3f2;
   text-transform: uppercase; }
 
 h2 {
@@ -61,21 +61,22 @@ h2 {
   font-family: "JosefinSans-Bold";
   font-weight: normal;
   line-height: 30px;
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase; }
 
 li {
+  color: #2d2d2d;
   font-size: 20px;
   font-family: "JosefinSans-Bold";
   line-height: 20px;
-  color: #2d2d2d;
-  text-transform: uppercase;
-  list-style-type: none; }
+  list-style-type: none;
+  text-transform: uppercase; }
 
 p {
+  color: #2d2d2d;
   font-size: 20px;
   font-family: "JosefinSans-SemiBold";
-  line-height: 20px;
-  color: #2d2d2d; }
+  line-height: 20px; }
 
 /**
  * _settings.default.scss
@@ -851,8 +852,19 @@ h1, h2, h3, h4, p, li, a {
   background-position: center center;
   z-index: -1; }
 
+.whiteStripe {
+  height: 40px;
+  background-color: white;
+  width: 100%; }
+
+.blueStripe {
+  background-color: #8dc2d5;
+  height: 20px;
+  margin-top: 20px;
+  width: 100%; }
+
 .intro--container {
-  padding: 155px 20px 135px 20px;
+  padding: 135px 20px 155px 20px;
   margin: 0 auto;
   max-width: 600px;
   width: 100%; }
@@ -862,6 +874,25 @@ h1, h2, h3, h4, p, li, a {
   margin-top: 35px;
   padding-top: 35px;
   text-align: justify; }
+
+.stopthejump {
+  display: none;
+  height: 100px;
+  width: 100%; }
+
+.imageContainer {
+  height: 390px;
+  width: 100%; }
+  .imageContainer .leftImage {
+    background-size: cover;
+    height: 100%;
+    width: 49%;
+    float: left; }
+  .imageContainer .rightImage {
+    background-size: cover;
+    height: 100%;
+    width: 49%;
+    float: right; }
 
 /*auto-generated*/
 /**
@@ -874,33 +905,87 @@ h1, h2, h3, h4, p, li, a {
  * @js:       ./source/js/module/gallery/gallery.js
  * @html:     ./source/js/module/gallery/gallery.html
  */
-.gallery .galleryImages {
-  background-color: red;
-  border: solid red 5px;
-  height: 2000px;
-  width: 300px; }
+.gallery .mosaic--container {
+  border: solid 1px black;
+  margin: 0 auto;
+  margin-bottom: 75px;
+  width: 94%; }
+  .gallery .mosaic--container .mosaic--element {
+    border: solid 1px black;
+    display: inline-block;
+    height: 100%;
+    padding: 10px; }
+  .gallery .mosaic--container .mosaic--container__top {
+    border: solid 1px black;
+    display: block;
+    height: 400px; }
+    .gallery .mosaic--container .mosaic--container__top .mosaic--top__left {
+      background: url("../img/test.jpg") no-repeat;
+      background-size: cover;
+      width: 33%; }
+    .gallery .mosaic--container .mosaic--container__top .mosaic--block {
+      display: inline-block;
+      height: 100%;
+      vertical-align: top;
+      width: 66%; }
+      .gallery .mosaic--container .mosaic--container__top .mosaic--block .mosaic--top__topMiddle {
+        background: url("../img/test.jpg") no-repeat;
+        background-size: cover;
+        display: inline-block;
+        height: 45%;
+        width: 45%; }
+      .gallery .mosaic--container .mosaic--container__top .mosaic--block .mosaic--top__topRight {
+        background: url("../img/test.jpg") no-repeat;
+        background-size: cover;
+        height: 45%;
+        display: inline-block;
+        width: 45%; }
+      .gallery .mosaic--container .mosaic--container__top .mosaic--block .mosaic--top__bottomRight {
+        background: url("../img/test.jpg") no-repeat;
+        background-size: cover;
+        display: block;
+        height: 50%;
+        width: 100%;
+        float: right; }
+  .gallery .mosaic--container .mosaic--container__middle {
+    height: 280px;
+    display: block;
+    border: solid 1px black; }
+    .gallery .mosaic--container .mosaic--container__middle .mosaic--middle__left {
+      background: url("../img/test.jpg") no-repeat;
+      background-size: cover;
+      width: 33%; }
+    .gallery .mosaic--container .mosaic--container__middle .mosaic--middle__middle {
+      background: url("../img/test.jpg") no-repeat;
+      background-size: cover;
+      width: 33%; }
+    .gallery .mosaic--container .mosaic--container__middle .mosaic--middle__right {
+      background: url("../img/test.jpg") no-repeat;
+      background-size: cover;
+      width: 33%; }
+  .gallery .mosaic--container .mosaic--container__bottom {
+    height: 220px;
+    display: block;
+    border: solid 1px black; }
+    .gallery .mosaic--container .mosaic--container__bottom .mosaic--bottom__left {
+      background: url("../img/test.jpg") no-repeat;
+      background-size: cover;
+      width: 49%; }
+    .gallery .mosaic--container .mosaic--container__bottom .mosaic--bottom__right {
+      background: url("../img/test.jpg") no-repeat;
+      background-size: cover;
+      width: 49%; }
 
 /**
  * @module:   home
  * @js:       ./source/js/module/home/home.js
  * @html:     ./source/js/module/home/home.html
  */
-.home .imageContainer {
-  height: 390px;
-  width: 100%;
-  padding-bottom: 40px; }
-  .home .imageContainer .leftImage {
-    background-image: url("../img/left-home-img.jpg");
-    background-size: cover;
-    height: 100%;
-    width: 49%;
-    float: left; }
-  .home .imageContainer .rightImage {
-    background-image: url("../img/right-home-img.jpg");
-    background-size: cover;
-    height: 100%;
-    width: 49%;
-    float: right; }
+.home .imageContainer .leftImage {
+  background-image: url("../img/left-home-img.jpg"); }
+
+.home .imageContainer .rightImage {
+  background-image: url("../img/right-home-img.jpg"); }
 
 .home .quotePanel {
   height: 330px;
@@ -915,11 +1000,6 @@ h1, h2, h3, h4, p, li, a {
       text-align: center;
       font-size: 30px; }
 
-.home .whiteStrip {
-  height: 40px;
-  background-color: white;
-  width: 100%; }
-
 .home .contactPanel {
   padding: 70px;
   text-align: center; }
@@ -927,11 +1007,6 @@ h1, h2, h3, h4, p, li, a {
     padding-top: 10px; }
   .home .contactPanel .number {
     padding-top: 10px; }
-
-.home .blueStripe {
-  width: 100%;
-  height: 20px;
-  background-color: #8dc2d5; }
 
 /**
  * @module:   homescreen
@@ -971,6 +1046,22 @@ h1, h2, h3, h4, p, li, a {
  * @js:       ./source/js/module/info/info.js
  * @html:     ./source/js/module/info/info.html
  */
+.info .imageContainer .leftImage {
+  background-image: url("../img/left-info-img.jpg"); }
+
+.info .imageContainer .rightImage {
+  background-image: url("../img/right-info-img.jpg"); }
+
+.info .floorPlanPanel {
+  background-color: #8dc2d5;
+  height: 360px;
+  width: 100%;
+  text-align: center;
+  display: table; }
+  .info .floorPlanPanel img {
+    display: table-cell;
+    vertical-align: middle; }
+
 /**
  * @module:   localArea
  * @js:       ./source/js/module/localArea/localArea.js
@@ -985,6 +1076,7 @@ h1, h2, h3, h4, p, li, a {
   background-color: #e1e1e1;
   width: 100%;
   z-index: 2;
+  height: 100px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4); }
   .nav .navbar--container {
     width: 85%;
@@ -997,10 +1089,11 @@ h1, h2, h3, h4, p, li, a {
       text-decoration: none;
       padding: 40px 20px;
       min-width: 200px; }
-  .nav .main-nav-sccrolled {
+  .nav.fixed {
     position: fixed;
-    width: 100%;
-    top: 0; }
+    top: 0;
+    height: 100px;
+    z-index: 1; }
 
 /*------------------------------------*    #SPACING
 \*------------------------------------*/

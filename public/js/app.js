@@ -26807,7 +26807,7 @@ module.exports = Ractive.extend({
 });
 
 },{"ractive":8}],10:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"contact"},"f":[{"t":7,"e":"h1","f":["contact :)"]}," ",{"t":7,"e":"p","f":["testContact"]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"contact"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Contact"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":[]}]}]}]}
 },{}],11:[function(require,module,exports){
 /**
  * @module:   contact
@@ -26825,7 +26825,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":9,"./contact.html":10}],12:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery"},"f":[{"t":7,"e":"h1","f":["gallery :)"]}," ",{"t":7,"e":"p","f":["testGallery"]}," ",{"t":7,"e":"div","a":{"class":"galleryImages"}}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Gallery"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}," ",{"t":7,"e":"div","a":{"class":"mosaic--container"},"f":[{"t":7,"e":"div","a":{"class":"mosaic--container__top"},"f":[{"t":7,"e":"div","a":{"class":"mosaic--element mosaic--top__left"}}," ",{"t":7,"e":"div","a":{"class":"mosaic--block"},"f":[{"t":7,"e":"div","a":{"class":"mosaic--element mosaic--top__topMiddle"}}," ",{"t":7,"e":"div","a":{"class":"mosaic--element mosaic--top__topRight"}}," ",{"t":7,"e":"div","a":{"class":"mosaic--element mosaic--top__bottomRight"}}]}]}," ",{"t":7,"e":"div","a":{"class":"mosaic--container__middle"},"f":[{"t":7,"e":"div","a":{"class":"mosaic--element mosaic--middle__left"}}," ",{"t":7,"e":"div","a":{"class":"mosaic--element mosaic--middle__middle"}}," ",{"t":7,"e":"div","a":{"class":"mosaic--element mosaic--middle__right"}}]}," ",{"t":7,"e":"div","a":{"class":"mosaic--container__bottom"},"f":[{"t":7,"e":"div","a":{"class":"mosaic--element mosaic--bottom__left"}}," ",{"t":7,"e":"div","a":{"class":"mosaic--element mosaic--bottom__right"}}]}]}]}]}
 },{}],13:[function(require,module,exports){
 /**
  * @module:   gallery
@@ -26843,7 +26843,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":9,"./gallery.html":12}],14:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"home"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Welcome"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["A newly refurbished house with stunning panoramic views over the Alpilles. Situated approximately 1km from the pretty hilltop village of Eygalières and 8km from the main market town of Saint Ré­my de Provence. A newly refurbished house with stunning panoramic views over the Alpilles. Situated approximately 1km from the pretty hilltop village of Eygalières and 8km from the main market town of Saint Ré­my de Provence."]}]}," ",{"t":7,"e":"div","a":{"class":"imagePanel"},"f":[{"t":7,"e":"div","a":{"class":"imageContainer"},"f":[{"t":7,"e":"div","a":{"class":"leftImage"}}," ",{"t":7,"e":"div","a":{"class":"rightImage"}}]}]}," ",{"t":7,"e":"div","a":{"class":"quotePanel"},"f":[{"t":7,"e":"div","a":{"class":"quotePanel--content"},"f":[{"t":7,"e":"p","f":["\"Stunning panoramic view over the Appilles\""]}]}]}," ",{"t":7,"e":"div","a":{"class":"whiteStrip"}}," ",{"t":7,"e":"div","a":{"class":"contactPanel"},"f":[{"t":7,"e":"div","a":{"class":"emailImg"}}," ",{"t":7,"e":"h2","f":["CONTACT US"]}," ",{"t":7,"e":"p","f":["Mas Aurelia"]}," ",{"t":7,"e":"p","a":{"class":"email"},"f":["jeanpayne@yahoo.com"]}," ",{"t":7,"e":"p","a":{"class":"number"},"f":["076338 564 945"]}]}," ",{"t":7,"e":"div","a":{"class":"blueStripe"}}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"home"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Welcome"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["A newly refurbished house with stunning panoramic views over the Alpilles. Situated approximately 1km from the pretty hilltop village of Eygalières and 8km from the main market town of Saint Ré­my de Provence. A newly refurbished house with stunning panoramic views over the Alpilles. Situated approximately 1km from the pretty hilltop village of Eygalières and 8km from the main market town of Saint Ré­my de Provence."]}]}," ",{"t":7,"e":"div","a":{"class":"imagePanel"},"f":[{"t":7,"e":"div","a":{"class":"imageContainer"},"f":[{"t":7,"e":"div","a":{"class":"leftImage"}}," ",{"t":7,"e":"div","a":{"class":"rightImage"}}]}]}," ",{"t":7,"e":"div","a":{"class":"whiteStripe"}}," ",{"t":7,"e":"div","a":{"class":"quotePanel"},"f":[{"t":7,"e":"div","a":{"class":"quotePanel--content"},"f":[{"t":7,"e":"p","f":["\"Stunning panoramic view over the Appilles\""]}]}]}," ",{"t":7,"e":"div","a":{"class":"whiteStripe"}}," ",{"t":7,"e":"div","a":{"class":"contactPanel"},"f":[{"t":7,"e":"div","a":{"class":"emailImg"}}," ",{"t":7,"e":"h2","f":["CONTACT US"]}," ",{"t":7,"e":"p","f":["Mas Aurelia"]}," ",{"t":7,"e":"p","a":{"class":"email"},"f":["jeanpayne@yahoo.com"]}," ",{"t":7,"e":"p","a":{"class":"number"},"f":["076338 564 945"]}]}]}]}
 },{}],15:[function(require,module,exports){
 /**
  * @module:   home
@@ -26861,7 +26861,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":9,"./home.html":14}],16:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"homescreen fixed-bg"},"f":[{"t":7,"e":"div","a":{"class":"heading--container"},"f":[{"t":7,"e":"h1","f":["MAS AURELIA"]}]}," ",{"t":7,"e":"dib","a":{"class":"arrow"},"f":["Arrow"]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"homescreen fixed-bg"},"f":[{"t":7,"e":"div","a":{"class":"heading--container","id":"screen1"},"f":[{"t":7,"e":"h1","f":["MAS AURELIA"]}]}," ",{"t":7,"e":"dib","a":{"class":"arrow","style":"color: white;"},"f":["Scroll"]}]}]}
 },{}],17:[function(require,module,exports){
 /**
  * @module:   homescreen
@@ -26886,7 +26886,7 @@ modules['ui-contact'] = require('./contact/contact.js');modules['ui-gallery'] = 
 module.exports = modules;
 
 },{"./contact/contact.js":11,"./gallery/gallery.js":13,"./home/home.js":15,"./homescreen/homescreen.js":17,"./info/info.js":20,"./localArea/localArea.js":22,"./nav/nav.js":24}],19:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"info"},"f":[{"t":7,"e":"h1","f":["info :)"]}," ",{"t":7,"e":"p","f":["testInfo"]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"info"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["About"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}," ",{"t":7,"e":"div","a":{"class":"imagePanel"},"f":[{"t":7,"e":"div","a":{"class":"imageContainer"},"f":[{"t":7,"e":"div","a":{"class":"leftImage"}}," ",{"t":7,"e":"div","a":{"class":"rightImage"}}]}]}," ",{"t":7,"e":"div","a":{"class":"whiteStripe"}}," ",{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Accomodation"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}," ",{"t":7,"e":"div","a":{"class":"whiteStripe"}}," ",{"t":7,"e":"div","a":{"class":"floorPlanPanel"},"f":[{"t":7,"e":"img","a":{"src":"../img/floorPlan.png","alt":""}}]}," ",{"t":7,"e":"div","a":{"class":"whiteStripe"}}," ",{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Activities"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}]}]}
 },{}],20:[function(require,module,exports){
 /**
  * @module:   info
@@ -26904,7 +26904,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":9,"./info.html":19}],21:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"localArea"},"f":[{"t":7,"e":"h1","f":["localArea :)"]}," ",{"t":7,"e":"p","f":["testlocal"]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"localArea"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Local Area"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}]}]}
 },{}],22:[function(require,module,exports){
 /**
  * @module:   localArea
@@ -26922,7 +26922,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":9,"./localArea.html":21}],23:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"navbar--container"},"f":[{"t":7,"e":"li","v":{"click":"goToHome"},"f":["HOME"]}," ",{"t":7,"e":"li","v":{"click":"goToGallery"},"f":["GALLERY"]}," ",{"t":7,"e":"li","v":{"click":"goToInfo"},"f":["INFO"]}," ",{"t":7,"e":"li","v":{"click":"goToLocalArea"},"f":["LOCAL AREA"]}," ",{"t":7,"e":"li","v":{"click":"goToContact"},"f":["CONTACT"]}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"navbar--container"},"f":[{"t":7,"e":"li","v":{"click":"goToHome"},"f":["HOME"]}," ",{"t":7,"e":"li","v":{"click":"goToGallery"},"f":["GALLERY"]}," ",{"t":7,"e":"li","v":{"click":"goToInfo"},"f":["INFO"]}," ",{"t":7,"e":"li","v":{"click":"goToLocalArea"},"f":["LOCAL AREA"]}," ",{"t":7,"e":"li","v":{"click":"goToContact"},"f":["CONTACT"]}]}]}," ",{"t":7,"e":"div","a":{"class":"stopthejump"}}]}
 },{}],24:[function(require,module,exports){
 /**
  * @module:   nav
@@ -26961,7 +26961,7 @@ module.exports = Module.extend({
     },
 
 	onGoLocalArea: function(){
-        page('/Localarea');
+        page('/localarea');
     },
 
 	onGoContact: function(){
@@ -26971,25 +26971,14 @@ module.exports = Module.extend({
 });
 
 
-// var mn = $(".nav");
-//     mns = "main-nav-scrolled";
-//     hdr = $('homescreen').height();
-
-// $(window).scroll(function() {
-//     if( $(this).scrollTop() > hdr ) {
-//         mn.addClass(mns);
-//         console.log('test');
-//     } else {
-//         mn.removeClass(mns);
-//     }
-// });
 
 
 },{"../abstract-module":9,"./nav.html":23,"jquery":4,"page":5}],25:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"ui-homescreen"}," ",{"t":7,"e":"ui-nav"}," ",{"t":4,"f":[{"t":7,"e":"ui-home"}],"x":{"r":["view"],"s":"_0==\"home\""}},{"t":4,"f":[{"t":7,"e":"ui-gallery"}],"x":{"r":["view"],"s":"_0==\"gallery\""}},{"t":4,"f":[{"t":7,"e":"ui-info"}],"x":{"r":["view"],"s":"_0==\"info\""}},{"t":4,"f":[{"t":7,"e":"ui-localArea"}],"x":{"r":["view"],"s":"_0==\"localArea\""}},{"t":4,"f":[{"t":7,"e":"ui-contact"}],"x":{"r":["view"],"s":"_0==\"contact\""}}]}
+module.exports={"v":3,"t":[{"t":7,"e":"ui-homescreen"}," ",{"t":7,"e":"ui-nav"}," ",{"t":4,"f":[{"t":7,"e":"ui-home"}],"x":{"r":["view"],"s":"_0==\"home\""}},{"t":4,"f":[{"t":7,"e":"ui-gallery"}],"x":{"r":["view"],"s":"_0==\"gallery\""}},{"t":4,"f":[{"t":7,"e":"ui-info"}],"x":{"r":["view"],"s":"_0==\"info\""}},{"t":4,"f":[{"t":7,"e":"ui-localArea"}],"x":{"r":["view"],"s":"_0==\"localArea\""}},{"t":4,"f":[{"t":7,"e":"ui-contact"}],"x":{"r":["view"],"s":"_0==\"contact\""}},{"t":7,"e":"div","a":{"class":"blueStripe"}}]}
 },{}],26:[function(require,module,exports){
 var Ractive = require('ractive');
 var page    = require('page');
+var $       = require('jquery');
 Ractive.components = require('../module');
 
 module.exports = function() {
@@ -27048,7 +27037,23 @@ module.exports = function() {
 
 };
 
-},{"../module":18,"./main.html":25,"page":5,"ractive":8}]},{},[1])
+
+$(document).ready(function(){
+   $(window).bind('scroll', function() {
+   var navHeight = $( window ).height();
+         if ($(window).scrollTop() > navHeight) {
+             $('.nav').addClass('fixed');
+             $(".stopthejump").css('display','block');
+
+         }
+         else {
+             $('.nav').removeClass('fixed');
+             $(".stopthejump").css('display','none');
+         }
+    });
+});
+
+},{"../module":18,"./main.html":25,"jquery":4,"page":5,"ractive":8}]},{},[1])
 
 
 //# sourceMappingURL=app.js.map

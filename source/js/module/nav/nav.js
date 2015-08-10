@@ -35,7 +35,7 @@ module.exports = Module.extend({
     },
 
 	onGoLocalArea: function(){
-        page('/Localarea');
+        page('/localarea');
     },
 
 	onGoContact: function(){
@@ -45,16 +45,4 @@ module.exports = Module.extend({
 });
 
 
-// var mn = $(".nav");
-//     mns = "main-nav-scrolled";
-//     hdr = $('homescreen').height();
-
-// $(window).scroll(function() {
-//     if( $(this).scrollTop() > hdr ) {
-//         mn.addClass(mns);
-//         console.log('test');
-//     } else {
-//         mn.removeClass(mns);
-//     }
-// });
 
