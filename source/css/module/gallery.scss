@@ -8,55 +8,59 @@
 @include module("gallery") {
 
 	.mosaic--container{
-		border: solid 1px black;
+		// border: solid 1px black;
 		margin: 0 auto;
 		margin-bottom: 75px;
 		width: 94%;
+		max-width: 1290px;
+		height: 1380px;
 
 		.mosaic--element{
-			border: solid 1px black;
 			display: inline-block;
 			height: 100%;
-			padding: 10px;
+			width:  100%;
 		}
 
 		.mosaic--container__top{
-			border: solid 1px black;
 			display: block;
-			height: 400px;
-			// padding-bottom: 20px;
+			height: 600px;
+			padding-bottom: 20px;
 
 			.mosaic--top__left{
-				background: url('../img/test.jpg') no-repeat;
+				background: url('../img/mosaic-img1.jpg') no-repeat;
 				background-size: cover;
-				width: 33%;
+				width: 32%;
+				margin-right: 20px;
 			}
 
 			.mosaic--block{
 				display: inline-block;
 				height: 100%;
 				vertical-align: top;
-				width: 66%;
+				width: 64%;
 
 				.mosaic--top__topMiddle{
-					background: url('../img/test.jpg') no-repeat;
+					background: url('../img/mosaic-img2.jpg') no-repeat;
 					background-size: cover;
 					display: inline-block;
 					height: 45%;
-					width: 45%;
+					width: 48%;
+					margin-bottom: 20px;
+					margin-right:20px;
 				}
 
 				.mosaic--top__topRight{
-					background: url('../img/test.jpg') no-repeat;
+					background: url('../img/mosaic-img3.jpg') no-repeat;
 					background-size: cover;
 					height: 45%;
 					display: inline-block;
-					width: 45%;
+					width: 49%;
+					margin-bottom: 20px;
 				}
 
 
 				.mosaic--top__bottomRight{
-					background: url('../img/test.jpg') no-repeat;
+					background: url('../img/mosaic-img4.jpg') no-repeat;
 					background-size: cover;
 					display: block;
 					height: 50%;
@@ -67,42 +71,42 @@
 		}
 
 		.mosaic--container__middle{
-			height: 280px;
+			height: 420px;
 			display: block;
-			border: solid 1px black;
-			// padding-bottom: 20px;
+			margin-bottom: 20px;
 
 			.mosaic--middle__left{
-				background: url('../img/test.jpg') no-repeat;
+				background: url('../img/mosaic-img5.jpg') no-repeat;
 				background-size: cover;
-				width: 33%;
+				width: 32%;
+				margin-right: 20px;
 			}
 			.mosaic--middle__middle{
-				background: url('../img/test.jpg') no-repeat;
+				background: url('../img/mosaic-img6.jpg') no-repeat;
 				background-size: cover;
-				width: 33%;
+				width: 32%;
+				margin-right: 20px;
 			}
 			.mosaic--middle__right{
-				background: url('../img/test.jpg') no-repeat;
+				background: url('../img/mosaic-img7.jpg') no-repeat;
 				background-size: cover;
-				width: 33%;
+				width: 32%;
 			}
 		}
 
 		.mosaic--container__bottom{
-			height: 220px;
+			height: 320px;
 			display: block;
-			border: solid 1px black;
-			// padding-bottom: 20px;
 
 			.mosaic--bottom__left{
-				background: url('../img/test.jpg') no-repeat;
+				background: url('../img/mosaic-img8.jpg') no-repeat;
 				background-size: cover;
 				width: 49%;
+				margin-right: 20px;
 			}
 
 			.mosaic--bottom__right{
-				background: url('../img/test.jpg') no-repeat;
+				background: url('../img/mosaic-img9.jpg') no-repeat;
 				background-size: cover;
 				width: 49%;
 

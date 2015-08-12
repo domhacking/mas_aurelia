@@ -906,73 +906,79 @@ h1, h2, h3, h4, p, li, a {
  * @html:     ./source/js/module/gallery/gallery.html
  */
 .gallery .mosaic--container {
-  border: solid 1px black;
   margin: 0 auto;
   margin-bottom: 75px;
-  width: 94%; }
+  width: 94%;
+  max-width: 1290px;
+  height: 1380px; }
   .gallery .mosaic--container .mosaic--element {
-    border: solid 1px black;
     display: inline-block;
     height: 100%;
-    padding: 10px; }
+    width: 100%; }
   .gallery .mosaic--container .mosaic--container__top {
-    border: solid 1px black;
     display: block;
-    height: 400px; }
+    height: 600px;
+    padding-bottom: 20px; }
     .gallery .mosaic--container .mosaic--container__top .mosaic--top__left {
-      background: url("../img/test.jpg") no-repeat;
+      background: url("../img/mosaic-img1.jpg") no-repeat;
       background-size: cover;
-      width: 33%; }
+      width: 32%;
+      margin-right: 20px; }
     .gallery .mosaic--container .mosaic--container__top .mosaic--block {
       display: inline-block;
       height: 100%;
       vertical-align: top;
-      width: 66%; }
+      width: 64%; }
       .gallery .mosaic--container .mosaic--container__top .mosaic--block .mosaic--top__topMiddle {
-        background: url("../img/test.jpg") no-repeat;
+        background: url("../img/mosaic-img2.jpg") no-repeat;
         background-size: cover;
         display: inline-block;
         height: 45%;
-        width: 45%; }
+        width: 48%;
+        margin-bottom: 20px;
+        margin-right: 20px; }
       .gallery .mosaic--container .mosaic--container__top .mosaic--block .mosaic--top__topRight {
-        background: url("../img/test.jpg") no-repeat;
+        background: url("../img/mosaic-img3.jpg") no-repeat;
         background-size: cover;
         height: 45%;
         display: inline-block;
-        width: 45%; }
+        width: 49%;
+        margin-bottom: 20px; }
       .gallery .mosaic--container .mosaic--container__top .mosaic--block .mosaic--top__bottomRight {
-        background: url("../img/test.jpg") no-repeat;
+        background: url("../img/mosaic-img4.jpg") no-repeat;
         background-size: cover;
         display: block;
         height: 50%;
         width: 100%;
         float: right; }
   .gallery .mosaic--container .mosaic--container__middle {
-    height: 280px;
+    height: 420px;
     display: block;
-    border: solid 1px black; }
+    margin-bottom: 20px; }
     .gallery .mosaic--container .mosaic--container__middle .mosaic--middle__left {
-      background: url("../img/test.jpg") no-repeat;
+      background: url("../img/mosaic-img5.jpg") no-repeat;
       background-size: cover;
-      width: 33%; }
+      width: 32%;
+      margin-right: 20px; }
     .gallery .mosaic--container .mosaic--container__middle .mosaic--middle__middle {
-      background: url("../img/test.jpg") no-repeat;
+      background: url("../img/mosaic-img6.jpg") no-repeat;
       background-size: cover;
-      width: 33%; }
+      width: 32%;
+      margin-right: 20px; }
     .gallery .mosaic--container .mosaic--container__middle .mosaic--middle__right {
-      background: url("../img/test.jpg") no-repeat;
+      background: url("../img/mosaic-img7.jpg") no-repeat;
       background-size: cover;
-      width: 33%; }
+      width: 32%; }
   .gallery .mosaic--container .mosaic--container__bottom {
-    height: 220px;
-    display: block;
-    border: solid 1px black; }
+    height: 320px;
+    display: block; }
     .gallery .mosaic--container .mosaic--container__bottom .mosaic--bottom__left {
-      background: url("../img/test.jpg") no-repeat;
+      background: url("../img/mosaic-img8.jpg") no-repeat;
       background-size: cover;
-      width: 49%; }
+      width: 49%;
+      margin-right: 20px; }
     .gallery .mosaic--container .mosaic--container__bottom .mosaic--bottom__right {
-      background: url("../img/test.jpg") no-repeat;
+      background: url("../img/mosaic-img9.jpg") no-repeat;
       background-size: cover;
       width: 49%; }
 
@@ -1037,9 +1043,13 @@ h1, h2, h3, h4, p, li, a {
       left: 50%;
       margin-left: -150px; }
   .homescreen .arrow {
+    background: url("../img/arrow.png") no-repeat;
+    background-size: 100%;
     position: absolute;
     bottom: 5%;
-    margin-left: -25px; }
+    margin-left: -25px;
+    height: 20px;
+    width: 40px; }
 
 /**
  * @module:   info
