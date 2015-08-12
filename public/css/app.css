@@ -1077,6 +1077,70 @@ h1, h2, h3, h4, p, li, a {
  * @js:       ./source/js/module/localArea/localArea.js
  * @html:     ./source/js/module/localArea/localArea.html
  */
+.localArea .nearestVillage--panel .house {
+  background: url("../img/house.png") no-repeat;
+  background-size: 100%;
+  height: 45px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  width: 54px; }
+
+.localArea .nearestVillage--panel h2 {
+  margin-bottom: 60px; }
+
+.localArea .nearestVillage--panel ul {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0 120px;
+  margin: 0 auto;
+  margin-bottom: 75px; }
+  .localArea .nearestVillage--panel ul li {
+    background-color: #e1e1e1;
+    display: inline-block;
+    width: 30%;
+    padding: 30px 0;
+    margin: 10px;
+    text-align: center; }
+    .localArea .nearestVillage--panel ul li.active, .localArea .nearestVillage--panel ul li:hover {
+      background-color: #8dc2d5; }
+    .localArea .nearestVillage--panel ul li a {
+      font-size: 20px;
+      text-decoration: none;
+      color: #2d2d2d; }
+
+.localArea .nearestVillage--info {
+  background-color: #e1e1e1;
+  width: 100%; }
+  .localArea .nearestVillage--info h3 {
+    font-size: 20px;
+    padding-bottom: 30px;
+    font-weight: normal; }
+  .localArea .nearestVillage--info .tab-pane {
+    display: none;
+    padding: 0 120px;
+    margin: 0 auto; }
+    .localArea .nearestVillage--info .tab-pane.active {
+      display: block; }
+    .localArea .nearestVillage--info .tab-pane .content--main {
+      padding: 70px 0px;
+      width: 100%; }
+      .localArea .nearestVillage--info .tab-pane .content--main .content--main__writing {
+        display: inline-block;
+        width: 70%;
+        vertical-align: top;
+        padding-right: 65px; }
+        .localArea .nearestVillage--info .tab-pane .content--main .content--main__writing p {
+          padding-bottom: 30px; }
+      .localArea .nearestVillage--info .tab-pane .content--main .content--main__img {
+        background: url("../img/villageImage.jpg") 100% no-repeat;
+        height: 515px;
+        width: 315px;
+        display: inline-block; }
+    .localArea .nearestVillage--info .tab-pane .content--second .content--second__block {
+      display: inline-block;
+      width: 30%;
+      padding: 40px 20px; }
+
 /**
  * @module:   nav
  * @js:       ./source/js/module/nav/nav.js

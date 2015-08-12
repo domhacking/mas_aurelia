@@ -1,6 +1,8 @@
-var Ractive = require('ractive');
-var page    = require('page');
-var $       = require('jquery');
+var Ractive     = require('ractive');
+var page        = require('page');
+var $           = require('jquery');
+// var bootstrap   = require('bootstrap');
+
 Ractive.components = require('../module');
 
 module.exports = function() {

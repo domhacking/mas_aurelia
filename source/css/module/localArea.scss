@@ -5,6 +5,108 @@
  */
 
 
-@include module("localArea") { 
-  // :)
+@include module("localArea") {
+	.nearestVillage--panel{
+		.house{
+			background: url('../img/house.png') no-repeat;
+			background-size: 100%;
+			height: 45px;
+			margin: 0 auto;
+			margin-bottom: 25px;
+			width: 54px;
+		}
+
+		h2{
+			margin-bottom: 60px;
+		}
+
+		ul{
+			background-color: transparent;
+			box-shadow: none;
+			padding: 0 120px;
+			margin: 0 auto;
+			margin-bottom: 75px;
+
+			li{
+				background-color: $mainGrey;
+				display: inline-block;
+				width: 30%;
+				padding: 30px 0;
+				margin: 10px;
+				text-align: center;
+
+
+				&.active, &:hover{
+					background-color: $mainBlue;
+				}
+
+				a{
+					font-size: 20px;
+					text-decoration: none;
+					color: $font-color;
+				}
+
+			}
+		}
+
+	}
+
+	.nearestVillage--info{
+		background-color: $mainGrey;
+		width: 100%;
+
+		h3{
+			font-size: 20px;
+			padding-bottom:30px;
+			font-weight: normal;
+		}
+
+
+	  	.tab-pane {
+	  		display: none;
+	  		padding: 0 120px;
+	  		margin: 0 auto;
+
+	  		&.active {
+	  			display: block;
+	  		}
+
+
+	  		.content--main{
+				padding: 70px 0px;
+				width: 100%;
+
+	  			.content--main__writing{
+	  				display: inline-block;
+	  				width: 70%;
+	  				vertical-align: top;
+	  				padding-right: 65px;
+
+
+		  			p{
+		  				padding-bottom: 30px;
+		  			}
+	  			}
+
+
+	  			.content--main__img{
+	  				background: url('../img/villageImage.jpg') 100% no-repeat;
+	  				height: 515px;
+	  				width: 315px;
+	  				display: inline-block;
+
+	  			}
+	  		}
+
+	  		.content--second{
+
+	  			.content--second__block{
+	  				display: inline-block;
+	  				width: 30%;
+	  				padding: 40px 20px;
+	  			}
+
+	  		}
+	  	}
+	}
 }
