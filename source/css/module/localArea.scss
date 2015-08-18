@@ -64,7 +64,6 @@
 
 	  	.tab-pane {
 	  		display: none;
-	  		padding: 0 120px;
 	  		margin: 0 auto;
 
 	  		&.active {
@@ -73,8 +72,9 @@
 
 
 	  		.content--main{
-				padding: 70px 0px;
-				width: 100%;
+				padding: 70px 0;
+				width: 80%;
+				margin: 0 auto;
 
 	  			.content--main__writing{
 	  				display: inline-block;
@@ -99,13 +99,19 @@
 	  		}
 
 	  		.content--second{
+	  			width: 80%;
+	  			margin: 0 auto;
 
 	  			.content--second__block{
+	  				vertical-align: top;
 	  				display: inline-block;
 	  				width: 30%;
 	  				padding: 40px 20px;
-	  			}
 
+	  				p{
+	  					line-height: 25px;
+	  				}
+	  			}
 	  		}
 	  	}
 	}

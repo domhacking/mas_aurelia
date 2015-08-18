@@ -64,6 +64,12 @@ h2 {
   text-align: center;
   text-transform: uppercase; }
 
+h3 {
+  font-family: "JosefinSans-Bold";
+  font-weight: normal;
+  font-size: 20px;
+  text-transform: uppercase; }
+
 li {
   color: #2d2d2d;
   font-size: 20px;
@@ -854,7 +860,7 @@ h1, h2, h3, h4, p, li, a {
 
 .whiteStripe {
   height: 40px;
-  background-color: white;
+  background-color: #f3f3f2;
   width: 100%; }
 
 .blueStripe {
@@ -900,6 +906,52 @@ h1, h2, h3, h4, p, li, a {
  * @js:       ./source/js/module/contact/contact.js
  * @html:     ./source/js/module/contact/contact.html
  */
+.contact .contactPanel {
+  background-color: #e1e1e1;
+  padding: 100px 0; }
+  .contact .contactPanel .contactPanel--container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 60px;
+    text-align: center; }
+    .contact .contactPanel .contactPanel--container h3 {
+      padding-bottom: 50px; }
+    .contact .contactPanel .contactPanel--container .contactPanel--container__left {
+      display: inline-block;
+      width: 40%;
+      vertical-align: top;
+      text-align: center;
+      padding-left: 20px; }
+      .contact .contactPanel .contactPanel--container .contactPanel--container__left p {
+        padding-top: 10px; }
+    .contact .contactPanel .contactPanel--container .contactPanel--container__right {
+      display: inline-block;
+      width: 40%;
+      padding-left: 20px; }
+      .contact .contactPanel .contactPanel--container .contactPanel--container__right h3 {
+        text-align: left; }
+      .contact .contactPanel .contactPanel--container .contactPanel--container__right input {
+        display: block;
+        height: 40px;
+        width: 100%;
+        margin: 10px;
+        margin-left: 0px;
+        padding-left: 5px;
+        padding-top: 5px;
+        vertical-align: top;
+        font-family: "JosefinSans-SemiBold";
+        font-style: italic; }
+        .contact .contactPanel .contactPanel--container .contactPanel--container__right input.message {
+          height: 150px; }
+        .contact .contactPanel .contactPanel--container .contactPanel--container__right input.submit {
+          width: 50%;
+          padding: 22px 0 32px;
+          font-family: "JosefinSans-Bold";
+          font-style: normal;
+          background-color: #8dc2d5;
+          text-transform: uppercase;
+          border: none; }
+
 /**
  * @module:   gallery
  * @js:       ./source/js/module/gallery/gallery.js
@@ -915,6 +967,8 @@ h1, h2, h3, h4, p, li, a {
     display: inline-block;
     height: 100%;
     width: 100%; }
+  .gallery .mosaic--container:hoverShadow {
+    background: red !important; }
   .gallery .mosaic--container .mosaic--container__top {
     display: block;
     height: 600px;
@@ -1009,6 +1063,16 @@ h1, h2, h3, h4, p, li, a {
 .home .contactPanel {
   padding: 70px;
   text-align: center; }
+  .home .contactPanel .emailImg {
+    background: url("../img/mailIcon.png") no-repeat 100%;
+    height: 30px;
+    width: 40px;
+    margin-left: -20px;
+    left: 50%;
+    position: absolute;
+    margin-bottom: 30px; }
+  .home .contactPanel h2 {
+    margin-top: 60px; }
   .home .contactPanel .email {
     padding-top: 10px; }
   .home .contactPanel .number {
@@ -1064,13 +1128,13 @@ h1, h2, h3, h4, p, li, a {
 
 .info .floorPlanPanel {
   background-color: #8dc2d5;
-  height: 360px;
   width: 100%;
   text-align: center;
   display: table; }
   .info .floorPlanPanel img {
-    display: table-cell;
-    vertical-align: middle; }
+    display: inline-block;
+    vertical-align: middle;
+    padding: 70px 20px; }
 
 /**
  * @module:   localArea
@@ -1117,13 +1181,13 @@ h1, h2, h3, h4, p, li, a {
     font-weight: normal; }
   .localArea .nearestVillage--info .tab-pane {
     display: none;
-    padding: 0 120px;
     margin: 0 auto; }
     .localArea .nearestVillage--info .tab-pane.active {
       display: block; }
     .localArea .nearestVillage--info .tab-pane .content--main {
-      padding: 70px 0px;
-      width: 100%; }
+      padding: 70px 0;
+      width: 80%;
+      margin: 0 auto; }
       .localArea .nearestVillage--info .tab-pane .content--main .content--main__writing {
         display: inline-block;
         width: 70%;
@@ -1136,10 +1200,16 @@ h1, h2, h3, h4, p, li, a {
         height: 515px;
         width: 315px;
         display: inline-block; }
-    .localArea .nearestVillage--info .tab-pane .content--second .content--second__block {
-      display: inline-block;
-      width: 30%;
-      padding: 40px 20px; }
+    .localArea .nearestVillage--info .tab-pane .content--second {
+      width: 80%;
+      margin: 0 auto; }
+      .localArea .nearestVillage--info .tab-pane .content--second .content--second__block {
+        vertical-align: top;
+        display: inline-block;
+        width: 30%;
+        padding: 40px 20px; }
+        .localArea .nearestVillage--info .tab-pane .content--second .content--second__block p {
+          line-height: 25px; }
 
 /**
  * @module:   nav

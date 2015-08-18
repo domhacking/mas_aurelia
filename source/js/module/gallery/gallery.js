@@ -14,9 +14,10 @@ module.exports = Module.extend({
 
 });
 
-
-// $(".mosaic--element").hover(function(){
-// 	$(this).addClass("hoverShadow");
-// }, function(){
-// 	$(this).removeClass("hoverShadow");
-// });
+// window.onload(function(){
+// 	$("li").hover(function(){
+// 		$(this).addClass("hoverShadow");
+// 	}, function(){
+// 		$(this).removeClass("hoverShadow");
+// 	});
+// })

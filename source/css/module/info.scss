@@ -18,14 +18,15 @@
 
 	.floorPlanPanel{
 		background-color: $mainBlue;
-		height: 360px;
+
 		width: 100%;
 		text-align: center;
 		display: table;
 
 		img{
-			display: table-cell;
+			display: inline-block;
 			vertical-align: middle;
+			padding: 70px 20px;
 		}
 	}
 }

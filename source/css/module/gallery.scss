@@ -21,6 +21,10 @@
 			width:  100%;
 		}
 
+		&:hoverShadow{
+			background: red !important;
+		}
+
 		.mosaic--container__top{
 			display: block;
 			height: 600px;
