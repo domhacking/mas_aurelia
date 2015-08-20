@@ -89,8 +89,12 @@ p {
     font-size: 15px; } }
 
 @media screen and (max-width: 767px) {
+  h2 {
+    font-size: 20px; }
   li {
-    font-size: 15px; } }
+    font-size: 15px; }
+  p {
+    font-size: 12px; } }
 
 /**
  * _settings.default.scss
@@ -908,6 +912,29 @@ h1, h2, h3, h4, p, li, a {
     width: 49%;
     float: right; }
 
+@media screen and (max-width: 767px) {
+  .intro--container {
+    padding-top: 50px;
+    padding-bottom: 40px; }
+  .intro--container__content {
+    padding-top: 20px;
+    margin-top: 20px; }
+  .imageContainer {
+    height: 400px; }
+    .imageContainer .leftImage {
+      display: block;
+      float: none;
+      width: 100%;
+      height: 200px;
+      margin-bottom: 10px; }
+    .imageContainer .rightImage {
+      display: block;
+      float: none;
+      width: 100%;
+      height: 200px; }
+  .stopthejump {
+    height: 0px; } }
+
 /*auto-generated*/
 /**
  * @module:   contact
@@ -1044,6 +1071,30 @@ h1, h2, h3, h4, p, li, a {
       background-size: cover;
       width: 49%; }
 
+@media screen and (max-width: 767px) {
+  .gallery .mosaic--container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0; }
+    .gallery .mosaic--container .mosaic--container__top, .gallery .mosaic--container .mosaic--container__middle {
+      height: auto;
+      margin: 0;
+      padding: 0; }
+      .gallery .mosaic--container .mosaic--container__top .mosaic--block, .gallery .mosaic--container .mosaic--container__middle .mosaic--block {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0; }
+    .gallery .mosaic--container .mobileView {
+      width: 90% !important;
+      margin: 0 auto;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      height: 200px !important;
+      display: block !important;
+      float: none !important; } }
+
 /**
  * @module:   home
  * @js:       ./source/js/module/home/home.js
@@ -1066,7 +1117,8 @@ h1, h2, h3, h4, p, li, a {
     .home .quotePanel .quotePanel--content p {
       color: #f3f3f2;
       text-align: center;
-      font-size: 30px; }
+      font-size: 30px;
+      line-height: 30px; }
 
 .home .contactPanel {
   padding: 70px;
@@ -1280,7 +1332,9 @@ h1, h2, h3, h4, p, li, a {
           margin: 0px;
           padding: 15px 10px;
           text-align: left;
-          border-bottom: solid 1px #e1e1e1; } }
+          border-bottom: solid 1px #e1e1e1; }
+      .nav.fixed {
+        height: auto; } }
 
 /*------------------------------------*    #SPACING
 \*------------------------------------*/

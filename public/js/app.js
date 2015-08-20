@@ -26825,7 +26825,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":9,"./contact.html":10}],12:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Gallery"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}," ",{"t":7,"e":"div","a":{"class":"mosaic--container"},"f":[{"t":7,"e":"div","a":{"class":"mosaic--container__top"},"f":[{"t":7,"e":"div","a":{"class":"mosaic--element mosaic--top__left"}}," ",{"t":7,"e":"div","a":{"class":"mosaic--block"},"f":[{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--top__topMiddle"}}," ",{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--top__topRight"}}," ",{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--top__bottomRight"}}]}]}," ",{"t":7,"e":"div","a":{"class":"mosaic--container__middle"},"f":[{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--middle__left"}}," ",{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--middle__middle"}}," ",{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--middle__right"}}]}," ",{"t":7,"e":"div","a":{"class":"mosaic--container__bottom"},"f":[{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--bottom__left"}}," ",{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--bottom__right"}}]}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Gallery"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}," ",{"t":7,"e":"div","a":{"class":"mosaic--container"},"f":[{"t":7,"e":"div","a":{"class":"mosaic--container__top"},"f":[{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--top__left mobileView"}}," ",{"t":7,"e":"div","a":{"class":"mosaic--block"},"f":[{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--top__topMiddle mobileView"}}," ",{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--top__topRight mobileView"}}," ",{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--top__bottomRight mobileView"}}]}]}," ",{"t":7,"e":"div","a":{"class":"mosaic--container__middle"},"f":[{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--middle__left mobileView"}}," ",{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--middle__middle mobileView"}}," ",{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--middle__right mobileView"}}]}," ",{"t":7,"e":"div","a":{"class":"mosaic--container__bottom"},"f":[{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--bottom__left mobileView"}}," ",{"t":7,"e":"li","a":{"class":"mosaic--element mosaic--bottom__right mobileView"}}]}]}]}]}
 },{}],13:[function(require,module,exports){
 /**
  * @module:   gallery
@@ -26952,7 +26952,7 @@ module.exports = Module.extend({
 
 
 },{"../abstract-module":9,"./localArea.html":21}],23:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"burger"},"f":[{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}]}," ",{"t":7,"e":"div","a":{"class":"navbar--container","id":"nav-tab"},"f":[{"t":7,"e":"li","a":{"class":"active"},"v":{"click":"goToHome"},"f":["HOME"]}," ",{"t":7,"e":"li","v":{"click":"goToGallery"},"f":["GALLERY"]}," ",{"t":7,"e":"li","v":{"click":"goToInfo"},"f":["INFO"]}," ",{"t":7,"e":"li","v":{"click":"goToLocalArea"},"f":["LOCAL AREA"]}," ",{"t":7,"e":"li","v":{"click":"goToContact"},"f":["CONTACT"]}]}]}," ",{"t":7,"e":"div","a":{"class":"stopthejump"}}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"burger","id":"burgerId"},"f":[{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}]}," ",{"t":7,"e":"div","a":{"class":"navbar--container","id":"nav-tab"},"f":[{"t":7,"e":"li","a":{"class":"active"},"v":{"click":"goToHome"},"f":["HOME"]}," ",{"t":7,"e":"li","v":{"click":"goToGallery"},"f":["GALLERY"]}," ",{"t":7,"e":"li","v":{"click":"goToInfo"},"f":["INFO"]}," ",{"t":7,"e":"li","v":{"click":"goToLocalArea"},"f":["LOCAL AREA"]}," ",{"t":7,"e":"li","v":{"click":"goToContact"},"f":["CONTACT"]}]}]}," ",{"t":7,"e":"div","a":{"class":"stopthejump"}}]}
 },{}],24:[function(require,module,exports){
 /**
  * @module:   nav
@@ -26978,6 +26978,10 @@ module.exports = Module.extend({
     },
 
 
+
+
+
+
     onGoHome: function(){
         page('/');
     },
@@ -27001,24 +27005,25 @@ module.exports = Module.extend({
 });
 
 
-document.addEventListener('DOMContentLoaded', function(){
-    function onActiveTab(event){
-        var actives = document.querySelectorAll('.active');
 
-        // deactivate existing active tab and panel
-        for (var i=0; i < actives.length; i++){
-          actives[i].className = actives[i].className.replace('active', '');
-        }
+// document.addEventListener('DOMContentLoaded', function(){
+//     function onActiveTab(event){
+//         var actives = document.querySelectorAll('.active');
 
-        // activate new tab and panel
-        event.target.parentElement.className += ' active';
-        // document.getElementById(event.target.href.split('#')[1]).className += ' active';
-    }
+//         // deactivate existing active tab and panel
+//         for (var i=0; i < actives.length; i++){
+//           actives[i].className = actives[i].className.replace('active', '');
+//         }
 
-    var el = document.getElementById('nav-tab');
+//         // activate new tab and panel
+//         event.target.parentElement.className += ' active';
+//         // document.getElementById(event.target.href.split('#')[1]).className += ' active';
+//     }
 
-    el.addEventListener('click', onActiveTab, false);
-});
+//     var el = document.getElementById('nav-tab');
+
+//     el.addEventListener('click', onActiveTab, false);
+// });
 
 
 },{"../abstract-module":9,"./nav.html":23,"jquery":4,"page":5}],25:[function(require,module,exports){

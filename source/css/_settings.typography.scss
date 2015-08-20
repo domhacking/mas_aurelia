@@ -88,8 +88,17 @@ p{
 
 
 @media #{$viewport-mobile} {
+	h2{
+		font-size: 20px;
+	}
+
+
 	li{
 		font-size: 15px;
+	}
+
+	p{
+		font-size:12px;
 	}
 }
 

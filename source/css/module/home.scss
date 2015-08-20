@@ -31,6 +31,7 @@
 				color: $color-background;
 				text-align: center;
 				font-size: 30px;
+				line-height: 30px;
 			}
 		}
 	}
@@ -62,4 +63,18 @@
 			padding-top:10px;
 		}
 	}
+
+
+	@media #{$viewport-mobile} {
+
+	}
 }
+
+
+
+
+
+
+
+
+
