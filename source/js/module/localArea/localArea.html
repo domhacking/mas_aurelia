@@ -22,65 +22,67 @@
 		<h2>Nearest Villages</h2>
 
 		<ul id="nav-tab">
-			<li class="active"><a href="#aix">Aix en Provence</a></li>
-			<li><a href="#avignon">Avignon</a></li>
-			<li><a href="#arles">Arles</a></li>
-			<li><a href="#lesBaux">Les Baux de Provence</a></li>
-			<li><a href="#marsielles">Marsielles</a></li>
-			<li><a href="#StRem">Saint Rémy de Provence</a></li>
+			<li class="{{#if area == 'aix'}}active{{/if}}" on-click="localTown:aix">Aix en Provence</li>
+			<li class="{{#if area == 'avignon'}}active{{/if}}" on-click="localTown:avignon">Avignon</li>
+			<li class="{{#if area == 'arles'}}active{{/if}}" on-click="localTown:arles">Arles</li>
+			<li class="{{#if area == 'lesBaux'}}active{{/if}}" on-click="localTown:lesBaux">Les Baux de Provence</li>
+			<li class="{{#if area == 'marseille'}}active{{/if}}" on-click="localTown:marseille">marseille</li>
+			<li class="{{#if area == 'StRem'}}active{{/if}}" on-click="localTown:StRem">Saint Rémy de Provence</li>
 		</ul>
 
 	</div>
 
 	<div class="nearestVillage--info">
-        <div class="tab-pane active" id="aix">
-        	<div class="content--main">
-        		<div class="content--main__writing">
-					<h3>AIX EN PROVENCE</h3>
+		{{#area == "aix"}}
+	        <div class="tab-pane" id="aix">
+	        	<div class="content--main">
+	        		<div class="content--main__writing">
+						<h3>AIX EN PROVENCE</h3>
 
-					<p>Protected by the Montagne St Victoire, Aix is surrounded by a countryside full of authentic Provencal houses and traditional French style gardens. Aix was the capital of Provence in the 15th century. Wealthy merchants and local dignitaries helped turn this city into the Florence of Provence as we know it today.</p>
+						<p>Protected by the Montagne St Victoire, Aix is surrounded by a countryside full of authentic Provencal houses and traditional French style gardens. Aix was the capital of Provence in the 15th century. Wealthy merchants and local dignitaries helped turn this city into the Florence of Provence as we know it today.</p>
 
-					<p>n Aix, one can find all the beauty of 17th and 18th century Provence - handsome houses, private mansions, city squares bursting with flowers, ancient fountains and narrow shaded streets. Aix was inspiration to many of the world's greatest writers and painters : Guigou, Stendhal, Mistral, Zola, and Cézanne. There is even a special Cézanne tour which one can follow through the streets of Aix.</p>
+						<p>n Aix, one can find all the beauty of 17th and 18th century Provence - handsome houses, private mansions, city squares bursting with flowers, ancient fountains and narrow shaded streets. Aix was inspiration to many of the world's greatest writers and painters : Guigou, Stendhal, Mistral, Zola, and Cézanne. There is even a special Cézanne tour which one can follow through the streets of Aix.</p>
 
-					<p>As a city of art and culture, Aix possesses a wealth of superb architecture that has been carefully preserved and restored. Walking through the Cours Mirabeau and the Rue Gaston de Saporta one can admire the private mansions with their sculptured doors and windows and the intricate iron work on the balconies.</p>
+						<p>As a city of art and culture, Aix possesses a wealth of superb architecture that has been carefully preserved and restored. Walking through the Cours Mirabeau and the Rue Gaston de Saporta one can admire the private mansions with their sculptured doors and windows and the intricate iron work on the balconies.</p>
 
-					<p>Each summer the International Festival of Lyric Arts and Music takes place, uniting acclaimed prima donnas and maestros in a fabulous selection of singing and music. The Dance Festival is also world reputed.</p>
+						<p>Each summer the International Festival of Lyric Arts and Music takes place, uniting acclaimed prima donnas and maestros in a fabulous selection of singing and music. The Dance Festival is also world reputed.</p>
+					</div>
+
+					<div class="content--main__img"></div>
 				</div>
 
-				<div class="content--main__img"></div>
+				<div class="whiteStripe"></div>
+
+				<div class="content--second">
+					<div class="content--second__block">
+						<h3>HISTORIC SITES</h3>
+
+						<p>Cathedral St. Sauveur</p>
+						<p>The Hôtel de Ville</p>
+						<p>The Tour de l'Horloge</p>
+						<p>The quartier Mazarin</p>
+					</div>
+
+					<div class="content--second__block">
+						<h3>MUSEUMS</h3>
+
+						<p>The Musée Granet</p>
+						<p>The Atelier Cézanne </p>
+						<p>Museum of old Aix</p>
+						<p>The Pavillon Vendome</p>
+					</div>
+
+					<div class="content--second__block">
+						<h3>ACTIVITIES</h3>
+
+						<p>Swimming pool, horseback riding, golf, tennis, hiking, night clubs, museums, theater, shopping</p>
+
+					</div>
+				</div>
 			</div>
-
-			<div class="whiteStripe"></div>
-
-			<div class="content--second">
-				<div class="content--second__block">
-					<h3>HISTORIC SITES</h3>
-
-					<p>Cathedral St. Sauveur</p>
-					<p>The Hôtel de Ville</p>
-					<p>The Tour de l'Horloge</p>
-					<p>The quartier Mazarin</p>
-				</div>
-
-				<div class="content--second__block">
-					<h3>MUSEUMS</h3>
-
-					<p>The Musée Granet</p>
-					<p>The Atelier Cézanne </p>
-					<p>Museum of old Aix</p>
-					<p>The Pavillon Vendome</p>
-				</div>
-
-				<div class="content--second__block">
-					<h3>ACTIVITIES</h3>
-
-					<p>Swimming pool, horseback riding, golf, tennis, hiking, night clubs, museums, theater, shopping</p>
-
-				</div>
-			</div>
-
-		</div>
-
+		{{/}}
+		
+		{{#area == "avignon"}}
 		<div class="tab-pane" id="avignon">
 			<div class="content--main">
 				<div class="content--main__writing">
@@ -123,7 +125,9 @@
 			</div>
 
 		</div>
-
+		{{/}}
+		
+		{{#area == "arles"}}
 		<div class="tab-pane" id="arles">
 			<div class="content--main">
 				<div class="content--main__writing">
@@ -168,7 +172,9 @@
 			</div>
 
 		</div>
-
+		{{/}}
+		
+		{{#area == "lesBaux"}}
 		<div class="tab-pane" id="lesBaux">
 			<div class="content--main">
 				<div class="content--main__writing">
@@ -213,11 +219,13 @@
 			</div>
 
 		</div>
+		{{/}}
 
-		<div class="tab-pane" id="marsielles">
+		{{#area == "marseille"}}
+		<div class="tab-pane" id="marseille">
 			<div class="content--main">
 				<div class="content--main__writing">
-					<h3>MARSEILLES</h3>
+					<h3>Marseille</h3>
 
 					<p>Although part of the region of Provence, Marseilles has a soul of its own. Founded in 600BC by the Greek sailors of Phocaea, this great city is the oldest in France and surely the most complex. Second largest city in France and the largest commercial port, Marseilles was the gateway to the Mediterranean in the time of the French colonies. Today Marseilles remains a capital of southern Europe, cosmopolitan and exuberant, with its picturesque old port, its Bouillabaisse and its folklore.</p>
 
@@ -257,7 +265,10 @@
 				</div>
 			</div>
 		</div>
+		{{/}}
 
+
+		{{#area == "StRem"}}
 		<div class="tab-pane" id="StRem">
 			<div class="content--main">
 				<div class="content--main__writing">
@@ -301,6 +312,7 @@
 				</div>
 			</div>
 		</div>
+		{{/}}
 	</div>
 
 </div>

@@ -9,26 +9,24 @@ var Module = require('../abstract-module');
 
 module.exports = Module.extend({
 
-  template: require('./localArea.html')
+  template: require('./localArea.html'),
 
-});
+    data: function(){
+        return {area:"aix"}
+    },
 
+    oninit: function() {
+        console.log("test")
+        this.on("localTown", this.onTabClick)
+    },
 
-document.addEventListener('DOMContentLoaded', function(){
-	function onTabClick(event){
-        var actives = document.querySelectorAll('.active');
+    onrender: function() {
 
-        // deactivate existing active tab and panel
-        for (var i=0; i < actives.length; i++){
-          actives[i].className = actives[i].className.replace('active', '');
-        }
+    },
 
-        // activate new tab and panel
-        event.target.parentElement.className += ' active';
-        document.getElementById(event.target.href.split('#')[1]).className += ' active';
+    onTabClick: function(event, area){
+        this.set("area", area)
     }
-
-    var el = document.getElementById('nav-tab');
-
-    el.addEventListener('click', onTabClick, false);
 });
+
+

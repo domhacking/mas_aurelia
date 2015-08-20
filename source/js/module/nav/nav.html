@@ -5,8 +5,13 @@
 -->
 
 	<div class="nav">
-		<div class="navbar--container">
-			<li on-click="goToHome">HOME</li>
+		<div class="burger">
+			<div class="burger--bar"></div>
+			<div class="burger--bar"></div>
+			<div class="burger--bar"></div>
+		</div>
+		<div class="navbar--container" id="nav-tab">
+			<li class="active" on-click="goToHome">HOME</li>
 			<li on-click="goToGallery">GALLERY</li>
 			<li on-click="goToInfo">INFO</li>
 			<li on-click="goToLocalArea">LOCAL AREA</li>

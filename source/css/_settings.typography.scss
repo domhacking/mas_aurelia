@@ -80,5 +80,30 @@ p{
 	line-height: 20px;
 }
 
+@media #{$viewport-tablet} {
+	li{
+		font-size:15px;
+	}
+}
+
+
+@media #{$viewport-mobile} {
+	li{
+		font-size: 15px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

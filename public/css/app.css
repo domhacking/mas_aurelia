@@ -84,6 +84,14 @@ p {
   font-family: "JosefinSans-SemiBold";
   line-height: 20px; }
 
+@media screen and (min-width: 768px) and (max-device-width: 1120px) {
+  li {
+    font-size: 15px; } }
+
+@media screen and (max-width: 767px) {
+  li {
+    font-size: 15px; } }
+
 /**
  * _settings.default.scss
  *
@@ -1180,10 +1188,8 @@ h1, h2, h3, h4, p, li, a {
     padding-bottom: 30px;
     font-weight: normal; }
   .localArea .nearestVillage--info .tab-pane {
-    display: none;
+    display: block;
     margin: 0 auto; }
-    .localArea .nearestVillage--info .tab-pane.active {
-      display: block; }
     .localArea .nearestVillage--info .tab-pane .content--main {
       padding: 70px 0;
       width: 80%;
@@ -1222,22 +1228,59 @@ h1, h2, h3, h4, p, li, a {
   z-index: 2;
   height: 100px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4); }
+  .nav .burger {
+    display: none; }
   .nav .navbar--container {
-    width: 85%;
-    margin: 0 auto;
     text-align: center; }
     .nav .navbar--container li {
       display: inline-block;
-      width: 17%;
+      width: 10%;
       text-align: center;
       text-decoration: none;
-      padding: 40px 20px;
-      min-width: 200px; }
+      padding: 45px 0px 25px;
+      margin: 0 20px;
+      min-width: 180px;
+      border-bottom: 10px solid #e1e1e1;
+      border-bottom: 10px solid #8dc2d5; }
   .nav.fixed {
     position: fixed;
     top: 0;
     height: 100px;
     z-index: 1; }
+  @media screen and (min-width: 768px) and (max-device-width: 1120px) {
+    .nav .navbar--container li {
+      font-size: 15px;
+      min-width: 100px; } }
+  @media screen and (max-width: 767px) {
+    .nav {
+      background-color: #8dc2d5;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      height: auto; }
+      .nav .burger {
+        display: block;
+        position: fixed;
+        left: 10px;
+        top: 10px; }
+        .nav .burger .burger--bar {
+          background-color: #e1e1e1;
+          margin: 3px 0;
+          height: 4px;
+          width: 25px; }
+      .nav .navbar--container {
+        text-align: left;
+        width: 90%;
+        margin: 0 auto;
+        margin-left: 35px; }
+        .nav .navbar--container li {
+          color: #e1e1e1;
+          min-width: auto;
+          width: 100%;
+          margin: 0px;
+          padding: 15px 10px;
+          text-align: left;
+          border-bottom: solid 1px #e1e1e1; } }
 
 /*------------------------------------*    #SPACING
 \*------------------------------------*/

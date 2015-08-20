@@ -63,13 +63,8 @@
 
 
 	  	.tab-pane {
-	  		display: none;
+  			display: block;
 	  		margin: 0 auto;
-
-	  		&.active {
-	  			display: block;
-	  		}
-
 
 	  		.content--main{
 				padding: 70px 0;
