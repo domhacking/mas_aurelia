@@ -19,18 +19,14 @@ module.exports = Module.extend({
   		this.on('goToInfo', this.onGoInfo);
   		this.on('goToLocalArea', this.onGoLocalArea);
   		this.on('goToContact', this.onGoContact);
+        this.on('burger', this.onBurgerClick);
     },
-
-
-
-
-
 
     onGoHome: function(){
         page('/');
     },
 
-	 onGoGallery: function(){
+	onGoGallery: function(){
         page('/gallery');
     },
 
@@ -44,11 +40,23 @@ module.exports = Module.extend({
 
 	 onGoContact: function(){
         page('/contact');
-    }
+    },
 
+
+    onBurgerClick: function(){
+        console.log('test');
+        var bugerDisplay = document.create('select');
+        bugerDisplay.style.display = none;
+    }
 });
 
 
+
+// function burgerClick(){
+//   console.log('test');
+// };
+
+// var burger = document.getElementById('burgerId').addEventListener('click', burgerClick);
 
 // document.addEventListener('DOMContentLoaded', function(){
 //     function onActiveTab(event){

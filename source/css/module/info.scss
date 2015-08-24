@@ -5,7 +5,7 @@
  */
 
 
-@include module("info") { 
+@include module("info") {
   	.imageContainer{
 		.leftImage{
 			background-image: url('../img/left-info-img.jpg');
@@ -27,6 +27,19 @@
 			display: inline-block;
 			vertical-align: middle;
 			padding: 70px 20px;
+		}
+	}
+
+	.accomodation{
+		background-color: $mainGrey;
+		width: 100%;
+	}
+
+	@media #{$viewport-mobile}{
+		.floorPlanPanel{
+			img{
+				padding: 40px 20px;
+			}
 		}
 	}
 }

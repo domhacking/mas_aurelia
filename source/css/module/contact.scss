@@ -11,6 +11,12 @@
   		padding: 100px 0;
 	  	// text-align: center;
 
+	  	// h2{
+	  	// 	border-bottom: 4px solid $mainBlue;
+	  	// 	display: block;
+			 
+	  	// }
+
 	  	.contactPanel--container{
 			width: 80%;
 			margin: 0 auto;
@@ -56,13 +62,24 @@
 					font-family: $content-font;
 					font-style: italic;
 
+					label{
+						position: absolute;
+						top: 2px;
+
+					}
+
 					&.message{
 						height: 150px;
+						// vertical-align: top;
+						// position: absolute;
+						// top: 5px;
 					}
 
 					&.submit{
 						width: 50%;
-						padding: 22px 0 32px;
+						padding-top: 25px;
+						padding-bottom: 22px;
+						text-align: center;
 						font-family: $header-font;
 						font-style: normal;
 						background-color: $mainBlue;
@@ -74,5 +91,42 @@
 	  			// padding-left:20px;
 	  		}
 	  	}
+  	}
+
+  	@media #{$viewport-mobile} {
+
+  		.contactPanel{
+  			.contactPanel--container{
+  					padding-top: 50px;
+
+				.contactPanel--container__left{
+  					padding-left: 0;
+					display: block;
+					width: 100%;
+
+					h3{
+						text-align: center;
+						padding-bottom: 25px;
+					}
+				}
+
+				.contactPanel--container__right{
+					padding-left: 0;
+					padding-top: 50px;
+					display: block;
+					width: 100%;
+					text-align: center;
+
+					h3{
+						text-align: center;
+						padding-bottom: 25px;
+					}
+
+					input{
+						padding: 22px 10px 20px;
+					}
+				}
+  			}
+  		}
   	}
 }

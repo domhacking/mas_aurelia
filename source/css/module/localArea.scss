@@ -57,7 +57,7 @@
 
 		h3{
 			font-size: 20px;
-			padding-bottom:30px;
+			padding-bottom: 30px;
 			font-weight: normal;
 		}
 
@@ -109,5 +109,59 @@
 	  			}
 	  		}
 	  	}
+	}
+
+	@media #{$viewport-mobile} {
+		.nearestVillage--panel{
+			h2{
+				margin-bottom: 25px;
+			}
+
+			ul{
+				padding: 0 10px;
+				text-align: center;
+
+				li{
+					width: 80%;
+					padding: 15px;
+					margin: 5px;
+				}
+			}
+		}
+
+		.nearestVillage--info{
+
+			h3{
+				padding-bottom: 15px;
+			}
+
+			.tab-pane{
+				.content--main{
+					width: 90%;
+
+					.content--main__writing{
+						width: 100%;
+						padding-right: 0px;
+						text-align: justify;
+					}
+
+					.content--main__img{
+						display: block;
+						margin: 0 auto;
+					}
+
+				}
+
+				.content--second{
+	  				width: 90%;
+	  				margin: 0 auto;
+
+		  			.content--second__block{
+		  				display: block;
+		  				width: 100%;
+		  			}
+		  		}
+			}
+		}
 	}
 }

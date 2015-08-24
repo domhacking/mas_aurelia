@@ -89,8 +89,10 @@ p {
     font-size: 15px; } }
 
 @media screen and (max-width: 767px) {
+  h1 {
+    font-size: 30px; }
   h2 {
-    font-size: 20px; }
+    font-size: 20px !important; }
   li {
     font-size: 15px; }
   p {
@@ -976,16 +978,43 @@ h1, h2, h3, h4, p, li, a {
         vertical-align: top;
         font-family: "JosefinSans-SemiBold";
         font-style: italic; }
+        .contact .contactPanel .contactPanel--container .contactPanel--container__right input label {
+          position: absolute;
+          top: 2px; }
         .contact .contactPanel .contactPanel--container .contactPanel--container__right input.message {
           height: 150px; }
         .contact .contactPanel .contactPanel--container .contactPanel--container__right input.submit {
           width: 50%;
-          padding: 22px 0 32px;
+          padding-top: 25px;
+          padding-bottom: 22px;
+          text-align: center;
           font-family: "JosefinSans-Bold";
           font-style: normal;
           background-color: #8dc2d5;
           text-transform: uppercase;
           border: none; }
+
+@media screen and (max-width: 767px) {
+  .contact .contactPanel .contactPanel--container {
+    padding-top: 50px; }
+    .contact .contactPanel .contactPanel--container .contactPanel--container__left {
+      padding-left: 0;
+      display: block;
+      width: 100%; }
+      .contact .contactPanel .contactPanel--container .contactPanel--container__left h3 {
+        text-align: center;
+        padding-bottom: 25px; }
+    .contact .contactPanel .contactPanel--container .contactPanel--container__right {
+      padding-left: 0;
+      padding-top: 50px;
+      display: block;
+      width: 100%;
+      text-align: center; }
+      .contact .contactPanel .contactPanel--container .contactPanel--container__right h3 {
+        text-align: center;
+        padding-bottom: 25px; }
+      .contact .contactPanel .contactPanel--container .contactPanel--container__right input {
+        padding: 22px 10px 20px; } }
 
 /**
  * @module:   gallery
@@ -1001,16 +1030,18 @@ h1, h2, h3, h4, p, li, a {
   .gallery .mosaic--container .mosaic--element {
     display: inline-block;
     height: 100%;
-    width: 100%; }
-  .gallery .mosaic--container:hoverShadow {
-    background: red !important; }
+    width: 100%;
+    background-color: black; }
+  .gallery .mosaic--container img {
+    width: 100%;
+    height: 100%; }
+    .gallery .mosaic--container img:hover {
+      opacity: 0.4; }
   .gallery .mosaic--container .mosaic--container__top {
     display: block;
     height: 600px;
     padding-bottom: 20px; }
     .gallery .mosaic--container .mosaic--container__top .mosaic--top__left {
-      background: url("../img/mosaic-img1.jpg") no-repeat;
-      background-size: cover;
       width: 32%;
       margin-right: 20px; }
     .gallery .mosaic--container .mosaic--container__top .mosaic--block {
@@ -1019,23 +1050,17 @@ h1, h2, h3, h4, p, li, a {
       vertical-align: top;
       width: 64%; }
       .gallery .mosaic--container .mosaic--container__top .mosaic--block .mosaic--top__topMiddle {
-        background: url("../img/mosaic-img2.jpg") no-repeat;
-        background-size: cover;
         display: inline-block;
         height: 45%;
         width: 48%;
         margin-bottom: 20px;
         margin-right: 20px; }
       .gallery .mosaic--container .mosaic--container__top .mosaic--block .mosaic--top__topRight {
-        background: url("../img/mosaic-img3.jpg") no-repeat;
-        background-size: cover;
         height: 45%;
         display: inline-block;
         width: 49%;
         margin-bottom: 20px; }
       .gallery .mosaic--container .mosaic--container__top .mosaic--block .mosaic--top__bottomRight {
-        background: url("../img/mosaic-img4.jpg") no-repeat;
-        background-size: cover;
         display: block;
         height: 50%;
         width: 100%;
@@ -1045,30 +1070,20 @@ h1, h2, h3, h4, p, li, a {
     display: block;
     margin-bottom: 20px; }
     .gallery .mosaic--container .mosaic--container__middle .mosaic--middle__left {
-      background: url("../img/mosaic-img5.jpg") no-repeat;
-      background-size: cover;
       width: 32%;
       margin-right: 20px; }
     .gallery .mosaic--container .mosaic--container__middle .mosaic--middle__middle {
-      background: url("../img/mosaic-img6.jpg") no-repeat;
-      background-size: cover;
       width: 32%;
       margin-right: 20px; }
     .gallery .mosaic--container .mosaic--container__middle .mosaic--middle__right {
-      background: url("../img/mosaic-img7.jpg") no-repeat;
-      background-size: cover;
       width: 32%; }
   .gallery .mosaic--container .mosaic--container__bottom {
     height: 320px;
     display: block; }
     .gallery .mosaic--container .mosaic--container__bottom .mosaic--bottom__left {
-      background: url("../img/mosaic-img8.jpg") no-repeat;
-      background-size: cover;
       width: 49%;
       margin-right: 20px; }
     .gallery .mosaic--container .mosaic--container__bottom .mosaic--bottom__right {
-      background: url("../img/mosaic-img9.jpg") no-repeat;
-      background-size: cover;
       width: 49%; }
 
 @media screen and (max-width: 767px) {
@@ -1138,6 +1153,11 @@ h1, h2, h3, h4, p, li, a {
   .home .contactPanel .number {
     padding-top: 10px; }
 
+@media screen and (max-width: 767px) {
+  .home .quotePanel .quotePanel--content p {
+    padding-left: 10px;
+    padding-right: 10px; } }
+
 /**
  * @module:   homescreen
  * @js:       ./source/js/module/homescreen/homescreen.js
@@ -1195,6 +1215,14 @@ h1, h2, h3, h4, p, li, a {
     display: inline-block;
     vertical-align: middle;
     padding: 70px 20px; }
+
+.info .accomodation {
+  background-color: #e1e1e1;
+  width: 100%; }
+
+@media screen and (max-width: 767px) {
+  .info .floorPlanPanel img {
+    padding: 40px 20px; } }
 
 /**
  * @module:   localArea
@@ -1269,6 +1297,34 @@ h1, h2, h3, h4, p, li, a {
         .localArea .nearestVillage--info .tab-pane .content--second .content--second__block p {
           line-height: 25px; }
 
+@media screen and (max-width: 767px) {
+  .localArea .nearestVillage--panel h2 {
+    margin-bottom: 25px; }
+  .localArea .nearestVillage--panel ul {
+    padding: 0 10px;
+    text-align: center; }
+    .localArea .nearestVillage--panel ul li {
+      width: 80%;
+      padding: 15px;
+      margin: 5px; }
+  .localArea .nearestVillage--info h3 {
+    padding-bottom: 15px; }
+  .localArea .nearestVillage--info .tab-pane .content--main {
+    width: 90%; }
+    .localArea .nearestVillage--info .tab-pane .content--main .content--main__writing {
+      width: 100%;
+      padding-right: 0px;
+      text-align: justify; }
+    .localArea .nearestVillage--info .tab-pane .content--main .content--main__img {
+      display: block;
+      margin: 0 auto; }
+  .localArea .nearestVillage--info .tab-pane .content--second {
+    width: 90%;
+    margin: 0 auto; }
+    .localArea .nearestVillage--info .tab-pane .content--second .content--second__block {
+      display: block;
+      width: 100%; } }
+
 /**
  * @module:   nav
  * @js:       ./source/js/module/nav/nav.js
@@ -1309,7 +1365,8 @@ h1, h2, h3, h4, p, li, a {
       position: fixed;
       top: 0px;
       left: 0px;
-      height: auto; }
+      height: auto;
+      display: none; }
       .nav .burger {
         display: block;
         position: fixed;
