@@ -30,6 +30,10 @@
 			border-bottom: 10px solid $mainGrey;
 			border-bottom: 10px solid $mainBlue;
 
+			a{
+				text-decoration: none;
+			}
+
 			&.active{
 			}
 		}
@@ -62,11 +66,16 @@
 		height: auto;
 		display: none;
 
+		&.activeBurger{
+			display: block;
+		}
+
 		.burger{
 			display: block;
 			position: fixed;
 			left: 10px;
 			top: 10px;
+
 
 			.burger--bar{
 				background-color: $mainGrey;

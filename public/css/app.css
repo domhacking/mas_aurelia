@@ -78,6 +78,14 @@ li {
   list-style-type: none;
   text-transform: uppercase; }
 
+a {
+  color: #2d2d2d;
+  font-size: 20px;
+  font-family: "JosefinSans-Bold";
+  line-height: 20px;
+  list-style-type: none;
+  text-transform: uppercase; }
+
 p {
   color: #2d2d2d;
   font-size: 20px;
@@ -967,7 +975,7 @@ h1, h2, h3, h4, p, li, a {
       padding-left: 20px; }
       .contact .contactPanel .contactPanel--container .contactPanel--container__right h3 {
         text-align: left; }
-      .contact .contactPanel .contactPanel--container .contactPanel--container__right input {
+      .contact .contactPanel .contactPanel--container .contactPanel--container__right input, .contact .contactPanel .contactPanel--container .contactPanel--container__right textarea {
         display: block;
         height: 40px;
         width: 100%;
@@ -977,13 +985,15 @@ h1, h2, h3, h4, p, li, a {
         padding-top: 5px;
         vertical-align: top;
         font-family: "JosefinSans-SemiBold";
-        font-style: italic; }
-        .contact .contactPanel .contactPanel--container .contactPanel--container__right input label {
+        font-style: italic;
+        resize: none; }
+        .contact .contactPanel .contactPanel--container .contactPanel--container__right input label, .contact .contactPanel .contactPanel--container .contactPanel--container__right textarea label {
           position: absolute;
           top: 2px; }
-        .contact .contactPanel .contactPanel--container .contactPanel--container__right input.message {
-          height: 150px; }
-        .contact .contactPanel .contactPanel--container .contactPanel--container__right input.submit {
+        .contact .contactPanel .contactPanel--container .contactPanel--container__right input.message, .contact .contactPanel .contactPanel--container .contactPanel--container__right textarea.message {
+          height: 150px;
+          border: #e1e1e1; }
+        .contact .contactPanel .contactPanel--container .contactPanel--container__right input.submit, .contact .contactPanel .contactPanel--container .contactPanel--container__right textarea.submit {
           width: 50%;
           padding-top: 25px;
           padding-bottom: 22px;
@@ -1028,8 +1038,8 @@ h1, h2, h3, h4, p, li, a {
   background-color: black;
   background-image: url("../img/magnifyingGlass.png");
   background-repeat: no-repeat;
-  background-size: 58px 49px;
-  background-position: center center;
+  background-size: 35px 27px;
+  background-position: 47% center;
   display: inline-block; }
   .gallery .photos li .mosiac--element img {
     height: 100%;
@@ -1303,6 +1313,8 @@ h1, h2, h3, h4, p, li, a {
       min-width: 180px;
       border-bottom: 10px solid #e1e1e1;
       border-bottom: 10px solid #8dc2d5; }
+      .nav .navbar--container li a {
+        text-decoration: none; }
   .nav.fixed {
     position: fixed;
     top: 0;
@@ -1320,6 +1332,8 @@ h1, h2, h3, h4, p, li, a {
       left: 0px;
       height: auto;
       display: none; }
+      .nav.activeBurger {
+        display: block; }
       .nav .burger {
         display: block;
         position: fixed;

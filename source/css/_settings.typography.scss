@@ -72,6 +72,15 @@ li{
 	text-transform: uppercase;
 }
 
+a{
+	color: $font-color;
+	font-size: 20px;
+	font-family: $header-font;
+	line-height: 20px;
+	list-style-type: none;
+	text-transform: uppercase;
+}
+
 
 p{
 	color: $font-color;
