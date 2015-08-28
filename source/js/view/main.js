@@ -24,6 +24,7 @@ module.exports = function() {
         },
 
         onrender: function() {
+
         },
 
         setRouter: function(){
@@ -56,9 +57,7 @@ module.exports = function() {
                 hashbang: false,
             });
         }
-
     });
-
 };
 
 

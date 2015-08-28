@@ -1,5 +1,6 @@
-var domready = require('domready');
-
+var domready  = require('domready');
+var loadMaps  = require('./util/loadMaps');
+var config    = require('./config');
 
 var app = {
 
@@ -7,7 +8,7 @@ var app = {
    * Setup and configs
    */
   init: function() {
-
+    loadMaps(config.api, app.render);
   },
 
 
@@ -20,8 +21,5 @@ var app = {
 
 
 domready(function() {
-
   app.init();
-  app.render();
-
 });
