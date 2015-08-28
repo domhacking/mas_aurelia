@@ -50,7 +50,7 @@
 	  				text-align: left;
 	  			}
 
-				input{
+				input, textarea{
 					display: block;
 					height: 40px;
 					width: 100%;
@@ -61,6 +61,7 @@
 					vertical-align: top;
 					font-family: $content-font;
 					font-style: italic;
+					resize: none;
 
 					label{
 						position: absolute;
@@ -70,6 +71,7 @@
 
 					&.message{
 						height: 150px;
+						border: $mainGrey;
 						// vertical-align: top;
 						// position: absolute;
 						// top: 5px;

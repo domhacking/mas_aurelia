@@ -4,7 +4,7 @@
   @js:       ./source/js/module/contact/contact.js
 -->
 
-<div class="contact">
+<div class="contact" id="contact">
   	<div class="intro--container">
 		<h2>Contact</h2>
 		<p class="intro--container__content">
@@ -17,10 +17,12 @@
 		<div class="contactPanel--container">
 			<div class="contactPanel--container__right">
 				<h3>General Enquiry</h3>
-				<input type="text" value="Name">
-				<input type="text" value="E-mail address">
-				<input type="text" class="message" value="Your Message">
-				<input type="text" class="submit" value="Send Message">
+				<form action="MAILTO:dominichacking@gmail.com" method="post" enctype="text/plain">
+					<input type="text" value="Name">
+					<input type="text" value="E-mail address">
+					<textarea type="text" class="message" value="Your Message"></textarea>
+					<input type="submit" class="submit" value="Send Message">
+				</form>
 			</div>
 			<div class="contactPanel--container__left">
 				<h3>Contact Info</h3>

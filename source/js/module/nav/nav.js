@@ -51,12 +51,18 @@ module.exports = Module.extend({
 });
 
 
+// var burger = document.getElementById('burgerId').addEventListener('click', burgerClick, false);
+
+function burgerClick(){
+  console.log('test');
+  // burger.classList.toggle('activeBurger');
+}
+
 
 // function burgerClick(){
 //   console.log('test');
 // };
 
-// var burger = document.getElementById('burgerId').addEventListener('click', burgerClick);
 
 // document.addEventListener('DOMContentLoaded', function(){
 //     function onActiveTab(event){

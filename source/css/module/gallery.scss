@@ -8,7 +8,6 @@
 @include module("gallery") {
 	.photos{
 		li{
-
 			.mosiac--element{
 				margin-left:30px;
 				height: 200px;
@@ -16,8 +15,8 @@
 				background-color: black;
 				background-image: url('../img/magnifyingGlass.png');
 				background-repeat: no-repeat;
-				background-size: 58px 49px;
-				background-position: center center;
+				background-size: 35px 27px;
+				background-position: 47% center;
 				display: inline-block;
 
 				img{
@@ -218,3 +217,24 @@
 
 		// 	}
 		// }
+
+	// 	<div class="mosaic--container">
+	// 	<div class="mosaic--container__top">
+	// 		<li class="mosaic--element mosaic--top__left mobileView"><img src="img/mosaic-img1.jpg" alt=""></li>
+	// 		<div class="mosaic--block">
+	// 			<li class="mosaic--element mosaic--top__topMiddle mobileView"><img src="img/mosaic-img2.jpg" alt=""></li>
+	// 			<li class="mosaic--element mosaic--top__topRight mobileView"><img src="img/mosaic-img3.jpg" alt=""></li>
+	// 			<li class="mosaic--element mosaic--top__bottomRight mobileView"><img src="img/mosaic-img4.jpg" alt=""></li>
+	// 		</div>
+	// 	</div>
+	// 	<div class="mosaic--container__middle">
+	// 		<li class="mosaic--element mosaic--middle__left mobileView"><img src="img/mosaic-img5.jpg" alt=""></li>
+	// 		<li class="mosaic--element mosaic--middle__middle mobileView"><img src="img/mosaic-img6.jpg" alt=""></li>
+	// 		<li class="mosaic--element mosaic--middle__right mobileView"><img src="img/mosaic-img7.jpg" alt=""></li>
+	// 	</div>
+	// 	<div class="mosaic--container__bottom">
+	// 		<li class="mosaic--element mosaic--bottom__left mobileView"><img src="img/mosaic-img8.jpg" alt=""></li>
+	// 		<li class="mosaic--element mosaic--bottom__right mobileView"><img src="img/mosaic-img9.jpg" alt=""></li>
+
+	// 	</div>
+	// </div> 
