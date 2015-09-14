@@ -1,6 +1,6 @@
 {
-  "name": "MasAurelia",
+  "name": "masaurelia",
   "root": "public",
   "clean_urls": true,
-  "error_page": "n"
+  "error_page": "error.html"
 }

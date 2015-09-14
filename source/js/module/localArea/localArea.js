@@ -23,7 +23,6 @@ module.exports = Module.extend({
     },
 
     oninit: function() {
-        console.log("test")
     },
 
     onrender: function() {
