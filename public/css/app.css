@@ -1396,8 +1396,6 @@ h1, h2, h3, h4, p, li, a {
       left: 0px;
       height: auto;
       display: block; }
-      .nav.activeBurger {
-        display: block; }
       .nav .burger {
         display: block;
         position: fixed;
@@ -1412,7 +1410,10 @@ h1, h2, h3, h4, p, li, a {
         text-align: left;
         width: 90%;
         margin: 0 auto;
-        margin-left: 35px; }
+        margin-left: 35px;
+        display: none; }
+        .nav .navbar--container.activeBurger {
+          display: block; }
         .nav .navbar--container li {
           color: #e1e1e1;
           min-width: auto;

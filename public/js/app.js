@@ -26788,7 +26788,7 @@ module.exports = Array.isArray || function (arr) {
 },{}],9:[function(require,module,exports){
 module.exports = {
 
-  api: 'AIzaSyC7zFBuv48OqHXtcTRQRUAYSDDMu7JIQtU'
+  api: 'AIzaSyDXqW4h_cLvyaSZwVlnnqGkQPuzX5UofK0'
 
 }
 },{}],10:[function(require,module,exports){
@@ -27066,7 +27066,7 @@ var Module = require('../abstract-module');
 
 module.exports = Module.extend({
 
-  template: require('./localArea.html'),
+    template: require('./localArea.html'),
 
     data: function(){
         return {area:"aix",
@@ -27074,13 +27074,12 @@ module.exports = Module.extend({
             center: new google.maps.LatLng(44.5403, -78.5463),
           zoom: 8,
           mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
         }
-    }
-
     },
 
     oninit: function() {
-        console.log("test")
+        this.on('localTown', this.onTabClick);
     },
 
     onrender: function() {
@@ -27091,6 +27090,7 @@ module.exports = Module.extend({
 
     onTabClick: function(event, area){
         this.set("area", area)
+        console.log('test')
     }
 
 
@@ -27100,7 +27100,7 @@ module.exports = Module.extend({
 
 
 },{"../abstract-module":10,"./localArea.html":22}],24:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"burger"},"v":{"click":"burger"},"f":[{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}]}," ",{"t":7,"e":"div","a":{"class":"navbar--container","id":"nav-tab"},"f":[{"t":7,"e":"li","a":{"class":"active navButton nav-underline","id":"#home"},"v":{"click":"goToHome"},"f":["HOME"]}," ",{"t":7,"e":"li","a":{"class":"navButton nav-underline","id":"#gallery"},"v":{"click":"goToGallery"},"f":["GALLERY"]}," ",{"t":7,"e":"li","a":{"class":"navButton nav-underline","id":"#info"},"v":{"click":"goToInfo"},"f":["INFO"]}," ",{"t":7,"e":"li","a":{"class":"navButton nav-underline","id":"#localArea"},"v":{"click":"goToLocalArea"},"f":["LOCAL AREA"]}," ",{"t":7,"e":"li","a":{"class":"navButton nav-underline","id":"#contact"},"v":{"click":"goToContact"},"f":["CONTACT"]}]}]}," ",{"t":7,"e":"div","a":{"class":"stopthejump"}}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"burger"},"v":{"click":"burger"},"f":[{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}]}," ",{"t":7,"e":"div","a":{"class":["navbar--container ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"activeBurger\":\" \""}}],"id":"nav-tab"},"f":[{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"home\""}}],"id":"#home"},"v":{"click":"goToHome"},"f":["HOME"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"gallery\""}}],"id":"#gallery"},"v":{"click":"goToGallery"},"f":["GALLERY"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"info\""}}],"id":"#info"},"v":{"click":"goToInfo"},"f":["INFO"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"localArea\""}}],"id":"#localArea"},"v":{"click":"goToLocalArea"},"f":["LOCAL AREA"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"contact\""}}],"id":"#contact"},"v":{"click":"goToContact"},"f":["CONTACT"]}]}]}," ",{"t":7,"e":"div","a":{"class":"stopthejump"}}]}
 },{}],25:[function(require,module,exports){
 /**
  * @module:   nav
@@ -27117,14 +27117,21 @@ module.exports = Module.extend({
 
   	template: require('./nav.html'),
 
+    data: function(){
+        return {expanded: false}
+    },
+
   	oninit: function() {
   		this.on('goToHome', this.onGoHome);
   		this.on('goToGallery', this.onGoGallery);
   		this.on('goToInfo', this.onGoInfo);
   		this.on('goToLocalArea', this.onGoLocalArea);
   		this.on('goToContact', this.onGoContact);
-      this.on('burger', this.onBurgerClick);
-      this.on('nav', this.onNavClick);
+        this.on('burger', this.onBurgerClick);
+        this.observe('view', function(newValue, old){
+            console.log(old, newValue);
+        });
+        // this.on('nav', this.onNavClick);
     },
 
     onGoHome: function(){
@@ -27139,61 +27146,18 @@ module.exports = Module.extend({
         page('/info');
     },
 
-	  onGoLocalArea: function(){
+	onGoLocalArea: function(){
         page('/localarea');
     },
 
-	  onGoContact: function(){
+	onGoContact: function(){
         page('/contact');
     },
 
-    onNavClick: function(){
-          var hasClass = function (elem, className) {
-            return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-        }
-
-        var addClass = function (elem, className) {
-            if (!hasClass(elem, className)) {
-                elem.className += ' ' + className;
-            }
-        }
-
-        var removeClass = function (elem, className) {
-            var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
-            if (hasClass(elem, className)) {
-                while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
-                    newClass = newClass.replace(' ' + className + ' ', ' ');
-                }
-                elem.className = newClass.replace(/^\s+|\s+$/g, '');
-            }
-        }
-
-        var activeTabs = document.querySelectorAll('.navbar--container');
-
-            for (var i = 0, len = activeTabs.length; i < len; i++) {
-            var activeTab = activeTabs[i];
-            activeTab.addEventListener('click', function(e) {
-
-                if ( hasClass(activeTab, 'active') ) {
-                    removeClass(activeTab, 'active');
-                }
-
-                else {
-                    addClass(activeTab, 'active');
-                }
-            });
-        }
-    },
-
-
     onBurgerClick: function(){
-
-        if (el.style.display != 'none'){
-                el.style.display = 'none'
-        } else {
-            el.style.display = 'block'
-        }
-        var el = document.getElementById("nav-tab")
+        // name of attribute
+        this.toggle('expanded')
+        console.log(this.get('expanded'))
     }
 });
 
@@ -27235,7 +27199,7 @@ module.exports = function (props, cb) {
 
 }
 },{}],28:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"ui-homescreen"}," ",{"t":7,"e":"ui-nav"}," ",{"t":4,"f":[{"t":7,"e":"ui-home"}],"x":{"r":["view"],"s":"_0==\"home\""}},{"t":4,"f":[{"t":7,"e":"ui-gallery"}],"x":{"r":["view"],"s":"_0==\"gallery\""}},{"t":4,"f":[{"t":7,"e":"ui-info"}],"x":{"r":["view"],"s":"_0==\"info\""}},{"t":4,"f":[{"t":7,"e":"ui-localArea"}],"x":{"r":["view"],"s":"_0==\"localArea\""}},{"t":4,"f":[{"t":7,"e":"ui-contact"}],"x":{"r":["view"],"s":"_0==\"contact\""}},{"t":7,"e":"div","a":{"class":"blueStripe"}}]}
+module.exports={"v":3,"t":[{"t":7,"e":"ui-homescreen"}," ",{"t":7,"e":"ui-nav","a":{"view":[{"t":2,"r":"view"}]}}," ",{"t":4,"f":[{"t":7,"e":"ui-home"}],"x":{"r":["view"],"s":"_0==\"home\""}},{"t":4,"f":[{"t":7,"e":"ui-gallery"}],"x":{"r":["view"],"s":"_0==\"gallery\""}},{"t":4,"f":[{"t":7,"e":"ui-info"}],"x":{"r":["view"],"s":"_0==\"info\""}},{"t":4,"f":[{"t":7,"e":"ui-localArea"}],"x":{"r":["view"],"s":"_0==\"localArea\""}},{"t":4,"f":[{"t":7,"e":"ui-contact"}],"x":{"r":["view"],"s":"_0==\"contact\""}},{"t":7,"e":"div","a":{"class":"blueStripe"}}]}
 },{}],29:[function(require,module,exports){
 var Ractive     = require('ractive');
 var page        = require('page');

@@ -9,7 +9,7 @@ var Module = require('../abstract-module');
 
 module.exports = Module.extend({
 
-  template: require('./localArea.html'),
+    template: require('./localArea.html'),
 
     data: function(){
         return {area:"aix",
@@ -17,13 +17,12 @@ module.exports = Module.extend({
             center: new google.maps.LatLng(44.5403, -78.5463),
           zoom: 8,
           mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
         }
-    }
-
     },
 
     oninit: function() {
-        console.log("test")
+        this.on('localTown', this.onTabClick);
     },
 
     onrender: function() {
@@ -34,6 +33,7 @@ module.exports = Module.extend({
 
     onTabClick: function(event, area){
         this.set("area", area)
+        console.log('test')
     }
 
 

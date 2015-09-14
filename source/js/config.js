@@ -1,5 +1,5 @@
 module.exports = {
 
-  api: 'AIzaSyC7zFBuv48OqHXtcTRQRUAYSDDMu7JIQtU'
+  api: 'AIzaSyDXqW4h_cLvyaSZwVlnnqGkQPuzX5UofK0'
 
 }
