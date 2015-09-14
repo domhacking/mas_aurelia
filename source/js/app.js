@@ -2,6 +2,7 @@ var domready  = require('domready');
 var loadMaps  = require('./util/loadMaps');
 var config    = require('./config');
 
+
 var app = {
 
   /**
@@ -23,3 +24,4 @@ var app = {
 domready(function() {
   app.init();
 });
+

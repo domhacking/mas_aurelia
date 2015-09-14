@@ -66,6 +66,7 @@ h2 {
 
 h3 {
   font-family: "JosefinSans-Bold";
+  color: #2d2d2d;
   font-weight: normal;
   font-size: 20px;
   text-transform: uppercase; }
@@ -995,8 +996,7 @@ h1, h2, h3, h4, p, li, a {
           border: #e1e1e1; }
         .contact .contactPanel .contactPanel--container .contactPanel--container__right input.submit, .contact .contactPanel .contactPanel--container .contactPanel--container__right textarea.submit {
           width: 50%;
-          padding-top: 25px;
-          padding-bottom: 22px;
+          padding: 0;
           text-align: center;
           font-family: "JosefinSans-Bold";
           font-style: normal;
@@ -1005,26 +1005,32 @@ h1, h2, h3, h4, p, li, a {
           border: none; }
 
 @media screen and (max-width: 767px) {
-  .contact .contactPanel .contactPanel--container {
-    padding-top: 50px; }
-    .contact .contactPanel .contactPanel--container .contactPanel--container__left {
-      padding-left: 0;
-      display: block;
-      width: 100%; }
-      .contact .contactPanel .contactPanel--container .contactPanel--container__left h3 {
-        text-align: center;
-        padding-bottom: 25px; }
-    .contact .contactPanel .contactPanel--container .contactPanel--container__right {
-      padding-left: 0;
-      padding-top: 50px;
-      display: block;
-      width: 100%;
-      text-align: center; }
-      .contact .contactPanel .contactPanel--container .contactPanel--container__right h3 {
-        text-align: center;
-        padding-bottom: 25px; }
-      .contact .contactPanel .contactPanel--container .contactPanel--container__right input {
-        padding: 22px 10px 20px; } }
+  .contact .contactPanel {
+    padding-top: 35px; }
+    .contact .contactPanel .contactPanel--container {
+      padding-top: 0px; }
+      .contact .contactPanel .contactPanel--container .contactPanel--container__left {
+        padding-top: 50px;
+        padding-left: 0;
+        display: block;
+        width: 100%; }
+        .contact .contactPanel .contactPanel--container .contactPanel--container__left h3 {
+          text-align: center;
+          padding-bottom: 15px;
+          font-size: 20px;
+          font-weight: normal; }
+      .contact .contactPanel .contactPanel--container .contactPanel--container__right {
+        padding-left: 0;
+        padding-top: 20px;
+        display: block;
+        width: 100%;
+        text-align: center; }
+        .contact .contactPanel .contactPanel--container .contactPanel--container__right h3 {
+          text-align: center;
+          padding-bottom: 25px;
+          font-size: 20px; }
+        .contact .contactPanel .contactPanel--container .contactPanel--container__right input {
+          padding: 22px 10px 20px; } }
 
 /**
  * @module:   gallery
@@ -1046,6 +1052,43 @@ h1, h2, h3, h4, p, li, a {
     width: 100%; }
     .gallery .photos li .mosiac--element img:hover {
       opacity: 0.5; }
+
+.gallery .carouselBox {
+  width: 90%;
+  font-size: 14px;
+  position: relative;
+  margin: 1em;
+  border: solid 1px #8dc2d5;
+  box-shadow: 2px 2px 10px #ccc;
+  overflow: hidden; }
+
+.gallery .active {
+  height: 130px; }
+
+.gallery .active li {
+  position: absolute;
+  top: 200px; }
+
+.gallery .active li.current {
+  top: 30px; }
+
+.gallery .active .buttons {
+  padding: 5px;
+  background: #eee;
+  text-align: center;
+  z-index: 10;
+  position: relative; }
+
+.gallery .carouselBox button {
+  border: none;
+  display: none; }
+
+.gallery .active button {
+  display: inline-block; }
+
+.gallery .offscreen {
+  position: absolute;
+  left: -2000px; }
 
 .gallery .black_overlay {
   display: none;
@@ -1133,6 +1176,7 @@ h1, h2, h3, h4, p, li, a {
   display: table; }
   .homescreen.fixed-bg {
     height: 300px;
+    width: 100%;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -1197,36 +1241,36 @@ h1, h2, h3, h4, p, li, a {
   height: 400px;
   background-color: #CCC; }
 
-.localArea .nearestVillage--panel .house {
-  background: url("../img/house.png") no-repeat;
-  background-size: 100%;
-  height: 45px;
-  margin: 0 auto;
-  margin-bottom: 25px;
-  width: 54px; }
-
-.localArea .nearestVillage--panel h2 {
-  margin-bottom: 60px; }
-
-.localArea .nearestVillage--panel ul {
-  background-color: transparent;
-  box-shadow: none;
-  padding: 0 120px;
-  margin: 0 auto;
-  margin-bottom: 75px; }
-  .localArea .nearestVillage--panel ul li {
-    background-color: #e1e1e1;
-    display: inline-block;
-    width: 30%;
-    padding: 30px 0;
-    margin: 10px;
-    text-align: center; }
-    .localArea .nearestVillage--panel ul li.active, .localArea .nearestVillage--panel ul li:hover {
-      background-color: #8dc2d5; }
-    .localArea .nearestVillage--panel ul li a {
-      font-size: 20px;
-      text-decoration: none;
-      color: #2d2d2d; }
+.localArea .nearestVillage--panel {
+  padding-top: 70px; }
+  .localArea .nearestVillage--panel .house {
+    background: url("../img/house.png") no-repeat;
+    background-size: 100%;
+    height: 45px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    width: 54px; }
+  .localArea .nearestVillage--panel h2 {
+    margin-bottom: 60px; }
+  .localArea .nearestVillage--panel ul {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0 120px;
+    margin: 0 auto;
+    margin-bottom: 75px; }
+    .localArea .nearestVillage--panel ul li {
+      background-color: #e1e1e1;
+      display: inline-block;
+      width: 30%;
+      padding: 30px 0;
+      margin: 10px;
+      text-align: center; }
+      .localArea .nearestVillage--panel ul li.active, .localArea .nearestVillage--panel ul li:hover {
+        background-color: #8dc2d5; }
+      .localArea .nearestVillage--panel ul li a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #2d2d2d; }
 
 .localArea .nearestVillage--info {
   background-color: #e1e1e1;
@@ -1266,15 +1310,17 @@ h1, h2, h3, h4, p, li, a {
           line-height: 25px; }
 
 @media screen and (max-width: 767px) {
-  .localArea .nearestVillage--panel h2 {
-    margin-bottom: 25px; }
-  .localArea .nearestVillage--panel ul {
-    padding: 0 10px;
-    text-align: center; }
-    .localArea .nearestVillage--panel ul li {
-      width: 80%;
-      padding: 15px;
-      margin: 5px; }
+  .localArea .nearestVillage--panel {
+    padding-top: 35px; }
+    .localArea .nearestVillage--panel h2 {
+      margin-bottom: 25px; }
+    .localArea .nearestVillage--panel ul {
+      padding: 0 10px;
+      text-align: center; }
+      .localArea .nearestVillage--panel ul li {
+        width: 80%;
+        padding: 15px;
+        margin: 5px; }
   .localArea .nearestVillage--info h3 {
     padding-bottom: 15px; }
   .localArea .nearestVillage--info .tab-pane .content--main {
@@ -1316,10 +1362,23 @@ h1, h2, h3, h4, p, li, a {
       padding: 45px 0px 25px;
       margin: 0 20px;
       min-width: 180px;
-      border-bottom: 10px solid #e1e1e1;
-      border-bottom: 10px solid #8dc2d5; }
-      .nav .navbar--container li a {
-        text-decoration: none; }
+      border-bottom: 10px solid #e1e1e1; }
+      .nav .navbar--container li.nav-underline {
+        position: relative; }
+        .nav .navbar--container li.nav-underline:after {
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          width: 0;
+          height: 10px;
+          background-color: #8dc2d5;
+          content: "";
+          transition: width 0.3s; }
+        .nav .navbar--container li.nav-underline:hover:after {
+          width: 100%; }
+      .nav .navbar--container li.active {
+        border-bottom: 10px solid #8dc2d5; }
   .nav.fixed {
     position: fixed;
     top: 0;
@@ -1336,7 +1395,7 @@ h1, h2, h3, h4, p, li, a {
       top: 0px;
       left: 0px;
       height: auto;
-      display: none; }
+      display: block; }
       .nav.activeBurger {
         display: block; }
       .nav .burger {

@@ -19,67 +19,78 @@ module.exports = Module.extend({
   		this.on('goToInfo', this.onGoInfo);
   		this.on('goToLocalArea', this.onGoLocalArea);
   		this.on('goToContact', this.onGoContact);
-        this.on('burger', this.onBurgerClick);
+      this.on('burger', this.onBurgerClick);
+      this.on('nav', this.onNavClick);
     },
 
     onGoHome: function(){
         page('/');
     },
 
-	onGoGallery: function(){
-        page('/gallery');
+  	onGoGallery: function(){
+          page('/gallery');
     },
 
     onGoInfo: function(){
         page('/info');
     },
 
-	 onGoLocalArea: function(){
+	  onGoLocalArea: function(){
         page('/localarea');
     },
 
-	 onGoContact: function(){
+	  onGoContact: function(){
         page('/contact');
+    },
+
+    onNavClick: function(){
+          var hasClass = function (elem, className) {
+            return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+        }
+
+        var addClass = function (elem, className) {
+            if (!hasClass(elem, className)) {
+                elem.className += ' ' + className;
+            }
+        }
+
+        var removeClass = function (elem, className) {
+            var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+            if (hasClass(elem, className)) {
+                while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+                    newClass = newClass.replace(' ' + className + ' ', ' ');
+                }
+                elem.className = newClass.replace(/^\s+|\s+$/g, '');
+            }
+        }
+
+        var activeTabs = document.querySelectorAll('.navbar--container');
+
+            for (var i = 0, len = activeTabs.length; i < len; i++) {
+            var activeTab = activeTabs[i];
+            activeTab.addEventListener('click', function(e) {
+
+                if ( hasClass(activeTab, 'active') ) {
+                    removeClass(activeTab, 'active');
+                }
+
+                else {
+                    addClass(activeTab, 'active');
+                }
+            });
+        }
     },
 
 
     onBurgerClick: function(){
-        console.log('test');
-        var bugerDisplay = document.create('select');
-        bugerDisplay.style.display = none;
+
+        if (el.style.display != 'none'){
+                el.style.display = 'none'
+        } else {
+            el.style.display = 'block'
+        }
+        var el = document.getElementById("nav-tab")
     }
 });
 
-
-// var burger = document.getElementById('burgerId').addEventListener('click', burgerClick, false);
-
-function burgerClick(){
-  console.log('test');
-  // burger.classList.toggle('activeBurger');
-}
-
-
-// function burgerClick(){
-//   console.log('test');
-// };
-
-
-// document.addEventListener('DOMContentLoaded', function(){
-//     function onActiveTab(event){
-//         var actives = document.querySelectorAll('.active');
-
-//         // deactivate existing active tab and panel
-//         for (var i=0; i < actives.length; i++){
-//           actives[i].className = actives[i].className.replace('active', '');
-//         }
-
-//         // activate new tab and panel
-//         event.target.parentElement.className += ' active';
-//         // document.getElementById(event.target.href.split('#')[1]).className += ' active';
-//     }
-
-//     var el = document.getElementById('nav-tab');
-
-//     el.addEventListener('click', onActiveTab, false);
-// });
 

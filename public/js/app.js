@@ -3,6 +3,7 @@ var domready  = require('domready');
 var loadMaps  = require('./util/loadMaps');
 var config    = require('./config');
 
+
 var app = {
 
   /**
@@ -24,6 +25,7 @@ var app = {
 domready(function() {
   app.init();
 });
+
 
 },{"./config":9,"./util/loadMaps":26,"./view/main.js":29,"domready":3}],2:[function(require,module,exports){
 // shim for using process in browser
@@ -26829,7 +26831,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":10,"./contact.html":11}],13:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Gallery"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}," ",{"t":7,"e":"div","a":{"class":"photos"},"f":[{"t":7,"e":"li","f":[{"t":7,"e":"div","a":{"class":"mosiac--element"},"f":[{"t":7,"e":"img","a":{"src":"../img/mosaic-img1.jpg","alt":""}}]}]}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Gallery"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}," ",{"t":7,"e":"div","a":{"class":"photos"},"f":[{"t":7,"e":"li","a":{"class":"images"},"v":{"click":"image"},"f":[{"t":7,"e":"div","a":{"class":"mosiac--element"},"f":[{"t":7,"e":"img","a":{"src":"../img/mosaic-img1.jpg","alt":""}}]}]}," "]}," ",{"t":7,"e":"div","a":{"class":"carouselBox active"},"f":[{"t":7,"e":"div","a":{"class":"buttons"},"f":[{"t":7,"e":"button","a":{"class":"prev"},"f":["◀",{"t":7,"e":"span","a":{"class":"offscreen"},"f":["Previous"]}]}," ",{"t":7,"e":"button","a":{"class":"next"},"f":["▶",{"t":7,"e":"span","a":{"class":"offscreen"},"f":["Next"]}]}]}," ",{"t":7,"e":"div","a":{"class":"photos"},"f":[{"t":7,"e":"li","f":[{"t":7,"e":"div","a":{"class":"mosiac--element"},"f":[{"t":7,"e":"img","a":{"src":"../img/mosaic-img1.jpg","alt":""}}]}]}," ",{"t":7,"e":"li","f":[{"t":7,"e":"div","a":{"class":"mosiac--element"},"f":[{"t":7,"e":"img","a":{"src":"../img/mosaic-img1.jpg","alt":""}}]}]}," ",{"t":7,"e":"li","f":[{"t":7,"e":"div","a":{"class":"mosiac--element"},"f":[{"t":7,"e":"img","a":{"src":"../img/mosaic-img1.jpg","alt":""}}]}]}]}]}," "]}]}
 },{}],14:[function(require,module,exports){
 /**
  * @module:   gallery
@@ -26838,27 +26840,158 @@ module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery
  */
 
 
-var Module 	= require('../abstract-module');
-var $		= require('jquery');
+var Module 		= require('../abstract-module');
+
 
 module.exports = Module.extend({
 
-  template: require('./gallery.html')
+  template: require('./gallery.html'),
+
+
+  	oninit: function() {
+      	this.on('image', this.onImage);
+    },
+
+
+
+    onImage: function(){
+    	var images = document.querySelectorAll('.images');
+
+    	images.classList.add('.active');
+
+  //  		var hasClass = function (elem, className) {
+		//     return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+		// }
+
+		// var addClass = function (elem, className) {
+		//     if (!hasClass(elem, className)) {
+		//         elem.className += ' ' + className;
+		//     }
+		// }
+
+		// var removeClass = function (elem, className) {
+		//     var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+		//     if (hasClass(elem, className)) {
+		//         while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+		//             newClass = newClass.replace(' ' + className + ' ', ' ');
+		//         }
+		//         elem.className = newClass.replace(/^\s+|\s+$/g, '');
+		//     }
+		// }
+
+
+		// // if ( 'querySelector' in document && 'addEventListener' in window ) {
+
+		// var images = document.querySelectorAll('.images');
+
+		//     for (var i = 0, len = images.length; i < len; i++) {
+		//         var image = images[i];
+		//         image.addEventListener('click', function(e) {
+
+		//             if ( hasClass(image, 'lightBox') ) {
+		//                 removeClass(image, 'lightBox');
+		//             }
+
+		//             else {
+		//                 addClass(image, 'lightBox');
+		//             }
+		//         });
+		// 	}
+  
+
+
+  //  		var images = document.querySelectorAll('.images').classList;
+
+		// console.log(images)
+
+
+    }
+
 
 });
 
 
 
 
-// window.onload(function(){
-// 	$("li").hover(function(){
-// 		$(this).addClass("hoverShadow");
-// 	}, function(){
-// 		$(this).removeClass("hoverShadow");
-// 	});
-// })
 
-},{"../abstract-module":10,"./gallery.html":13,"jquery":4}],15:[function(require,module,exports){
+
+
+
+
+
+
+// carousel = (function(){
+ //  	onrender: function(){
+ //  		console.log('test')
+
+	// 	var box 	= document.querySelector('.carouselBox');
+	// 	var next 	= box.querySelector('.next');
+	// 	var prev 	= box.querySelector('.prev');
+	// 	var items	= box.querySelector('.content li');
+	// 	var counter	= 0;
+	// 	var amount 	= items.length;
+	// 	var current	= items[0];
+	// 	box.classList.add('active');
+
+	// 	function navigate(direction){
+	// 		current.classList.remove('current');
+	// 		counter = counter + direction;
+
+	// 		if (direction === -1 && counter < 0){
+	// 			counter = amount -1;
+	// 		}
+
+	// 		if (direction === 1 && !items[counter]){
+	// 			counter = 0
+	// 		}
+
+	// 		current = items[counter];
+	// 		current.classList.add('current');
+	// 	}
+
+	// 	next.addEventListener('click', function(ev){
+	// 		navigate(1);
+	// 	});
+	// 	prev.addEventListener('click', function(ev){
+	// 		navigate(-1);
+	// 	});
+	// 	navigate(0);
+	// }
+
+// 	var box 	= document.querySelector('.carouselBox');
+// 	var next 	= box.querySelector('.next');
+// 	var prev 	= box.querySelector('.prev');
+// 	var items	= box.querySelector('.content li');
+// 	var counter	= 0;
+// 	var amount 	= items.length;
+// 	var current	= items[0];
+// 	box.classList.add('active');
+
+// 	function navigate(direction){
+// 		current.classList.remove('current');
+// 		counter = counter + direction;
+
+// 		if (direction === -1 && counter < 0){
+// 			counter = amount -1;
+// 		}
+
+// 		if (direction === 1 && !items[counter]){
+// 			counter = 0
+// 		}
+
+// 		current = items[counter];
+// 		current.classList.add('current');
+// 	}
+
+// 	next.addEventListener('click', function(ev){
+// 		navigate(1);
+// 	});
+// 	prev.addEventListener('click', function(ev){
+// 		navigate(-1);
+// 	});
+// 	navigate(0);
+// })();
+},{"../abstract-module":10,"./gallery.html":13}],15:[function(require,module,exports){
 module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"home","id":"home"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Welcome"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["A lovely family house with stunning panoramic views over the Alpilles. Situated approximately 1km from the pretty hilltop village of Eygalières and 8km from the main market town of Saint Ré­my de Provence. Mas Aurelia provides a perfect get away where you can explore the provencal countryside and soak up the views and flavours of the local region."]}]}," ",{"t":7,"e":"div","a":{"class":"imagePanel"},"f":[{"t":7,"e":"div","a":{"class":"imageContainer"},"f":[{"t":7,"e":"div","a":{"class":"leftImage"}}," ",{"t":7,"e":"div","a":{"class":"rightImage"}}]}]}," ",{"t":7,"e":"div","a":{"class":"whiteStripe"}}," ",{"t":7,"e":"div","a":{"class":"quotePanel"},"f":[{"t":7,"e":"div","a":{"class":"quotePanel--content"},"f":[{"t":7,"e":"p","f":["\"Stunning panoramic view over the Appilles\""]}]}]}," ",{"t":7,"e":"div","a":{"class":"whiteStripe"}}," ",{"t":7,"e":"div","a":{"class":"contactPanel"},"f":[{"t":7,"e":"div","a":{"class":"emailImg"}}," ",{"t":7,"e":"h2","f":["CONTACT US"]}," ",{"t":7,"e":"p","f":["Mas Aurelia"]}," ",{"t":7,"e":"p","a":{"class":"email"},"f":["jeanpayne@yahoo.com"]}," ",{"t":7,"e":"p","a":{"class":"number"},"f":["076338 564 945"]}]}]}]}
 },{}],16:[function(require,module,exports){
 /**
@@ -26967,7 +27100,7 @@ module.exports = Module.extend({
 
 
 },{"../abstract-module":10,"./localArea.html":22}],24:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"burger"},"v":{"click":"burger"},"f":[{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}]}," ",{"t":7,"e":"div","a":{"class":"navbar--container","id":"nav-tab"},"f":[{"t":7,"e":"li","a":{"class":"active"},"v":{"click":"goToHome"},"f":[{"t":7,"e":"a","a":{"href":"#home"},"f":["HOME"]}]}," ",{"t":7,"e":"li","v":{"click":"goToGallery"},"f":[{"t":7,"e":"a","a":{"href":"#gallery"},"f":["GALLERY"]}]}," ",{"t":7,"e":"li","v":{"click":"goToInfo"},"f":[{"t":7,"e":"a","a":{"href":"#info"},"f":["INFO"]}]}," ",{"t":7,"e":"li","v":{"click":"goToLocalArea"},"f":[{"t":7,"e":"a","a":{"href":"#localArea"},"f":["LOCAL AREA"]}]}," ",{"t":7,"e":"li","v":{"click":"goToContact"},"f":[{"t":7,"e":"a","a":{"href":"#contact"},"f":["CONTACT"]}]}]}]}," ",{"t":7,"e":"div","a":{"class":"stopthejump"}}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"burger"},"v":{"click":"burger"},"f":[{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}]}," ",{"t":7,"e":"div","a":{"class":"navbar--container","id":"nav-tab"},"f":[{"t":7,"e":"li","a":{"class":"active navButton nav-underline","id":"#home"},"v":{"click":"goToHome"},"f":["HOME"]}," ",{"t":7,"e":"li","a":{"class":"navButton nav-underline","id":"#gallery"},"v":{"click":"goToGallery"},"f":["GALLERY"]}," ",{"t":7,"e":"li","a":{"class":"navButton nav-underline","id":"#info"},"v":{"click":"goToInfo"},"f":["INFO"]}," ",{"t":7,"e":"li","a":{"class":"navButton nav-underline","id":"#localArea"},"v":{"click":"goToLocalArea"},"f":["LOCAL AREA"]}," ",{"t":7,"e":"li","a":{"class":"navButton nav-underline","id":"#contact"},"v":{"click":"goToContact"},"f":["CONTACT"]}]}]}," ",{"t":7,"e":"div","a":{"class":"stopthejump"}}]}
 },{}],25:[function(require,module,exports){
 /**
  * @module:   nav
@@ -26990,69 +27123,80 @@ module.exports = Module.extend({
   		this.on('goToInfo', this.onGoInfo);
   		this.on('goToLocalArea', this.onGoLocalArea);
   		this.on('goToContact', this.onGoContact);
-        this.on('burger', this.onBurgerClick);
+      this.on('burger', this.onBurgerClick);
+      this.on('nav', this.onNavClick);
     },
 
     onGoHome: function(){
         page('/');
     },
 
-	onGoGallery: function(){
-        page('/gallery');
+  	onGoGallery: function(){
+          page('/gallery');
     },
 
     onGoInfo: function(){
         page('/info');
     },
 
-	 onGoLocalArea: function(){
+	  onGoLocalArea: function(){
         page('/localarea');
     },
 
-	 onGoContact: function(){
+	  onGoContact: function(){
         page('/contact');
+    },
+
+    onNavClick: function(){
+          var hasClass = function (elem, className) {
+            return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+        }
+
+        var addClass = function (elem, className) {
+            if (!hasClass(elem, className)) {
+                elem.className += ' ' + className;
+            }
+        }
+
+        var removeClass = function (elem, className) {
+            var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+            if (hasClass(elem, className)) {
+                while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+                    newClass = newClass.replace(' ' + className + ' ', ' ');
+                }
+                elem.className = newClass.replace(/^\s+|\s+$/g, '');
+            }
+        }
+
+        var activeTabs = document.querySelectorAll('.navbar--container');
+
+            for (var i = 0, len = activeTabs.length; i < len; i++) {
+            var activeTab = activeTabs[i];
+            activeTab.addEventListener('click', function(e) {
+
+                if ( hasClass(activeTab, 'active') ) {
+                    removeClass(activeTab, 'active');
+                }
+
+                else {
+                    addClass(activeTab, 'active');
+                }
+            });
+        }
     },
 
 
     onBurgerClick: function(){
-        console.log('test');
-        var bugerDisplay = document.create('select');
-        bugerDisplay.style.display = none;
+
+        if (el.style.display != 'none'){
+                el.style.display = 'none'
+        } else {
+            el.style.display = 'block'
+        }
+        var el = document.getElementById("nav-tab")
     }
 });
 
-
-// var burger = document.getElementById('burgerId').addEventListener('click', burgerClick, false);
-
-function burgerClick(){
-  console.log('test');
-  // burger.classList.toggle('activeBurger');
-}
-
-
-// function burgerClick(){
-//   console.log('test');
-// };
-
-
-// document.addEventListener('DOMContentLoaded', function(){
-//     function onActiveTab(event){
-//         var actives = document.querySelectorAll('.active');
-
-//         // deactivate existing active tab and panel
-//         for (var i=0; i < actives.length; i++){
-//           actives[i].className = actives[i].className.replace('active', '');
-//         }
-
-//         // activate new tab and panel
-//         event.target.parentElement.className += ' active';
-//         // document.getElementById(event.target.href.split('#')[1]).className += ' active';
-//     }
-
-//     var el = document.getElementById('nav-tab');
-
-//     el.addEventListener('click', onActiveTab, false);
-// });
 
 
 },{"../abstract-module":10,"./nav.html":24,"jquery":4,"page":5}],26:[function(require,module,exports){
@@ -27169,7 +27313,55 @@ $(document).ready(function(){
              $(".stopthejump").css('display','none');
          }
     });
+
+
+    // $(".navButton").on("click", function( e ) {
+    //     console.log('test');
+    //     var navContainter = document.getElementById('nav-tab');
+    //     e.preventDefault();
+
+    //     $("body, html").animate({
+    //         scrollTop: navContainter.offset().top}, 700);
+
+    // });
 });
+
+
+// var carousel = (function(){
+
+//  var box     = document.querySelector('.carouselBox');
+//  var next    = box.querySelector('.next');
+//  var prev    = box.querySelector('.prev');
+//  var items   = box.querySelector('.content li');
+//  var counter = 0;
+//  var amount  = items.length;
+//  var current = items[0];
+//  box.classList.add('active');
+
+//  function navigate(direction){
+//      current.classList.remove('current');
+//      counter = counter + direction;
+
+//      if (direction === -1 && counter < 0){
+//          counter = amount -1;
+//      }
+
+//      if (direction === 1 && !items[counter]){
+//          counter = 0
+//      }
+
+//      current = items[counter];
+//      current.classList.add('current');
+//  }
+
+//  next.addEventListener('click', function(ev){
+//      navigate(1);
+//  });
+//  prev.addEventListener('click', function(ev){
+//      navigate(-1);
+//  });
+//  navigate(0);
+// })();
 
 
 },{"../module":19,"./main.html":28,"jquery":4,"page":5,"ractive":8}]},{},[1])

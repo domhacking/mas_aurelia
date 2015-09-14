@@ -6,29 +6,90 @@
 
 
 @include module("gallery") {
-	.photos{
-		li{
-			.mosiac--element{
-				margin-left:30px;
-				height: 200px;
-				width: 200px;
-				background-color: black;
-				background-image: url('../img/magnifyingGlass.png');
-				background-repeat: no-repeat;
-				background-size: 35px 27px;
-				background-position: 47% center;
-				display: inline-block;
 
-				img{
-					height: 100%;
-					width: 100%;
-					&:hover{
-						opacity: 0.5;
+
+		.photos{
+			li{
+				.mosiac--element{
+					margin-left:30px;
+					height: 200px;
+					width: 200px;
+					background-color: black;
+					background-image: url('../img/magnifyingGlass.png');
+					background-repeat: no-repeat;
+					background-size: 35px 27px;
+					background-position: 47% center;
+					display: inline-block;
+
+					img{
+						height: 100%;
+						width: 100%;
+						&:hover{
+							opacity: 0.5;
+						}
 					}
 				}
 			}
 		}
+	.carouselBox{
+		width: 90%;
+		font-size: 14px;
+		position: relative;
+		margin: 1em;
+		border: solid 1px $mainBlue;
+		box-shadow: 2px 2px 10px #ccc;
+		overflow: hidden;
+
 	}
+
+
+	// .photos{
+	// 	margin: 0;
+	// 	padding: 0;
+	// }
+
+	// li{
+	// 	font-size: 100px;
+	// 	width:100%;
+	// 	list-style: none;
+	// 	text-align: center;
+	// 	line-height: normal;
+	// }
+
+	.active {
+	  height: 130px;
+	}
+
+	.active li {
+	  position: absolute;
+	  top: 200px;
+	}
+
+	.active li.current {
+	  top: 30px;
+	}
+
+	.active .buttons{
+		padding: 5px;
+		background: #eee;
+		text-align: center;
+		z-index: 10;
+		position: relative;
+	}
+
+	.carouselBox button{
+		border: none;
+		display: none;
+	}
+	.active button{
+		display: inline-block;
+	}
+
+	.offscreen{
+		position: absolute;
+		left: -2000px;
+	}
+
 
 
 	.black_overlay{

@@ -14,7 +14,7 @@
 	  	// h2{
 	  	// 	border-bottom: 4px solid $mainBlue;
 	  	// 	display: block;
-			 
+
 	  	// }
 
 	  	.contactPanel--container{
@@ -79,8 +79,9 @@
 
 					&.submit{
 						width: 50%;
-						padding-top: 25px;
-						padding-bottom: 22px;
+						padding: 0;
+						// padding-top: 25px;
+						// padding-bottom: 22px;
 						text-align: center;
 						font-family: $header-font;
 						font-style: normal;
@@ -98,23 +99,27 @@
   	@media #{$viewport-mobile} {
 
   		.contactPanel{
+  			padding-top:35px;
   			.contactPanel--container{
-  					padding-top: 50px;
+  					padding-top: 0px;
 
 				.contactPanel--container__left{
+  					padding-top: 50px;
   					padding-left: 0;
 					display: block;
 					width: 100%;
 
 					h3{
 						text-align: center;
-						padding-bottom: 25px;
+						padding-bottom: 15px;
+						font-size: 20px;
+						font-weight: normal;
 					}
 				}
 
 				.contactPanel--container__right{
 					padding-left: 0;
-					padding-top: 50px;
+					padding-top: 20px;
 					display: block;
 					width: 100%;
 					text-align: center;
@@ -122,6 +127,7 @@
 					h3{
 						text-align: center;
 						padding-bottom: 25px;
+						font-size: 20px;
 					}
 
 					input{

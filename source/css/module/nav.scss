@@ -28,13 +28,30 @@
 			margin: 0 20px;
 			min-width: 180px;
 			border-bottom: 10px solid $mainGrey;
-			border-bottom: 10px solid $mainBlue;
 
-			a{
-				text-decoration: none;
+			&.nav-underline {
+  				position: relative;
+
+				&:after{
+				  display: block;
+				  position: absolute;
+				  left: 0;
+				  bottom: -10px;
+				  width: 0;
+				  height: 10px;
+				  background-color: $mainBlue;
+				  content: "";
+				  transition: width 0.3s;
+				}
+
+				&:hover:after {
+				  width: 100%;
+				}
+
 			}
 
 			&.active{
+				border-bottom: 10px solid $mainBlue;
 			}
 		}
 	}
@@ -64,7 +81,7 @@
 		top: 0px;
 		left: 0px;
 		height: auto;
-		display: none;
+		display: block;
 
 		&.activeBurger{
 			display: block;

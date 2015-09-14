@@ -74,5 +74,53 @@ $(document).ready(function(){
              $(".stopthejump").css('display','none');
          }
     });
+
+
+    // $(".navButton").on("click", function( e ) {
+    //     console.log('test');
+    //     var navContainter = document.getElementById('nav-tab');
+    //     e.preventDefault();
+
+    //     $("body, html").animate({
+    //         scrollTop: navContainter.offset().top}, 700);
+
+    // });
 });
+
+
+// var carousel = (function(){
+
+//  var box     = document.querySelector('.carouselBox');
+//  var next    = box.querySelector('.next');
+//  var prev    = box.querySelector('.prev');
+//  var items   = box.querySelector('.content li');
+//  var counter = 0;
+//  var amount  = items.length;
+//  var current = items[0];
+//  box.classList.add('active');
+
+//  function navigate(direction){
+//      current.classList.remove('current');
+//      counter = counter + direction;
+
+//      if (direction === -1 && counter < 0){
+//          counter = amount -1;
+//      }
+
+//      if (direction === 1 && !items[counter]){
+//          counter = 0
+//      }
+
+//      current = items[counter];
+//      current.classList.add('current');
+//  }
+
+//  next.addEventListener('click', function(ev){
+//      navigate(1);
+//  });
+//  prev.addEventListener('click', function(ev){
+//      navigate(-1);
+//  });
+//  navigate(0);
+// })();
 
