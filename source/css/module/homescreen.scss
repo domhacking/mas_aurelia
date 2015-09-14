@@ -46,4 +46,16 @@
 		height: 20px;
 		width: 40px;
 	}
+
+	@media #{$viewport-mobile} {
+
+		.heading--container{
+			h1{
+		    	width: 240px;
+		    	margin-left: -120px;
+				font-size: 2rem;
+			}
+		}
+
+	}
 }

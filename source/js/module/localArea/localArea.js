@@ -14,8 +14,8 @@ module.exports = Module.extend({
     data: function(){
         return {area:"aix",
         mapOptions:{
-            center: new google.maps.LatLng(44.5403, -78.5463),
-          zoom: 8,
+            center: new google.maps.LatLng(43.768741, 4.928654),
+          zoom: 12,
           mapTypeId: google.maps.MapTypeId.ROADMAP
             }
         }

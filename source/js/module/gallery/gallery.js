@@ -5,22 +5,66 @@
  */
 
 
+var Module = require('../abstract-module');
 
-var Module 		= require('../abstract-module');
+module.exports = Module.extend({
 
   template: require('./gallery.html'),
 
-
-  	oninit: function() {
-      	this.on('image', this.onImage);
-    },
+});
 
 
 
-    onImage: function(){
-    	var images = document.querySelectorAll('.images');
 
-    	images.classList.add('.active');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  	// oninit: function() {
+   //    	this.on('image', this.onImage);
+   //  },
+
+
+
+    // onImage: function(){
+    // 	var images = document.querySelectorAll('.images');
+
+    // 	images.classList.add('.active');
+    // }
 
   //  		var hasClass = function (elem, className) {
 		//     return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
@@ -68,7 +112,6 @@ var Module 		= require('../abstract-module');
 		// console.log(images)
 
 
-    }
 
 
 
@@ -147,5 +190,4 @@ var Module 		= require('../abstract-module');
 // 	});
 // 	navigate(0);
 // })();
-=======
->>>>>>> development
+
