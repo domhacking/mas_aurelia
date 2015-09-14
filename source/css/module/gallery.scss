@@ -4,6 +4,8 @@
  * @html:     ./source/js/module/gallery/gallery.html
  */
 
+@import "photoswipe/dist/photoswipe.css";
+@import "photoswipe/dist/default-skin/default-skin.css";
 
 @include module("gallery") {
 

@@ -5,10 +5,8 @@
  */
 
 
+
 var Module 		= require('../abstract-module');
-
-
-module.exports = Module.extend({
 
   template: require('./gallery.html'),
 
@@ -71,13 +69,6 @@ module.exports = Module.extend({
 
 
     }
-
-
-});
-
-
-
-
 
 
 
@@ -156,3 +147,5 @@ module.exports = Module.extend({
 // 	});
 // 	navigate(0);
 // })();
+=======
+>>>>>>> development
