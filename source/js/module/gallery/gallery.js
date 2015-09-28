@@ -11,6 +11,31 @@ module.exports = Module.extend({
 
   template: require('./gallery.html'),
 
+  data: function(){
+  	return { lightBox: false}
+  },
+
+  oninit: function(){
+  	this.on('image1', this.onImageClick);
+  	this.on('image2', this.onImageClick);
+  	this.on('image3', this.onImageClick);
+  	// this.on('image4', this.onImageClick);
+  	// this.on('image5', this.onImageClick);
+  	// this.on('image6', this.onImageClick);
+  	// this.on('image7', this.onImageClick);
+  	// this.on('image8', this.onImageClick);
+  	this.on('close', this.onCloseClick);
+  },
+
+  onImageClick: function(){
+  	this.set('lightBox', true);
+  	console.log(this.get('lightBox'))
+  },
+
+  onCloseClick: function(){
+  	this.set('lightBox', false);
+  }
+
 });
 
 
@@ -18,6 +43,55 @@ module.exports = Module.extend({
 
 
 
+
+
+// module.exports = Module.extend({
+
+//   	template: require('./nav.html'),
+
+//     data: function(){
+//         return {expanded: false}
+//     },
+
+//   	oninit: function() {
+//   		this.on('goToHome', this.onGoHome);
+//   		this.on('goToGallery', this.onGoGallery);
+//   		this.on('goToInfo', this.onGoInfo);
+//   		this.on('goToLocalArea', this.onGoLocalArea);
+//   		this.on('goToContact', this.onGoContact);
+//         this.on('burger', this.onBurgerClick);
+//         this.observe('view', function(newValue, old){
+//             console.log(old, newValue);
+//         });
+//         // this.on('nav', this.onNavClick);
+//     },
+
+//     onGoHome: function(){
+//         page('/');
+//     },
+
+//   	onGoGallery: function(){
+//           page('/gallery');
+//     },
+
+//     onGoInfo: function(){
+//         page('/info');
+//     },
+
+// 	onGoLocalArea: function(){
+//         page('/localarea');
+//     },
+
+// 	onGoContact: function(){
+//         page('/contact');
+//     },
+
+//     onBurgerClick: function(){
+//         // name of attribute
+//         this.toggle('expanded')
+//         console.log(this.get('expanded'))
+//     }
+// });
 
 
 

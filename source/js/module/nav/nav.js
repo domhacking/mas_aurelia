@@ -7,7 +7,6 @@
 
 var Module 	= require('../abstract-module');
 var page 	  = require('page');
-var $       = require('jquery');
 
 module.exports = Module.extend({
 

@@ -16,18 +16,24 @@
 	</div>
 
 
-	<div class="photos" >
-		<li class="images" on-click="image">
+	<div class="photos {{lightBox ? 'background': ' '}}" >
+		<div class="controls">
+			<div class="close" on-click="close">X</div>
+			<div class="leftArrow">left</div>
+			<div class="rightArrow">right</div>
+		</div>
+
+		<li class="images {{lightBox ? 'activeImage': ' '}}" on-click="image1">
+			<div class="mosiac--element ">
+				<img src="../img/mosaic-img1.jpg" alt="">
+			</div>
+		</li>
+		<li class="images" on-click="image2">
 			<div class="mosiac--element">
 				<img src="../img/mosaic-img1.jpg" alt="">
 			</div>
 		</li>
-		<li class="images" on-click="image">
-			<div class="mosiac--element">
-				<img src="../img/mosaic-img1.jpg" alt="">
-			</div>
-		</li>
-		<li class="images" on-click="image">
+		<li class="images" on-click="image3">
 			<div class="mosiac--element">
 				<img src="../img/mosaic-img1.jpg" alt="">
 			</div>
