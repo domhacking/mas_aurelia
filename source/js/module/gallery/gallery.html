@@ -15,8 +15,18 @@
 		</p>
 	</div>
 
+<!-- 	 <a class='prev' on-tap='goto:{{current-1}}'><span>&laquo;</span></a>
+	{{#each galleryImages}}
+		<li><img src="{{src}}" id="{{id}}" alt=""></li>
+	{{/each}}
+	<a class='next' on-tap='goto:{{current+1}}'><span>&raquo;</span></a> -->
+ <a class='prev' on-tap='goto:{{current-1}}'><span>&laquo;</span></a>
+	<!-- {{#each galleryImages}} -->
+		<li><img src="{{images.src}}" id="{{id}}" alt=""></li>
+	<!-- {{/each}} -->
+	<a class='next' on-tap='goto:{{current+1}}'><span>&raquo;</span></a>
 
-	<div class="photos {{lightBox ? 'background': ' '}}" >
+	<!-- <div class="photos {{lightBox ? 'background': ' '}}" >
 		<div class="controls">
 			<div class="close" on-click="close">X</div>
 			<div class="leftArrow">left</div>
@@ -24,22 +34,22 @@
 		</div>
 
 		<li class="images {{lightBox ? 'activeImage': ' '}}" on-click="image1">
-			<div class="mosiac--element ">
+			<div class="mosiacelement ">
 				<img src="../img/mosaic-img1.jpg" alt="">
 			</div>
 		</li>
 		<li class="images" on-click="image2">
-			<div class="mosiac--element">
+			<div class="mosiacelement">
 				<img src="../img/mosaic-img1.jpg" alt="">
 			</div>
 		</li>
 		<li class="images" on-click="image3">
-			<div class="mosiac--element">
+			<div class="mosiacelement">
 				<img src="../img/mosaic-img1.jpg" alt="">
 			</div>
 		</li>
 	</div>
-
+ -->
 
 
 

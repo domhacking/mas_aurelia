@@ -26831,7 +26831,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":10,"./contact.html":11}],13:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Gallery"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}," ",{"t":7,"e":"div","a":{"class":["photos ",{"t":2,"x":{"r":["lightBox"],"s":"_0?\"background\":\" \""}}]},"f":[{"t":7,"e":"div","a":{"class":"controls"},"f":[{"t":7,"e":"div","a":{"class":"close"},"v":{"click":"close"},"f":["X"]}," ",{"t":7,"e":"div","a":{"class":"leftArrow"},"f":["left"]}," ",{"t":7,"e":"div","a":{"class":"rightArrow"},"f":["right"]}]}," ",{"t":7,"e":"li","a":{"class":["images ",{"t":2,"x":{"r":["lightBox"],"s":"_0?\"activeImage\":\" \""}}]},"v":{"click":"image1"},"f":[{"t":7,"e":"div","a":{"class":"mosiac--element "},"f":[{"t":7,"e":"img","a":{"src":"../img/mosaic-img1.jpg","alt":""}}]}]}," ",{"t":7,"e":"li","a":{"class":"images"},"v":{"click":"image2"},"f":[{"t":7,"e":"div","a":{"class":"mosiac--element"},"f":[{"t":7,"e":"img","a":{"src":"../img/mosaic-img1.jpg","alt":""}}]}]}," ",{"t":7,"e":"li","a":{"class":"images"},"v":{"click":"image3"},"f":[{"t":7,"e":"div","a":{"class":"mosiac--element"},"f":[{"t":7,"e":"img","a":{"src":"../img/mosaic-img1.jpg","alt":""}}]}]}]}]}," "]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Gallery"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}," ",{"t":7,"e":"a","a":{"class":"prev"},"v":{"tap":{"n":"goto","d":[{"t":2,"x":{"r":["current"],"s":"_0-1"}}]}},"f":[{"t":7,"e":"span","f":["«"]}]}," ",{"t":7,"e":"li","f":[{"t":7,"e":"img","a":{"src":[{"t":2,"r":"images.src"}],"id":[{"t":2,"r":"id"}],"alt":""}}]}," ",{"t":7,"e":"a","a":{"class":"next"},"v":{"tap":{"n":"goto","d":[{"t":2,"x":{"r":["current"],"s":"_0+1"}}]}},"f":[{"t":7,"e":"span","f":["»"]}]}," "]}," "]}
 },{}],14:[function(require,module,exports){
 /**
  * @module:   gallery
@@ -26840,36 +26840,41 @@ module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery
  */
 
 
+var ractive, images;
+
+
+images =[
+	{id:"image1", src:"../img/mosaic-img1.jpg"},
+	{id:"image2", src:"../img/mosaic-img2.jpg"},
+	{id:"image3", src:"../img/mosaic-img3.jpg"}
+];
+
 var Module = require('../abstract-module');
 
 module.exports = Module.extend({
 
-  template: require('./gallery.html'),
+  	template: require('./gallery.html'),
 
-  data: function(){
-  	return { lightBox: false}
-  },
+	data: { galleryImages: images}
 
-  oninit: function(){
-  	this.on('image1', this.onImageClick);
-  	this.on('image2', this.onImageClick);
-  	this.on('image3', this.onImageClick);
-  	// this.on('image4', this.onImageClick);
-  	// this.on('image5', this.onImageClick);
-  	// this.on('image6', this.onImageClick);
-  	// this.on('image7', this.onImageClick);
-  	// this.on('image8', this.onImageClick);
-  	this.on('close', this.onCloseClick);
-  },
+	 // goto: function ( imageNum ) {
+  //   	var images = this.get( 'images' );
 
-  onImageClick: function(){
-  	this.set('lightBox', true);
-  	console.log(this.get('lightBox'))
-  },
+  //   // Make sure the image number is between 0...
+	 //    while ( imageNum < 0 ) {
+	 //      imageNum += images.length;
+	 //    }
 
-  onCloseClick: function(){
-  	this.set('lightBox', false);
-  }
+	 //    // ...and the maximum
+	 //    imageNum %= images.length;
+
+	 //    // Then, update the view
+	 //    this.set({
+	 //      image: images[ imageNum ],
+	 //      current: imageNum
+	 //    });
+  // 	},
+
 
 });
 
@@ -26878,6 +26883,26 @@ module.exports = Module.extend({
 
 
 
+  	// oninit: function(){
+  	// 	this.on('image1', this.onImageClick);
+  	// 	this.on('image2', this.onImageClick);
+  	// 	this.on('image3', this.onImageClick);
+  		// this.on('image4', this.onImageClick);
+  		// this.on('image5', this.onImageClick);
+  		// this.on('image6', this.onImageClick);
+  		// this.on('image7', this.onImageClick);
+  		// this.on('image8', this.onImageClick);
+  	// 	this.on('close', this.onCloseClick);
+  	// },
+
+  	// onImageClick: function(){
+  	// 	this.set('lightBox', true);
+  	// 	console.log(this.get('lightBox'))
+  	// },
+
+  	// onCloseClick: function(){
+  	// 	this.set('lightBox', false);
+  	// }
 
 
 // module.exports = Module.extend({
@@ -27210,7 +27235,7 @@ module.exports = Module.extend({
 
 
 },{"../abstract-module":10,"./localArea.html":22}],24:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"burger"},"v":{"click":"burger"},"f":[{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}]}," ",{"t":7,"e":"div","a":{"class":["navbar--container ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"activeBurger\":\" \""}}],"id":"nav-tab"},"f":[{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"home\""}}],"id":"#home"},"v":{"click":"goToHome"},"f":["HOME"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"gallery\""}}],"id":"#gallery"},"v":{"click":"goToGallery"},"f":["GALLERY"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"info\""}}],"id":"#info"},"v":{"click":"goToInfo"},"f":["INFO"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"localArea\""}}],"id":"#localArea"},"v":{"click":"goToLocalArea"},"f":["LOCAL AREA"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"contact\""}}],"id":"#contact"},"v":{"click":"goToContact"},"f":["CONTACT"]}]}]}," ",{"t":7,"e":"div","a":{"class":"stopthejump"}}," "]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"burger"},"v":{"click":"burger"},"f":[{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}]}," ",{"t":7,"e":"div","a":{"class":["navbar--container ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"activeBurger\":\" \""}}],"id":"nav-tab"},"f":[{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"home\""}}],"id":"#home"},"v":{"click":"goToHome"},"f":["HOME"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"gallery\""}}],"id":"#gallery"},"v":{"click":"goToGallery"},"f":["GALLERY"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"info\""}}],"id":"#info"},"v":{"click":"goToInfo"},"f":["INFO"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"localArea\""}}],"id":"#localArea"},"v":{"click":"goToLocalArea"},"f":["LOCAL AREA"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"contact\""}}],"id":"#contact"},"v":{"click":"goToContact"},"f":["CONTACT"]}]}]}," ",{"t":7,"e":"div","a":{"class":"stopthejump"}}]}
 },{}],25:[function(require,module,exports){
 /**
  * @module:   nav
@@ -27386,55 +27411,9 @@ $(document).ready(function(){
              $(".stopthejump").css('display','none');
          }
     });
-
-
-    // $(".navButton").on("click", function( e ) {
-    //     console.log('test');
-    //     var navContainter = document.getElementById('nav-tab');
-    //     e.preventDefault();
-
-    //     $("body, html").animate({
-    //         scrollTop: navContainter.offset().top}, 700);
-
-    // });
 });
 
 
-// var carousel = (function(){
-
-//  var box     = document.querySelector('.carouselBox');
-//  var next    = box.querySelector('.next');
-//  var prev    = box.querySelector('.prev');
-//  var items   = box.querySelector('.content li');
-//  var counter = 0;
-//  var amount  = items.length;
-//  var current = items[0];
-//  box.classList.add('active');
-
-//  function navigate(direction){
-//      current.classList.remove('current');
-//      counter = counter + direction;
-
-//      if (direction === -1 && counter < 0){
-//          counter = amount -1;
-//      }
-
-//      if (direction === 1 && !items[counter]){
-//          counter = 0
-//      }
-
-//      current = items[counter];
-//      current.classList.add('current');
-//  }
-
-//  next.addEventListener('click', function(ev){
-//      navigate(1);
-//  });
-//  prev.addEventListener('click', function(ev){
-//      navigate(-1);
-//  });
-//  navigate(0);
-// })();
 
 
 },{"../module":19,"./main.html":28,"jquery":4,"page":5,"ractive":8}]},{},[1])

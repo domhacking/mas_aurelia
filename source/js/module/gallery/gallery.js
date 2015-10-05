@@ -5,36 +5,41 @@
  */
 
 
+var ractive, images;
+
+
+images =[
+	{id:"image1", src:"../img/mosaic-img1.jpg"},
+	{id:"image2", src:"../img/mosaic-img2.jpg"},
+	{id:"image3", src:"../img/mosaic-img3.jpg"}
+];
+
 var Module = require('../abstract-module');
 
 module.exports = Module.extend({
 
-  template: require('./gallery.html'),
+  	template: require('./gallery.html'),
 
-  data: function(){
-  	return { lightBox: false}
-  },
+	data: { galleryImages: images}
 
-  oninit: function(){
-  	this.on('image1', this.onImageClick);
-  	this.on('image2', this.onImageClick);
-  	this.on('image3', this.onImageClick);
-  	// this.on('image4', this.onImageClick);
-  	// this.on('image5', this.onImageClick);
-  	// this.on('image6', this.onImageClick);
-  	// this.on('image7', this.onImageClick);
-  	// this.on('image8', this.onImageClick);
-  	this.on('close', this.onCloseClick);
-  },
+	 // goto: function ( imageNum ) {
+  //   	var images = this.get( 'images' );
 
-  onImageClick: function(){
-  	this.set('lightBox', true);
-  	console.log(this.get('lightBox'))
-  },
+  //   // Make sure the image number is between 0...
+	 //    while ( imageNum < 0 ) {
+	 //      imageNum += images.length;
+	 //    }
 
-  onCloseClick: function(){
-  	this.set('lightBox', false);
-  }
+	 //    // ...and the maximum
+	 //    imageNum %= images.length;
+
+	 //    // Then, update the view
+	 //    this.set({
+	 //      image: images[ imageNum ],
+	 //      current: imageNum
+	 //    });
+  // 	},
+
 
 });
 
@@ -43,6 +48,26 @@ module.exports = Module.extend({
 
 
 
+  	// oninit: function(){
+  	// 	this.on('image1', this.onImageClick);
+  	// 	this.on('image2', this.onImageClick);
+  	// 	this.on('image3', this.onImageClick);
+  		// this.on('image4', this.onImageClick);
+  		// this.on('image5', this.onImageClick);
+  		// this.on('image6', this.onImageClick);
+  		// this.on('image7', this.onImageClick);
+  		// this.on('image8', this.onImageClick);
+  	// 	this.on('close', this.onCloseClick);
+  	// },
+
+  	// onImageClick: function(){
+  	// 	this.set('lightBox', true);
+  	// 	console.log(this.get('lightBox'))
+  	// },
+
+  	// onCloseClick: function(){
+  	// 	this.set('lightBox', false);
+  	// }
 
 
 // module.exports = Module.extend({
