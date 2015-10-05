@@ -20,7 +20,7 @@ module.exports = Module.extend({
 
   	template: require('./gallery.html'),
 
-	data: { galleryImages: images}
+	data: {galleryImages: images},
 
 	 // goto: function ( imageNum ) {
   //   	var images = this.get( 'images' );
@@ -35,7 +35,7 @@ module.exports = Module.extend({
 
 	 //    // Then, update the view
 	 //    this.set({
-	 //      image: images[ imageNum ],
+	 //      galleryImage: images[ imageNum ],
 	 //      current: imageNum
 	 //    });
   // 	},

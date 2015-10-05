@@ -15,41 +15,23 @@
 		</p>
 	</div>
 
-<!-- 	 <a class='prev' on-tap='goto:{{current-1}}'><span>&laquo;</span></a>
-	{{#each galleryImages}}
-		<li><img src="{{src}}" id="{{id}}" alt=""></li>
-	{{/each}}
-	<a class='next' on-tap='goto:{{current+1}}'><span>&raquo;</span></a> -->
- <a class='prev' on-tap='goto:{{current-1}}'><span>&laquo;</span></a>
-	<!-- {{#each galleryImages}} -->
-		<li><img src="{{images.src}}" id="{{id}}" alt=""></li>
-	<!-- {{/each}} -->
-	<a class='next' on-tap='goto:{{current+1}}'><span>&raquo;</span></a>
 
-	<!-- <div class="photos {{lightBox ? 'background': ' '}}" >
+	<div class="photos {{lightBox ? 'background': ' '}}" >
 		<div class="controls">
 			<div class="close" on-click="close">X</div>
-			<div class="leftArrow">left</div>
-			<div class="rightArrow">right</div>
+			<div class='prev' on-tap='goto:{{current-1}}'><span>&laquo;</span></div>
+			<div cclass='next' on-tap='goto:{{current+1}}'><span>&raquo;</div>
 		</div>
 
-		<li class="images {{lightBox ? 'activeImage': ' '}}" on-click="image1">
-			<div class="mosiacelement ">
-				<img src="../img/mosaic-img1.jpg" alt="">
-			</div>
-		</li>
-		<li class="images" on-click="image2">
-			<div class="mosiacelement">
-				<img src="../img/mosaic-img1.jpg" alt="">
-			</div>
-		</li>
-		<li class="images" on-click="image3">
-			<div class="mosiacelement">
-				<img src="../img/mosaic-img1.jpg" alt="">
-			</div>
-		</li>
+		{{#each galleryImages}}
+			<li class="images {{lightBox ? 'activeImage': ' '}}">
+				<div class="mosiacelement">
+					<img src="{{src}}" id="{{id}}"  onclick="image" alt="">
+				</div>
+			</li>
+		{{/each}}
 	</div>
- -->
+
 
 
 
@@ -57,50 +39,3 @@
 
 
 </div>
-	<!-- <div class="carouselBox active">
-		<div class="buttons">
-			<button class="prev">
-				◀<span class="offscreen">Previous</span>
-			</button>
-			<button class="next">
-				▶<span class="offscreen">Next</span>
-			</button>
-		</div>
-
-		<div class="photos">
-			<li>
-				<div class="mosiac--element">
-					<img src="../img/mosaic-img1.jpg" alt="">
-				</div>
-			</li>
-			<li>
-				<div class="mosiac--element">
-					<img src="../img/mosaic-img1.jpg" alt="">
-				</div>
-			</li>
-			<li>
-				<div class="mosiac--element">
-					<img src="../img/mosaic-img1.jpg" alt="">
-				</div>
-			</li>
-		</div>
-	</div> -->
-
-	<!-- <div class="carouselBox active">
-		<div class="buttons">
-			<button class="prev">
-				◀<span class="offscreen">Previous</span>
-			</button>
-			<button class="next">
-				▶<span class="offscreen">Next</span>
-			</button>
-		</div> -->
-
-		<!-- <ol class="content">
-			<li>1</li>
-			<li class="current">2</li>
-			<li>3</li>
-			<li>4</li>
-		</ol>
-	</div> -->
- 

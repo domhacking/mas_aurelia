@@ -26831,7 +26831,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":10,"./contact.html":11}],13:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Gallery"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}," ",{"t":7,"e":"a","a":{"class":"prev"},"v":{"tap":{"n":"goto","d":[{"t":2,"x":{"r":["current"],"s":"_0-1"}}]}},"f":[{"t":7,"e":"span","f":["«"]}]}," ",{"t":7,"e":"li","f":[{"t":7,"e":"img","a":{"src":[{"t":2,"r":"images.src"}],"id":[{"t":2,"r":"id"}],"alt":""}}]}," ",{"t":7,"e":"a","a":{"class":"next"},"v":{"tap":{"n":"goto","d":[{"t":2,"x":{"r":["current"],"s":"_0+1"}}]}},"f":[{"t":7,"e":"span","f":["»"]}]}," "]}," "]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Gallery"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}," ",{"t":7,"e":"div","a":{"class":["photos ",{"t":2,"x":{"r":["lightBox"],"s":"_0?\"background\":\" \""}}]},"f":[{"t":7,"e":"div","a":{"class":"controls"},"f":[{"t":7,"e":"div","a":{"class":"close"},"v":{"click":"close"},"f":["X"]}," ",{"t":7,"e":"div","a":{"class":"prev"},"v":{"tap":{"n":"goto","d":[{"t":2,"x":{"r":["current"],"s":"_0-1"}}]}},"f":[{"t":7,"e":"span","f":["«"]}]}," ",{"t":7,"e":"div","a":{"cclass":"next"},"v":{"tap":{"n":"goto","d":[{"t":2,"x":{"r":["current"],"s":"_0+1"}}]}},"f":[{"t":7,"e":"span","f":["»"]}]}]}," ",{"t":4,"f":[{"t":7,"e":"li","a":{"class":["images ",{"t":2,"x":{"r":["lightBox"],"s":"_0?\"activeImage\":\" \""}}]},"f":[{"t":7,"e":"div","a":{"class":"mosiacelement"},"f":[{"t":7,"e":"img","a":{"src":[{"t":2,"r":"src"}],"id":[{"t":2,"r":"id"}],"onclick":"image","alt":""}}]}]}],"n":52,"r":"galleryImages"}]}]}]}
 },{}],14:[function(require,module,exports){
 /**
  * @module:   gallery
@@ -26855,7 +26855,7 @@ module.exports = Module.extend({
 
   	template: require('./gallery.html'),
 
-	data: { galleryImages: images}
+	data: {galleryImages: images},
 
 	 // goto: function ( imageNum ) {
   //   	var images = this.get( 'images' );
@@ -26870,7 +26870,7 @@ module.exports = Module.extend({
 
 	 //    // Then, update the view
 	 //    this.set({
-	 //      image: images[ imageNum ],
+	 //      galleryImage: images[ imageNum ],
 	 //      current: imageNum
 	 //    });
   // 	},
