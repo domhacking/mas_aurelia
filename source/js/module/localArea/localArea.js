@@ -12,11 +12,14 @@ module.exports = Module.extend({
     template: require('./localArea.html'),
 
     data: function(){
-        return {area:"aix",
-        mapOptions:{
-            center: new google.maps.LatLng(43.768741, 4.928654),
-          zoom: 12,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+        return {
+            area:"aix",
+            mapOptions:{
+                center: new google.maps.LatLng(43.768741, 4.928654),
+                zoom: 10,
+                scrollwheel: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+
             }
         }
     },

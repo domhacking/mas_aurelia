@@ -26831,7 +26831,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":10,"./contact.html":11}],13:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Gallery"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}," ",{"t":7,"e":"div","a":{"class":["photos ",{"t":2,"x":{"r":["lightBox"],"s":"_0?\"background\":\" \""}}]},"f":[{"t":7,"e":"div","a":{"class":"controls"},"f":[{"t":7,"e":"div","a":{"class":"close"},"v":{"click":"close"},"f":["X"]}," ",{"t":7,"e":"div","a":{"class":"prev"},"v":{"tap":{"n":"goto","d":[{"t":2,"x":{"r":["current"],"s":"_0-1"}}]}},"f":[{"t":7,"e":"span","f":["«"]}]}," ",{"t":7,"e":"div","a":{"cclass":"next"},"v":{"tap":{"n":"goto","d":[{"t":2,"x":{"r":["current"],"s":"_0+1"}}]}},"f":[{"t":7,"e":"span","f":["»"]}]}]}," ",{"t":4,"f":[{"t":7,"e":"li","a":{"class":["images ",{"t":2,"x":{"r":["lightBox"],"s":"_0?\"activeImage\":\" \""}}]},"f":[{"t":7,"e":"div","a":{"class":"mosiacelement"},"f":[{"t":7,"e":"img","a":{"src":[{"t":2,"r":"src"}],"id":[{"t":2,"r":"id"}],"onclick":"image","alt":""}}]}]}],"n":52,"r":"galleryImages"}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Gallery"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}," ",{"t":7,"e":"div","a":{"class":["photos ",{"t":2,"x":{"r":["lightBox"],"s":"_0?\"background\":\" \""}}]},"f":[{"t":7,"e":"div","a":{"class":[{"t":2,"x":{"r":["lightBox"],"s":"_0?\"cross\":\"noCross\""}}]},"v":{"click":"close"},"f":["X"]}," ",{"t":4,"f":[{"t":7,"e":"li","a":{"class":"images","id":[{"t":2,"r":"id"}]},"f":[{"t":7,"e":"div","a":{"class":"mosiacelement"},"f":[{"t":7,"e":"img","a":{"src":[{"t":2,"r":"src"}],"alt":""},"v":{"click":"image"}}]}]}],"n":52,"r":"galleryImages"}]}]}," "]}
 },{}],14:[function(require,module,exports){
 /**
  * @module:   gallery
@@ -26844,9 +26844,15 @@ var ractive, images;
 
 
 images =[
-	{id:"image1", src:"../img/mosaic-img1.jpg"},
-	{id:"image2", src:"../img/mosaic-img2.jpg"},
-	{id:"image3", src:"../img/mosaic-img3.jpg"}
+	{src:"../img/mosaic-img1.jpg", id:1},
+	{src:"../img/mosaic-img2.jpg", id:2},
+	{src:"../img/mosaic-img3.jpg", id:3},
+	{src:"../img/mosaic-img4.jpg", id:4},
+	{src:"../img/mosaic-img5.jpg", id:5},
+	{src:"../img/mosaic-img6.jpg", id:6},
+	{src:"../img/mosaic-img7.jpg", id:7},
+	{src:"../img/mosaic-img8.jpg", id:8},
+	{src:"../img/mosaic-img9.jpg", id:9},
 ];
 
 var Module = require('../abstract-module');
@@ -26855,103 +26861,74 @@ module.exports = Module.extend({
 
   	template: require('./gallery.html'),
 
-	data: {galleryImages: images},
+	data: {galleryImages: images,
+		function(){
+			return {lightBox: false}
+		}
+	},
 
-	 // goto: function ( imageNum ) {
-  //   	var images = this.get( 'images' );
+	oninit: function() {
+	        // this.on('next', this.onNextImage);
+	        this.on('image', this.onImageClick);
+	        this.on('close', this.onCloseClick);
+  	},
 
-  //   // Make sure the image number is between 0...
-	 //    while ( imageNum < 0 ) {
-	 //      imageNum += images.length;
-	 //    }
 
-	 //    // ...and the maximum
-	 //    imageNum %= images.length;
+  	onImageClick: function(){
+  		this.set('active', true);
+  		console.log(this.get('lightBox'));
+  	},
 
-	 //    // Then, update the view
-	 //    this.set({
-	 //      galleryImage: images[ imageNum ],
-	 //      current: imageNum
-	 //    });
-  // 	},
+  	onCloseClick: function(){
+  		this.set('lightBox', false);
+  	},
 
+  	loop: function(images){
+  		for(var i = 0; i < images.length; i++){
+  			return i + 1
+  		}
+  	}
 
 });
 
 
+		// function ( options ) {
+		//     this.on( 'goto', function ( event, index ) {
+		//       this.goto( index );
+		//     });
 
+		//     this.goto( 0 );
 
 
+ 	// goto: function ( imageNum ) {
+  // 	 	var images = this.get( 'images' );
+  // 	 	console.log(imageNum);
+  // 	 	// console.log(current);
 
-  	// oninit: function(){
-  	// 	this.on('image1', this.onImageClick);
-  	// 	this.on('image2', this.onImageClick);
-  	// 	this.on('image3', this.onImageClick);
-  		// this.on('image4', this.onImageClick);
-  		// this.on('image5', this.onImageClick);
-  		// this.on('image6', this.onImageClick);
-  		// this.on('image7', this.onImageClick);
-  		// this.on('image8', this.onImageClick);
-  	// 	this.on('close', this.onCloseClick);
-  	// },
+  // 	 	while( imageNum < 0){
+  // 	 		imageNum += images.length;
+  // 	 		console.log(imageNum)
+  // 	 	}
+  // 	 	// ...and the maximum
+		// imageNum %= images.length;
 
-  	// onImageClick: function(){
-  	// 	this.set('lightBox', true);
-  	// 	console.log(this.get('lightBox'))
-  	// },
+		// this.set({
+	 //      	images: images[ imageNum ],
+		//     current: imageNum
+		// });
 
-  	// onCloseClick: function(){
-  	// 	this.set('lightBox', false);
-  	// }
+  // 	},
 
 
-// module.exports = Module.extend({
 
-//   	template: require('./nav.html'),
 
-//     data: function(){
-//         return {expanded: false}
-//     },
 
-//   	oninit: function() {
-//   		this.on('goToHome', this.onGoHome);
-//   		this.on('goToGallery', this.onGoGallery);
-//   		this.on('goToInfo', this.onGoInfo);
-//   		this.on('goToLocalArea', this.onGoLocalArea);
-//   		this.on('goToContact', this.onGoContact);
-//         this.on('burger', this.onBurgerClick);
-//         this.observe('view', function(newValue, old){
-//             console.log(old, newValue);
-//         });
-//         // this.on('nav', this.onNavClick);
-//     },
 
-//     onGoHome: function(){
-//         page('/');
-//     },
 
-//   	onGoGallery: function(){
-//           page('/gallery');
-//     },
 
-//     onGoInfo: function(){
-//         page('/info');
-//     },
 
-// 	onGoLocalArea: function(){
-//         page('/localarea');
-//     },
 
-// 	onGoContact: function(){
-//         page('/contact');
-//     },
 
-//     onBurgerClick: function(){
-//         // name of attribute
-//         this.toggle('expanded')
-//         console.log(this.get('expanded'))
-//     }
-// });
 
 
 
@@ -26969,161 +26946,6 @@ module.exports = Module.extend({
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  	// oninit: function() {
-   //    	this.on('image', this.onImage);
-   //  },
-
-
-
-    // onImage: function(){
-    // 	var images = document.querySelectorAll('.images');
-
-    // 	images.classList.add('.active');
-    // }
-
-  //  		var hasClass = function (elem, className) {
-		//     return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-		// }
-
-		// var addClass = function (elem, className) {
-		//     if (!hasClass(elem, className)) {
-		//         elem.className += ' ' + className;
-		//     }
-		// }
-
-		// var removeClass = function (elem, className) {
-		//     var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
-		//     if (hasClass(elem, className)) {
-		//         while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
-		//             newClass = newClass.replace(' ' + className + ' ', ' ');
-		//         }
-		//         elem.className = newClass.replace(/^\s+|\s+$/g, '');
-		//     }
-		// }
-
-
-		// // if ( 'querySelector' in document && 'addEventListener' in window ) {
-
-		// var images = document.querySelectorAll('.images');
-
-		//     for (var i = 0, len = images.length; i < len; i++) {
-		//         var image = images[i];
-		//         image.addEventListener('click', function(e) {
-
-		//             if ( hasClass(image, 'lightBox') ) {
-		//                 removeClass(image, 'lightBox');
-		//             }
-
-		//             else {
-		//                 addClass(image, 'lightBox');
-		//             }
-		//         });
-		// 	}
-  
-
-
-  //  		var images = document.querySelectorAll('.images').classList;
-
-		// console.log(images)
-
-
-
-
-
-
-
-
-
-// carousel = (function(){
- //  	onrender: function(){
- //  		console.log('test')
-
-	// 	var box 	= document.querySelector('.carouselBox');
-	// 	var next 	= box.querySelector('.next');
-	// 	var prev 	= box.querySelector('.prev');
-	// 	var items	= box.querySelector('.content li');
-	// 	var counter	= 0;
-	// 	var amount 	= items.length;
-	// 	var current	= items[0];
-	// 	box.classList.add('active');
-
-	// 	function navigate(direction){
-	// 		current.classList.remove('current');
-	// 		counter = counter + direction;
-
-	// 		if (direction === -1 && counter < 0){
-	// 			counter = amount -1;
-	// 		}
-
-	// 		if (direction === 1 && !items[counter]){
-	// 			counter = 0
-	// 		}
-
-	// 		current = items[counter];
-	// 		current.classList.add('current');
-	// 	}
-
-	// 	next.addEventListener('click', function(ev){
-	// 		navigate(1);
-	// 	});
-	// 	prev.addEventListener('click', function(ev){
-	// 		navigate(-1);
-	// 	});
-	// 	navigate(0);
-	// }
-
-// 	var box 	= document.querySelector('.carouselBox');
-// 	var next 	= box.querySelector('.next');
-// 	var prev 	= box.querySelector('.prev');
-// 	var items	= box.querySelector('.content li');
-// 	var counter	= 0;
-// 	var amount 	= items.length;
-// 	var current	= items[0];
-// 	box.classList.add('active');
-
-// 	function navigate(direction){
-// 		current.classList.remove('current');
-// 		counter = counter + direction;
-
-// 		if (direction === -1 && counter < 0){
-// 			counter = amount -1;
-// 		}
-
-// 		if (direction === 1 && !items[counter]){
-// 			counter = 0
-// 		}
-
-// 		current = items[counter];
-// 		current.classList.add('current');
-// 	}
-
-// 	next.addEventListener('click', function(ev){
-// 		navigate(1);
-// 	});
-// 	prev.addEventListener('click', function(ev){
-// 		navigate(-1);
-// 	});
-// 	navigate(0);
-// })();
 
 
 },{"../abstract-module":10,"./gallery.html":13}],15:[function(require,module,exports){
@@ -27145,7 +26967,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":10,"./home.html":15}],17:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"homescreen fixed-bg"},"f":[{"t":7,"e":"div","a":{"class":"heading--container","id":"screen1"},"f":[{"t":7,"e":"h1","f":["MAS AURELIA"]}]}," ",{"t":7,"e":"dib","a":{"class":"arrow"}}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"homescreen fixed-bg"},"f":[{"t":7,"e":"div","a":{"class":"heading--container","id":"screen1"},"f":[{"t":7,"e":"h1","f":["MAS AURELIA"]}]}," ",{"t":7,"e":"a","a":{"href":"#navpoint","class":"arrow"}}]}]}
 },{}],18:[function(require,module,exports){
 /**
  * @module:   homescreen
@@ -27204,11 +27026,14 @@ module.exports = Module.extend({
     template: require('./localArea.html'),
 
     data: function(){
-        return {area:"aix",
-        mapOptions:{
-            center: new google.maps.LatLng(43.768741, 4.928654),
-          zoom: 12,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+        return {
+            area:"aix",
+            mapOptions:{
+                center: new google.maps.LatLng(43.768741, 4.928654),
+                zoom: 10,
+                scrollwheel: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+
             }
         }
     },
@@ -27235,7 +27060,7 @@ module.exports = Module.extend({
 
 
 },{"../abstract-module":10,"./localArea.html":22}],24:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"burger"},"v":{"click":"burger"},"f":[{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}]}," ",{"t":7,"e":"div","a":{"class":["navbar--container ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"activeBurger\":\" \""}}],"id":"nav-tab"},"f":[{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"home\""}}],"id":"#home"},"v":{"click":"goToHome"},"f":["HOME"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"gallery\""}}],"id":"#gallery"},"v":{"click":"goToGallery"},"f":["GALLERY"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"info\""}}],"id":"#info"},"v":{"click":"goToInfo"},"f":["INFO"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"localArea\""}}],"id":"#localArea"},"v":{"click":"goToLocalArea"},"f":["LOCAL AREA"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"contact\""}}],"id":"#contact"},"v":{"click":"goToContact"},"f":["CONTACT"]}]}]}," ",{"t":7,"e":"div","a":{"class":"stopthejump"}}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"burger"},"v":{"click":"burger"},"f":[{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}]}," ",{"t":7,"e":"div","a":{"class":["navbar--container ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"activeBurger\":\" \""}}],"id":"nav-tab navpoint"},"f":[{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"home\""}}],"id":"#home"},"v":{"click":"goToHome"},"f":["HOME"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"gallery\""}}],"id":"#gallery"},"v":{"click":"goToGallery"},"f":["GALLERY"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"info\""}}],"id":"#info"},"v":{"click":"goToInfo"},"f":["INFO"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"localArea\""}}],"id":"#localArea"},"v":{"click":"goToLocalArea"},"f":["LOCAL AREA"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"contact\""}}],"id":"#contact"},"v":{"click":"goToContact"},"f":["CONTACT"]}]}]}," ",{"t":7,"e":"div","a":{"class":"stopthejump"}}]}
 },{}],25:[function(require,module,exports){
 /**
  * @module:   nav
@@ -27398,6 +27223,28 @@ module.exports = function() {
 };
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function(){
    $(window).bind('scroll', function() {
    var navHeight = $( window ).height();
@@ -27411,7 +27258,22 @@ $(document).ready(function(){
              $(".stopthejump").css('display','none');
          }
     });
+
 });
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+            return false;
+          }
+        }
+      });
+    });
 
 
 

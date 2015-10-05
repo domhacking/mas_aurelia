@@ -17,25 +17,33 @@
 
 
 	<div class="photos {{lightBox ? 'background': ' '}}" >
-		<div class="controls">
-			<div class="close" on-click="close">X</div>
-			<div class='prev' on-tap='goto:{{current-1}}'><span>&laquo;</span></div>
-			<div cclass='next' on-tap='goto:{{current+1}}'><span>&raquo;</div>
-		</div>
+
+		<div class="{{lightBox ? 'cross': 'noCross'}}" on-click="close">X</div>
 
 		{{#each galleryImages}}
-			<li class="images {{lightBox ? 'activeImage': ' '}}">
+			<li class="images" id="{{id}}">
 				<div class="mosiacelement">
-					<img src="{{src}}" id="{{id}}"  onclick="image" alt="">
+					<img src="{{src}}"   on-click="image" alt="">
 				</div>
 			</li>
 		{{/each}}
 	</div>
-
-
-
-
-
-
-
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="controls">
+	<div class="close" on-click="close">X</div>
+	<div class='prev' on-click='goto:{{current-1}}'><span style="font-size: 50px; padding-left: 20px;">&laquo;</span></div>
+	<div class='next' on-click='goto:{{current+1}}'><span style="font-size: 50px; padding-left: 20px;">&raquo;</div>
+</div> -->
