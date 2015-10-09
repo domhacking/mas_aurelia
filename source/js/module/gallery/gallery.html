@@ -20,13 +20,13 @@
 
 		<div class="{{lightBox ? 'cross': 'noCross'}}" on-click="close">X</div>
 
-		{{#each galleryImages}}
-			<li class="images" id="{{id}}">
+		{{#galleryImages:i}}
+			<li class="images {{lightBox ? 'active': ' '}} {{i}}" on-click="image{{i}}">
 				<div class="mosiacelement">
-					<img src="{{src}}"   on-click="image" alt="">
+					<img src="{{src}}"  alt="">
 				</div>
 			</li>
-		{{/each}}
+		{{/galleryImages}}
 	</div>
 </div>
 
