@@ -93,7 +93,7 @@ p {
   font-family: "JosefinSans-SemiBold";
   line-height: 20px; }
 
-@media screen and (min-width: 768px) and (max-device-width: 1120px) {
+@media screen and (min-width: 768px) and (max-width: 1120px) {
   li {
     font-size: 15px; } }
 
@@ -914,14 +914,32 @@ h1, h2, h3, h4, p, li, a {
   width: 100%; }
   .imageContainer .leftImage {
     background-size: cover;
+    background-repeat: none;
+    background-position: center center;
     height: 100%;
     width: 49%;
     float: left; }
   .imageContainer .rightImage {
     background-size: cover;
+    background-position: center center;
     height: 100%;
     width: 49%;
     float: right; }
+
+@media screen and (min-width: 768px) and (max-width: 1120px) {
+  .imageContainer {
+    height: 800px; }
+    .imageContainer .leftImage {
+      display: block;
+      float: none;
+      width: 100%;
+      height: 400px;
+      margin-bottom: 10px; }
+    .imageContainer .rightImage {
+      display: block;
+      float: none;
+      width: 100%;
+      height: 400px; } }
 
 @media screen and (max-width: 767px) {
   .intro--container {
@@ -1217,6 +1235,12 @@ h1, h2, h3, h4, p, li, a {
  * @js:       ./source/js/module/localArea/localArea.js
  * @html:     ./source/js/module/localArea/localArea.html
  */
+.localArea .imageContainer .leftImage {
+  background-image: url("../img/left-info-img.jpg"); }
+
+.localArea .imageContainer .rightImage {
+  background-image: url("../img/right-info-img.jpg"); }
+
 .localArea .map--panel #map {
   width: 100%;
   height: 400px;
@@ -1289,6 +1313,13 @@ h1, h2, h3, h4, p, li, a {
         padding: 40px 20px; }
         .localArea .nearestVillage--info .tab-pane .content--second .content--second__block p {
           line-height: 25px; }
+
+@media screen and (min-width: 768px) and (max-width: 1120px) {
+  .localArea .nearestVillage--panel ul {
+    padding: 0 100px; }
+    .localArea .nearestVillage--panel ul li {
+      width: 46%;
+      padding: 20px; } }
 
 @media screen and (max-width: 767px) {
   .localArea .nearestVillage--panel {
