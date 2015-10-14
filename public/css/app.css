@@ -1262,6 +1262,7 @@ h1, h2, h3, h4, p, li, a {
     box-shadow: none;
     padding: 0 120px;
     margin: 0 auto;
+    text-align: center;
     margin-bottom: 75px; }
     .localArea .nearestVillage--panel ul li {
       background-color: #e1e1e1;
