@@ -6,6 +6,16 @@
 
 
 @include module("localArea") {
+	.imageContainer{
+		.leftImage{
+			background-image: url('../img/left-info-img.jpg');
+		}
+
+		.rightImage{
+			background-image: url('../img/right-info-img.jpg');
+		}
+	}
+
 	.map--panel{
 		#map{
 			width: 100%;
@@ -16,6 +26,7 @@
 
 	.nearestVillage--panel{
 		padding-top: 70px;
+
 
 		.house{
 			background: url('../img/house.png') no-repeat;
@@ -35,6 +46,7 @@
 			box-shadow: none;
 			padding: 0 120px;
 			margin: 0 auto;
+			text-align: center;
 			margin-bottom: 75px;
 
 			li{
@@ -119,6 +131,18 @@
 	  			}
 	  		}
 	  	}
+	}
+
+	@media #{$viewport-tablet} {
+		.nearestVillage--panel{
+			ul{
+				padding: 0 100px;
+				li{
+					width: 46%;
+					padding: 20px;
+				}
+			}
+		}
 	}
 
 	@media #{$viewport-mobile} {

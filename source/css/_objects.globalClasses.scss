@@ -58,6 +58,8 @@
 
 	.leftImage{
 		background-size: cover;
+		background-repeat: none;
+		background-position: center center;
 		height: 100%;
 		width: 49%;
 		float: left;
@@ -65,13 +67,35 @@
 
 	.rightImage{
 		background-size: cover;
+		background-position: center center;
 		height: 100%;
 		width: 49%;
 		float: right;
 	}
 }
 
+@media #{$viewport-tablet} {
+	.imageContainer{
+		height: 800px;
 
+		.leftImage{
+			display: block;
+			float: none;
+			width: 100%;
+			height: 400px;
+			margin-bottom: 10px;
+		}
+
+		.rightImage{
+			display: block;
+			float: none;
+			width: 100%;
+			height: 400px;
+
+		}
+	}
+
+}
 
 
 @media #{$viewport-mobile} {
