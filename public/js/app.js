@@ -26831,7 +26831,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":10,"./contact.html":11}],13:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Gallery"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}," ",{"t":7,"e":"div","a":{"class":["photos ",{"t":2,"x":{"r":["lightBox"],"s":"_0?\"background\":\" \""}}]},"f":[{"t":7,"e":"div","a":{"class":[{"t":2,"x":{"r":["lightBox"],"s":"_0?\"cross\":\"noCross\""}}]},"v":{"click":"close"},"f":["X"]}," ",{"t":4,"f":[{"t":7,"e":"li","a":{"class":"images","id":[{"t":2,"r":"id"}]},"f":[{"t":7,"e":"div","a":{"class":"mosiacelement"},"f":[{"t":7,"e":"img","a":{"src":[{"t":2,"r":"src"}],"alt":""},"v":{"click":"image"}}]}]}],"n":52,"r":"galleryImages"}]}]}," "]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Gallery"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Living accommodation is on 2 floors. The ground floor comprises a salon, study, superbly fitted kitchen, laundry room and shower room. The salon, study and kitchen all have French doors opening onto a large terrace and garden with pool and barbecue. Upstairs are 3 double bedrooms, 2 bathrooms (1 en suite) both with separate shower. Bedrooms 1 and 2 both have terraces with panoramic views of the Alpilles. The house has all mod cons - central heating, microwave, circotherm and conventional oven, gas hob, icemaker, washing machine and tumble-dryer."]}]}," ",{"t":7,"e":"div","a":{"class":["photos ",{"t":2,"x":{"r":["lightBox"],"s":"_0?\"background\":\" \""}}]},"f":[{"t":7,"e":"div","a":{"class":[{"t":2,"x":{"r":["lightBox"],"s":"_0?\"cross\":\"noCross\""}}]},"v":{"click":"close"},"f":["X"]}," ",{"t":7,"e":"li","a":{"class":"images active","id":[{"t":2,"r":"id"}]},"v":{"click":"image"},"f":[{"t":7,"e":"div","a":{"class":"mosiacelement"},"f":[{"t":7,"e":"img","a":{"src":"../img/mosaic-img1.jpg","alt":""},"v":{"click":"image"}}]}]}]}]}," "]}
 },{}],14:[function(require,module,exports){
 /**
  * @module:   gallery
@@ -26844,15 +26844,15 @@ var ractive, images;
 
 
 images =[
-	{src:"../img/mosaic-img1.jpg", id:1},
-	{src:"../img/mosaic-img2.jpg", id:2},
-	{src:"../img/mosaic-img3.jpg", id:3},
-	{src:"../img/mosaic-img4.jpg", id:4},
-	{src:"../img/mosaic-img5.jpg", id:5},
-	{src:"../img/mosaic-img6.jpg", id:6},
-	{src:"../img/mosaic-img7.jpg", id:7},
-	{src:"../img/mosaic-img8.jpg", id:8},
-	{src:"../img/mosaic-img9.jpg", id:9},
+	{src:"../img/mosaic-img1.jpg", id:1, imageNumber:"1"},
+	{src:"../img/mosaic-img2.jpg", id:2, imageNumber:"2"},
+	{src:"../img/mosaic-img3.jpg", id:3, imageNumber:"3"},
+	{src:"../img/mosaic-img4.jpg", id:4, imageNumber:"4"},
+	{src:"../img/mosaic-img5.jpg", id:5, imageNumber:"5"},
+	{src:"../img/mosaic-img6.jpg", id:6, imageNumber:"6"},
+	{src:"../img/mosaic-img7.jpg", id:7, imageNumber:"7"},
+	{src:"../img/mosaic-img8.jpg", id:8, imageNumber:"8"},
+	{src:"../img/mosaic-img9.jpg", id:9, imageNumber:"9"},
 ];
 
 var Module = require('../abstract-module');
@@ -26865,6 +26865,7 @@ module.exports = Module.extend({
 		function(){
 			return {lightBox: false}
 		}
+
 	},
 
 	oninit: function() {
@@ -26890,6 +26891,9 @@ module.exports = Module.extend({
   	}
 
 });
+
+
+
 
 
 		// function ( options ) {
