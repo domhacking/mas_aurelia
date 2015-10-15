@@ -1013,14 +1013,17 @@ h1, h2, h3, h4, p, li, a {
           height: 150px;
           border: #e1e1e1; }
         .contact .contactPanel .contactPanel--container .contactPanel--container__right input.submit, .contact .contactPanel .contactPanel--container .contactPanel--container__right textarea.submit {
-          width: 50%;
-          padding: 0;
+          max-width: 50%;
+          padding: 0 10px;
           text-align: center;
           font-family: "JosefinSans-Bold";
           font-style: normal;
           background-color: #8dc2d5;
           text-transform: uppercase;
           border: none; }
+          @media screen and (min-width: 768px) and (max-width: 1120px) {
+            .contact .contactPanel .contactPanel--container .contactPanel--container__right input.submit, .contact .contactPanel .contactPanel--container .contactPanel--container__right textarea.submit {
+              max-width: 100%; } }
 
 @media screen and (max-width: 767px) {
   .contact .contactPanel {
@@ -1236,10 +1239,10 @@ h1, h2, h3, h4, p, li, a {
  * @html:     ./source/js/module/localArea/localArea.html
  */
 .localArea .imageContainer .leftImage {
-  background-image: url("../img/left-info-img.jpg"); }
+  background-image: url("../img/img--eygalieres__left.jpg"); }
 
 .localArea .imageContainer .rightImage {
-  background-image: url("../img/right-info-img.jpg"); }
+  background-image: url("../img/img--eygalieres__right.jpg"); }
 
 .localArea .map--panel #map {
   width: 100%;
@@ -1278,6 +1281,12 @@ h1, h2, h3, h4, p, li, a {
         text-decoration: none;
         color: #2d2d2d; }
 
+.localArea .mapHeading {
+  padding-bottom: 40px; }
+  .localArea .mapHeading .intro--container__content {
+    margin-top: 10px;
+    padding-top: 0px; }
+
 .localArea .nearestVillage--info {
   background-color: #e1e1e1;
   width: 100%; }
@@ -1292,18 +1301,27 @@ h1, h2, h3, h4, p, li, a {
       padding: 70px 0;
       width: 80%;
       margin: 0 auto; }
-      .localArea .nearestVillage--info .tab-pane .content--main .content--main__writing {
+      .localArea .nearestVillage--info .tab-pane .content--main .content--main__writingTop {
         display: inline-block;
-        width: 70%;
+        width: 40%;
         vertical-align: top;
         padding-right: 65px; }
-        .localArea .nearestVillage--info .tab-pane .content--main .content--main__writing p {
-          padding-bottom: 30px; }
       .localArea .nearestVillage--info .tab-pane .content--main .content--main__img {
-        background: url("../img/villageImage.jpg") 100% no-repeat;
-        height: 515px;
-        width: 315px;
+        height: auto;
+        width: 200px;
         display: inline-block; }
+        .localArea .nearestVillage--info .tab-pane .content--main .content--main__img.arles {
+          background: url("../img/img--village__arles.jpg") 100% no-repeat; }
+        .localArea .nearestVillage--info .tab-pane .content--main .content--main__img.lesBaux {
+          background: url("../img/img--village__lesBaux.jpg") 100% no-repeat; }
+        .localArea .nearestVillage--info .tab-pane .content--main .content--main__img.stRem {
+          background: url("../img/img--village__stRemy.jpg") 100% no-repeat; }
+        .localArea .nearestVillage--info .tab-pane .content--main .content--main__img.marsielle {
+          background: url("../img/img--village__marseille.jpg") 100% no-repeat; }
+        .localArea .nearestVillage--info .tab-pane .content--main .content--main__img.avignon {
+          background: url("../img/img--village__avignon.jpg") 100% no-repeat; }
+        .localArea .nearestVillage--info .tab-pane .content--main .content--main__img.aix {
+          background: url("../img/img--village__aix.jpg") 100% no-repeat; }
     .localArea .nearestVillage--info .tab-pane .content--second {
       width: 80%;
       margin: 0 auto; }

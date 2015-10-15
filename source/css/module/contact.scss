@@ -78,8 +78,8 @@
 					}
 
 					&.submit{
-						width: 50%;
-						padding: 0;
+						max-width: 50%;
+						padding: 0 10px;
 						// padding-top: 25px;
 						// padding-bottom: 22px;
 						text-align: center;
@@ -88,13 +88,16 @@
 						background-color: $mainBlue;
 						text-transform: uppercase;
 						border:none;
+
+						@media #{$viewport-tablet} {
+							max-width: 100%;
+						}
 					}
 				}
-
-	  			// padding-left:20px;
 	  		}
 	  	}
   	}
+
 
   	@media #{$viewport-mobile} {
 

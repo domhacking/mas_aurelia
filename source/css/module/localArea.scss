@@ -8,11 +8,11 @@
 @include module("localArea") {
 	.imageContainer{
 		.leftImage{
-			background-image: url('../img/left-info-img.jpg');
+			background-image: url('../img/img--eygalieres__left.jpg');
 		}
 
 		.rightImage{
-			background-image: url('../img/right-info-img.jpg');
+			background-image: url('../img/img--eygalieres__right.jpg');
 		}
 	}
 
@@ -73,6 +73,15 @@
 
 	}
 
+	.mapHeading{
+		padding-bottom: 40px;
+
+		.intro--container__content{
+			margin-top: 10px;
+			padding-top:0px;
+		}
+	}
+
 	.nearestVillage--info{
 		background-color: $mainGrey;
 		width: 100%;
@@ -93,25 +102,47 @@
 				width: 80%;
 				margin: 0 auto;
 
-	  			.content--main__writing{
+	  			.content--main__writingTop{
 	  				display: inline-block;
-	  				width: 70%;
+	  				width: 40%;
 	  				vertical-align: top;
 	  				padding-right: 65px;
 
 
-		  			p{
-		  				padding-bottom: 30px;
-		  			}
+		  			// p{
+		  			// 	padding-bottom: 30px;
+		  			// }
 	  			}
 
 
 	  			.content--main__img{
-	  				background: url('../img/villageImage.jpg') 100% no-repeat;
-	  				height: 515px;
-	  				width: 315px;
+	  				height: auto;
+	  				width: 200px;
 	  				display: inline-block;
 
+	  				&.arles{
+	  					background: url('../img/img--village__arles.jpg') 100% no-repeat;
+	  				}
+
+					&.lesBaux{
+	  					background: url('../img/img--village__lesBaux.jpg') 100% no-repeat;
+	  				}
+
+					&.stRem{
+	  					background: url('../img/img--village__stRemy.jpg') 100% no-repeat;
+	  				}
+
+					&.marsielle{
+	  					background: url('../img/img--village__marseille.jpg') 100% no-repeat;
+	  				}
+
+					&.avignon{
+	  					background: url('../img/img--village__avignon.jpg') 100% no-repeat;
+	  				}
+
+	  				&.aix{
+	  					background: url('../img/img--village__aix.jpg') 100% no-repeat;
+	  				}
 	  			}
 	  		}
 
