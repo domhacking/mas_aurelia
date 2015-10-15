@@ -20,6 +20,7 @@
 
 		<div class="{{lightBox ? 'cross': 'noCross'}}" on-click="close">X</div>
 
+
 		{{#galleryImages:i}}
 			<li class="images {{lightBox ? 'active': ' '}} {{i}}" on-click="image{{i}}">
 				<div class="mosiacelement">
@@ -27,9 +28,45 @@
 				</div>
 			</li>
 		{{/galleryImages}}
+
 	</div>
 </div>
 
+			<!-- <li class="images {{#if imageId == '1'}}active{{/if}}" on-click="image:{{id}}" id="{{id}}">
+				<div class="mosiacelement">
+					<img src="../img/mosaic-img2.jpg"   on-click="image" alt="">
+				</div>
+			</li>
+			<li class="images {{#if imageId == '2'}}active{{/if}}" on-click="image:{{id}}" id="{{id}}">
+				<div class="mosiacelement">
+					<img src="../img/mosaic-img3.jpg"   on-click="image" alt="">
+				</div>
+			</li>
+			<li class="images {{#if imageId == '1'}}active{{/if}}" on-click="image:{{id}}" id="{{id}}">
+				<div class="mosiacelement">
+					<img src="../img/mosaic-img4.jpg"   on-click="image" alt="">
+				</div>
+			</li>
+			<li class="images {{#if imageId == '1'}}active{{/if}}" on-click="image:{{id}}" id="{{id}}">
+				<div class="mosiacelement">
+					<img src="../img/mosaic-img5.jpg"   on-click="image" alt="">
+				</div>
+			</li>
+			<li class="images {{#if imageId == '1'}}active{{/if}}" on-click="image:{{id}}" id="{{id}}">
+				<div class="mosiacelement">
+					<img src="../img/mosaic-img6.jpg"   on-click="image" alt="">
+				</div>
+			</li>
+			<li class="images {{#if imageId == '1'}}active{{/if}}" on-click="image:{{id}}" id="{{id}}">
+				<div class="mosiacelement">
+					<img src="../img/mosaic-img7.jpg"   on-click="image" alt="">
+				</div>
+			</li>
+			<li class="images {{#if imageId == '1'}}active{{/if}}" on-click="image:{{id}}" id="{{id}}">
+				<div class="mosiacelement">
+					<img src="../img/mosaic-img8.jpg"   on-click="image" alt="">
+				</div>
+			</li>-->
 
 
 

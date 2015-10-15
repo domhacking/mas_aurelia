@@ -26842,27 +26842,19 @@ module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery
 
 var ractive, images;
 
-// images = [
-// 	{word: "this"},
-// 	{word: "is"},
-// 	{word: "next"},
-// 	{word: "picture"},
-// 	{word: "please"},
-// 	{word: "maybe"},
-// 	{word: "work"}
-// ]; 
 
-// images =[
-// 	{src:"../img/mosaic-img1.jpg", id:1},
-// 	{src:"../img/mosaic-img2.jpg", id:2},
-// 	{src:"../img/mosaic-img3.jpg", id:3},
-// 	{src:"../img/mosaic-img4.jpg", id:4},
-// 	{src:"../img/mosaic-img5.jpg", id:5},
-// 	{src:"../img/mosaic-img6.jpg", id:6},
-// 	{src:"../img/mosaic-img7.jpg", id:7},
-// 	{src:"../img/mosaic-img8.jpg", id:8},
-// 	{src:"../img/mosaic-img9.jpg", id:9},
-// ];
+
+images =[
+	{src:"../img/mosaic-img1.jpg", id:1, imageNumber:"1"},
+	{src:"../img/mosaic-img2.jpg", id:2, imageNumber:"2"},
+	{src:"../img/mosaic-img3.jpg", id:3, imageNumber:"3"},
+	{src:"../img/mosaic-img4.jpg", id:4, imageNumber:"4"},
+	{src:"../img/mosaic-img5.jpg", id:5, imageNumber:"5"},
+	{src:"../img/mosaic-img6.jpg", id:6, imageNumber:"6"},
+	{src:"../img/mosaic-img7.jpg", id:7, imageNumber:"7"},
+	{src:"../img/mosaic-img8.jpg", id:8, imageNumber:"8"},
+	{src:"../img/mosaic-img9.jpg", id:9, imageNumber:"9"},
+];
 
 var Module = require('../abstract-module');
 
@@ -26888,17 +26880,18 @@ module.exports = Module.extend({
 		function(){
 			return {active: false}
 		}
+
 	},
 
 	oninit: function() {
 	        // this.on('next', this.onNextImage);
-	        this.on('image0', this.onImageClick); 
-	        this.on('image1', this.onImageClick); 
-	        this.on('image2', this.onImageClick); 
-	        this.on('image3', this.onImageClick); 
-	        this.on('image4', this.onImageClick); 
-	        this.on('image5', this.onImageClick); 
-	        this.on('image6', this.onImageClick); 
+	        this.on('image0', this.onImageClick);
+	        this.on('image1', this.onImageClick);
+	        this.on('image2', this.onImageClick);
+	        this.on('image3', this.onImageClick);
+	        this.on('image4', this.onImageClick);
+	        this.on('image5', this.onImageClick);
+	        this.on('image6', this.onImageClick);
 	        this.on('image7', this.onImageClick);
 	        this.on('close', this.onCloseClick);
   	},
@@ -26922,6 +26915,9 @@ module.exports = Module.extend({
   	}
 
 });
+
+
+
 
 
 		// function ( options ) {
