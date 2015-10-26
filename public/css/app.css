@@ -406,7 +406,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -569,9 +570,7 @@ ins {
 html {
   box-sizing: border-box; }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit; }
 
 /*------------------------------------*    #SHARED
@@ -704,7 +703,9 @@ img {
  * 2. If a `width` and/or `height` attribute have been explicitly defined, let’s
  *    not make the image fluid.
  */
-.gm-style img, img[width], img[height] {
+.gm-style img,
+img[width],
+img[height] {
   /* [2] */
   max-width: none; }
 
@@ -1066,6 +1067,34 @@ h1, h2, h3, h4, p, li, a {
   width: 80%;
   max-width: 1000px;
   margin: 0 auto; }
+  .gallery .photos .slider {
+    background: url("../img/arrow.png") no-repeat;
+    background-size: 100%;
+    height: 90px;
+    width: 60px;
+    display: inline-block;
+    position: absolute;
+    bottom: 50%;
+    margin-bottom: -45px; }
+    .gallery .photos .slider__prev {
+      left: 30px;
+      -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+              transform: rotate(90deg); }
+    .gallery .photos .slider__next {
+      right: 30px;
+      -webkit-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg); }
+  .gallery .photos .displayNone {
+    display: none; }
+  .gallery .photos .cross {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    font-size: 40px;
+    color: #ffffff; }
   .gallery .photos.background {
     background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
@@ -1076,31 +1105,31 @@ h1, h2, h3, h4, p, li, a {
     height: 100%;
     z-index: 10;
     max-width: none; }
-  .gallery .photos .noCross {
-    display: none; }
-  .gallery .photos .cross {
-    display: block;
-    position: absolute;
-    right: 30px;
-    top: 10px;
-    font-size: 40px;
-    color: #ffffff; }
-  .gallery .photos li {
-    display: inline-block; }
-    .gallery .photos li.activeImage {
-      margin-top: 10%;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      z-index: 1002;
-      display: table-cell;
-      vertical-align: middle; }
-      .gallery .photos li.activeImage .mosiac--element {
-        height: 80%;
-        width: auto; }
-        .gallery .photos li.activeImage .mosiac--element img:hover {
-          opacity: 1; }
-    .gallery .photos li .mosiac--element {
+    .gallery .photos.background li {
+      display: inline-block; }
+      .gallery .photos.background li.activeImage {
+        margin-top: 10%;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        z-index: 1002;
+        display: table-cell;
+        vertical-align: middle; }
+        .gallery .photos.background li.activeImage .mosiac--element {
+          height: 80%;
+          width: auto; }
+          .gallery .photos.background li.activeImage .mosiac--element img:hover {
+            opacity: 1; }
+    .gallery .photos.background .noCross {
+      display: none; }
+    .gallery .photos.background .cross {
+      display: block;
+      position: absolute;
+      right: 30px;
+      top: 10px;
+      font-size: 40px;
+      color: #ffffff; }
+    .gallery .photos.background .mosiac--element {
       margin-left: 30px;
       height: 200px;
       width: 200px;
@@ -1110,10 +1139,10 @@ h1, h2, h3, h4, p, li, a {
       background-size: 35px 27px;
       background-position: 47% center;
       display: inline-block; }
-      .gallery .photos li .mosiac--element img {
+      .gallery .photos.background .mosiac--element img {
         height: 100%;
         width: 100%; }
-        .gallery .photos li .mosiac--element img:hover {
+        .gallery .photos.background .mosiac--element img:hover {
           opacity: 0.5; }
 
 /**
@@ -1526,37 +1555,37 @@ h1, h2, h3, h4, p, li, a {
  *
  * <div class="u-7/12">
  */
-.u-1\/1 {
+.u-1\/ 1 {
   width: 100% !important; }
 
-.u-1\/2 {
+.u-1\/ 2 {
   width: 50% !important; }
 
-.u-1\/3 {
+.u-1\/ 3 {
   width: 33.33333% !important; }
 
-.u-2\/3 {
+.u-2\/ 3 {
   width: 66.66667% !important; }
 
-.u-1\/4 {
+.u-1\/ 4 {
   width: 25% !important; }
 
-.u-2\/4 {
+.u-2\/ 4 {
   width: 50% !important; }
 
-.u-3\/4 {
+.u-3\/ 4 {
   width: 75% !important; }
 
-.u-1\/5 {
+.u-1\/ 5 {
   width: 20% !important; }
 
-.u-2\/5 {
+.u-2\/ 5 {
   width: 40% !important; }
 
-.u-3\/5 {
+.u-3\/ 5 {
   width: 60% !important; }
 
-.u-4\/5 {
+.u-4\/ 5 {
   width: 80% !important; }
 
 /*------------------------------------*    #WIDTHS-RESPONSIVE
@@ -1565,147 +1594,147 @@ h1, h2, h3, h4, p, li, a {
  * Responsive width classes based on your responsive settings.
  */
 @media screen and (max-width: 44.9375em) {
-  .u-1\/1-palm {
+  .u-1\/ 1-palm {
     width: 100% !important; }
-  .u-1\/2-palm {
+  .u-1\/ 2-palm {
     width: 50% !important; }
-  .u-1\/3-palm {
+  .u-1\/ 3-palm {
     width: 33.33333% !important; }
-  .u-2\/3-palm {
+  .u-2\/ 3-palm {
     width: 66.66667% !important; }
-  .u-1\/4-palm {
+  .u-1\/ 4-palm {
     width: 25% !important; }
-  .u-2\/4-palm {
+  .u-2\/ 4-palm {
     width: 50% !important; }
-  .u-3\/4-palm {
+  .u-3\/ 4-palm {
     width: 75% !important; }
-  .u-1\/5-palm {
+  .u-1\/ 5-palm {
     width: 20% !important; }
-  .u-2\/5-palm {
+  .u-2\/ 5-palm {
     width: 40% !important; }
-  .u-3\/5-palm {
+  .u-3\/ 5-palm {
     width: 60% !important; }
-  .u-4\/5-palm {
+  .u-4\/ 5-palm {
     width: 80% !important; } }
 
 @media screen and (min-width: 45em) and (max-width: 63.9375em) {
-  .u-1\/1-lap {
+  .u-1\/ 1-lap {
     width: 100% !important; }
-  .u-1\/2-lap {
+  .u-1\/ 2-lap {
     width: 50% !important; }
-  .u-1\/3-lap {
+  .u-1\/ 3-lap {
     width: 33.33333% !important; }
-  .u-2\/3-lap {
+  .u-2\/ 3-lap {
     width: 66.66667% !important; }
-  .u-1\/4-lap {
+  .u-1\/ 4-lap {
     width: 25% !important; }
-  .u-2\/4-lap {
+  .u-2\/ 4-lap {
     width: 50% !important; }
-  .u-3\/4-lap {
+  .u-3\/ 4-lap {
     width: 75% !important; }
-  .u-1\/5-lap {
+  .u-1\/ 5-lap {
     width: 20% !important; }
-  .u-2\/5-lap {
+  .u-2\/ 5-lap {
     width: 40% !important; }
-  .u-3\/5-lap {
+  .u-3\/ 5-lap {
     width: 60% !important; }
-  .u-4\/5-lap {
+  .u-4\/ 5-lap {
     width: 80% !important; } }
 
 @media screen and (min-width: 45em) {
-  .u-1\/1-lap-and-up {
+  .u-1\/ 1-lap-and-up {
     width: 100% !important; }
-  .u-1\/2-lap-and-up {
+  .u-1\/ 2-lap-and-up {
     width: 50% !important; }
-  .u-1\/3-lap-and-up {
+  .u-1\/ 3-lap-and-up {
     width: 33.33333% !important; }
-  .u-2\/3-lap-and-up {
+  .u-2\/ 3-lap-and-up {
     width: 66.66667% !important; }
-  .u-1\/4-lap-and-up {
+  .u-1\/ 4-lap-and-up {
     width: 25% !important; }
-  .u-2\/4-lap-and-up {
+  .u-2\/ 4-lap-and-up {
     width: 50% !important; }
-  .u-3\/4-lap-and-up {
+  .u-3\/ 4-lap-and-up {
     width: 75% !important; }
-  .u-1\/5-lap-and-up {
+  .u-1\/ 5-lap-and-up {
     width: 20% !important; }
-  .u-2\/5-lap-and-up {
+  .u-2\/ 5-lap-and-up {
     width: 40% !important; }
-  .u-3\/5-lap-and-up {
+  .u-3\/ 5-lap-and-up {
     width: 60% !important; }
-  .u-4\/5-lap-and-up {
+  .u-4\/ 5-lap-and-up {
     width: 80% !important; } }
 
 @media screen and (max-width: 63.9375em) {
-  .u-1\/1-portable {
+  .u-1\/ 1-portable {
     width: 100% !important; }
-  .u-1\/2-portable {
+  .u-1\/ 2-portable {
     width: 50% !important; }
-  .u-1\/3-portable {
+  .u-1\/ 3-portable {
     width: 33.33333% !important; }
-  .u-2\/3-portable {
+  .u-2\/ 3-portable {
     width: 66.66667% !important; }
-  .u-1\/4-portable {
+  .u-1\/ 4-portable {
     width: 25% !important; }
-  .u-2\/4-portable {
+  .u-2\/ 4-portable {
     width: 50% !important; }
-  .u-3\/4-portable {
+  .u-3\/ 4-portable {
     width: 75% !important; }
-  .u-1\/5-portable {
+  .u-1\/ 5-portable {
     width: 20% !important; }
-  .u-2\/5-portable {
+  .u-2\/ 5-portable {
     width: 40% !important; }
-  .u-3\/5-portable {
+  .u-3\/ 5-portable {
     width: 60% !important; }
-  .u-4\/5-portable {
+  .u-4\/ 5-portable {
     width: 80% !important; } }
 
 @media screen and (min-width: 64em) {
-  .u-1\/1-desk {
+  .u-1\/ 1-desk {
     width: 100% !important; }
-  .u-1\/2-desk {
+  .u-1\/ 2-desk {
     width: 50% !important; }
-  .u-1\/3-desk {
+  .u-1\/ 3-desk {
     width: 33.33333% !important; }
-  .u-2\/3-desk {
+  .u-2\/ 3-desk {
     width: 66.66667% !important; }
-  .u-1\/4-desk {
+  .u-1\/ 4-desk {
     width: 25% !important; }
-  .u-2\/4-desk {
+  .u-2\/ 4-desk {
     width: 50% !important; }
-  .u-3\/4-desk {
+  .u-3\/ 4-desk {
     width: 75% !important; }
-  .u-1\/5-desk {
+  .u-1\/ 5-desk {
     width: 20% !important; }
-  .u-2\/5-desk {
+  .u-2\/ 5-desk {
     width: 40% !important; }
-  .u-3\/5-desk {
+  .u-3\/ 5-desk {
     width: 60% !important; }
-  .u-4\/5-desk {
+  .u-4\/ 5-desk {
     width: 80% !important; } }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .u-1\/1-retina {
+  .u-1\/ 1-retina {
     width: 100% !important; }
-  .u-1\/2-retina {
+  .u-1\/ 2-retina {
     width: 50% !important; }
-  .u-1\/3-retina {
+  .u-1\/ 3-retina {
     width: 33.33333% !important; }
-  .u-2\/3-retina {
+  .u-2\/ 3-retina {
     width: 66.66667% !important; }
-  .u-1\/4-retina {
+  .u-1\/ 4-retina {
     width: 25% !important; }
-  .u-2\/4-retina {
+  .u-2\/ 4-retina {
     width: 50% !important; }
-  .u-3\/4-retina {
+  .u-3\/ 4-retina {
     width: 75% !important; }
-  .u-1\/5-retina {
+  .u-1\/ 5-retina {
     width: 20% !important; }
-  .u-2\/5-retina {
+  .u-2\/ 5-retina {
     width: 40% !important; }
-  .u-3\/5-retina {
+  .u-3\/ 5-retina {
     width: 60% !important; }
-  .u-4\/5-retina {
+  .u-4\/ 5-retina {
     width: 80% !important; } }
 
 /*------------------------------------*    #CLEARFIX

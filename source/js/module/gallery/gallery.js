@@ -4,22 +4,17 @@
  * @html:     ./source/js/module/gallery/gallery.html
  */
 
-
-var ractive, images;
-
-
-
-images =[
-	{src:"../img/mosaic-img1.jpg", id:1, imageNumber:"1"},
-	{src:"../img/mosaic-img2.jpg", id:2, imageNumber:"2"},
-	{src:"../img/mosaic-img3.jpg", id:3, imageNumber:"3"},
-	{src:"../img/mosaic-img4.jpg", id:4, imageNumber:"4"},
-	{src:"../img/mosaic-img5.jpg", id:5, imageNumber:"5"},
-	{src:"../img/mosaic-img6.jpg", id:6, imageNumber:"6"},
-	{src:"../img/mosaic-img7.jpg", id:7, imageNumber:"7"},
-	{src:"../img/mosaic-img8.jpg", id:8, imageNumber:"8"},
-	{src:"../img/mosaic-img9.jpg", id:9, imageNumber:"9"},
-];
+ images = [
+ 	{name:"../img/mosaic-img1.jpg", imageNumber:"1"},
+ 	{name:"../img/mosaic-img2.jpg", imageNumber:"2"},
+ 	{name:"../img/mosaic-img3.jpg", imageNumber:"3"},
+ 	{name:"../img/mosaic-img4.jpg", imageNumber:"4"},
+ 	{name:"../img/mosaic-img5.jpg", imageNumber:"5"},
+ 	{name:"../img/mosaic-img6.jpg", imageNumber:"6"},
+ 	{name:"../img/mosaic-img7.jpg", imageNumber:"7"},
+ 	{name:"../img/mosaic-img8.jpg", imageNumber:"8"},
+ 	{name:"../img/mosaic-img9.jpg", imageNumber:"9"}
+ ];
 
 var Module = require('../abstract-module');
 
@@ -27,58 +22,50 @@ module.exports = Module.extend({
 
   	template: require('./gallery.html'),
 
+	goto: function( imageNum ){
+        var images = this.get('images');
+
+		console.log(images)
+
+        while (imageNum < 0 ) {
+            imageNum += images.length;
+        }
+
+        console.log(imageNum)
+
+        imageNum %= images.length;
+
+        this.set({
+            image: images[imageNum],
+            current: imageNum
+        });
+    },
+
 	data: {
-		galleryImages: [
-			{src:"../img/mosaic-img1.jpg", id:"image1"},
-			{src:"../img/mosaic-img2.jpg", id:"image2"},
-			{src:"../img/mosaic-img3.jpg", id:"image3"},
-			{src:"../img/mosaic-img4.jpg", id:"image4"},
-			{src:"../img/mosaic-img5.jpg", id:"image5"},
-			{src:"../img/mosaic-img6.jpg", id:"image6"},
-			{src:"../img/mosaic-img7.jpg", id:"image7"},
-			{src:"../img/mosaic-img8.jpg", id:"image8"},
-			{src:"../img/mosaic-img9.jpg", id:"image9"},
-		],
+		images: images,
 		function(){
 			return {lightBox: false}
 		},
-		function(){
-			return {active: false}
-		}
-
 	},
 
 	oninit: function() {
-	        // this.on('next', this.onNextImage);
-	        this.on('image0', this.onImageClick);
-	        this.on('image1', this.onImageClick);
-	        this.on('image2', this.onImageClick);
-	        this.on('image3', this.onImageClick);
-	        this.on('image4', this.onImageClick);
-	        this.on('image5', this.onImageClick);
-	        this.on('image6', this.onImageClick);
-	        this.on('image7', this.onImageClick);
-	        this.on('close', this.onCloseClick);
-  	},
-
+        this.on('goto', function(event, index){
+            this.goto(index);
+        });
+        this.goto(0);
+		this.on('image', this.onImageClick);
+    	this.on('close', this.onCloseClick);
+    },
 
   	onImageClick: function(){
-  		console.log('test')
+  // 		console.log('test');
   		this.set('lightBox', true);
-  		this.set('active', true);
-  		console.log(this.get('lightBox'));
+  // 		console.log(this.get('lightBox'));
   	},
 
   	onCloseClick: function(){
   		this.set('lightBox', false);
-  	},
-
-  	loop: function(images){
-  		for(var i = 0; i < images.length; i++){
-  			return i + 1
-  		}
   	}
-
 });
 
 
@@ -111,32 +98,3 @@ module.exports = Module.extend({
 		// });
 
   // 	},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -11,6 +11,41 @@
 		max-width: 1000px;
 		margin: 0 auto;
 
+		.slider{
+			background: url("../img/arrow.png") no-repeat;
+			background-size: 100%;
+			height: 90px;
+			width: 60px;
+			display: inline-block;
+			position: absolute;
+			bottom: 50%;
+			margin-bottom: -45px;
+
+			&__prev{
+				left: 30px;
+				transform: rotate(90deg);
+			}
+
+			&__next{
+				right: 30px;
+				transform: rotate(-90deg);
+			}
+		}
+
+		.displayNone{
+			display: none;
+
+		}
+
+		.cross{
+			display: block;
+			position: absolute;
+			right: 30px;
+			top: 10px;
+			font-size: 40px;
+			color: $white;
+		}
+
 		&.background{
 	    	background-color: rgba(0,0,0,0.8);
 			position: fixed;
@@ -22,7 +57,32 @@
 	    	z-index:10;
 	    	max-width: none;
 
+			li{
+				display: inline-block;
+
+				&.activeImage{
+					margin-top: 10%;
+					width: 100%;
+					height: 100%;
+					text-align: center;
+					z-index: 1002;
+					display: table-cell;
+					vertical-align: middle;
+
+					.mosiac--element{
+						height: 80%;
+						width: auto;
+
+						img{
+							&:hover{
+								opacity: 1;
+							}
+						}
+					}
+				}
 		}
+
+
 
 		.noCross{
 			display: none;
@@ -37,29 +97,7 @@
 			color: $white;
 		}
 
-		li{
-			display: inline-block;
 
-			&.activeImage{
-				margin-top: 10%;
-				width: 100%;
-				height: 100%;
-				text-align: center;
-				z-index: 1002;
-				display: table-cell;
-				vertical-align: middle;
-
-				.mosiac--element{
-					height: 80%;
-					width: auto;
-
-					img{
-						&:hover{
-							opacity: 1;
-						}
-					}
-				}
-			}
 
 			.mosiac--element{
 				margin-left:30px;
@@ -265,4 +303,4 @@
 	// 		<li class="mosaic--element mosaic--bottom__right mobileView"><img src="img/mosaic-img9.jpg" alt=""></li>
 
 	// 	</div>
-	// </div> 
+	// </div>
