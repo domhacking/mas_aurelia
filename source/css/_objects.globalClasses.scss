@@ -74,6 +74,10 @@
 	}
 }
 
+.no-padding{
+	padding-bottom: 0 !important;
+}
+
 @media #{$viewport-tablet} {
 	.imageContainer{
 		height: 800px;

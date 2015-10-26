@@ -101,13 +101,13 @@
 				padding: 70px 0;
 				width: 80%;
 				margin: 0 auto;
+				display: flex;
 
-	  			.content--main__writingTop{
-	  				display: inline-block;
-	  				width: 40%;
-	  				vertical-align: top;
+	  			.content--main__writing{
 	  				padding-right: 20px;
-
+	  				-webkit-flex: 1;
+    				-ms-flex: 1;
+    				flex: 1;
 
 		  			p{
 		  				padding-bottom: 20px;
@@ -116,39 +116,39 @@
 
 
 	  			.content--main__img{
-	  				height: 250px;
-	  				width: 59%;
-	  				display: inline-block;
+	  				-webkit-flex: 0.5;
+    				-ms-flex: 0.5;
+    				flex: 0.5;
 
-	  				&.arles{
-	  					background: url('../img/img--village__arles.jpg') no-repeat;
-	  					background-size: contain;
-	  				}
+    				&.aix{
+    					background: url("../img/img--village__aix.jpg") no-repeat;
+    					background-size: cover;
+    				}
 
-					&.lesBaux{
-	  					background: url('../img/img--village__lesBaux.jpg') no-repeat;
-	  					background-size: contain;
-	  				}
+    				&.arles{
+    					background: url("../img/img--village__arles.jpg") no-repeat;
+    					background-size: cover;
+    				}
 
-					&.stRem{
-	  					background: url('../img/img--village__stRemy.jpg') no-repeat;
-	  					background-size: contain;
-	  				}
+    				&.avignon{
+    					background: url("../img/img--village__avignon.jpg") no-repeat;
+    					background-size: cover;
+    				}
 
-					&.marseille{
-	  					background: url('../img/img--village__marseille.jpg') no-repeat;
-	  					background-size: contain;
-	  				}
+    				&.marseille{
+    					background: url("../img/img--village__marseille.jpg") no-repeat;
+    					background-size: cover;
+    				}
 
-					&.avignon{
-	  					background: url('../img/img--village__avignon.jpg') no-repeat;
-	  					background-size: contain;
-	  				}
+    				&.lesBaux{
+    					background: url("../img/img--village__lesBaux.jpg") no-repeat;
+    					background-size: cover;
+    				}
 
-	  				&.aix{
-	  					background: url('../img/img--village__aix.jpg') no-repeat;
-	  					background-size: contain;
-	  				}
+    				&.stRem{
+    					background: url("../img/img--village__stRem.jpg") no-repeat;
+    					background-size: cover;
+    				}
 	  			}
 
 	  			.content--main__writingBottom{
@@ -180,10 +180,53 @@
 		.nearestVillage--panel{
 			ul{
 				padding: 0 100px;
+
 				li{
 					width: 46%;
 					padding: 20px;
 				}
+			}
+		}
+
+		.nearestVillage--info{
+
+			h3{
+				padding-bottom: 15px;
+			}
+
+			.tab-pane{
+				.content--main{
+					width: 90%;
+					display: block;
+
+					.content--main__writing{
+						width: 100%;
+						padding-right: 0px;
+						text-align: justify;
+
+						.no-padding{
+							padding-bottom:20px !important;
+						}
+					}
+
+					.content--main__img{
+						display: block;
+						flex: 0;
+						margin: 0 auto;
+						width: 30%;
+					}
+
+				}
+
+				.content--second{
+	  				width: 90%;
+	  				margin: 0 auto;
+
+		  			.content--second__block{
+		  				display: block;
+		  				width: 100%;
+		  			}
+		  		}
 			}
 		}
 	}
@@ -216,7 +259,7 @@
 
 			.tab-pane{
 				.content--main{
-					width: 90%;
+					width: 80%;
 
 					.content--main__writing{
 						width: 100%;
