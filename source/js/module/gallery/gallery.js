@@ -5,15 +5,15 @@
  */
 
  images = [
- 	{name:"../img/mosaic-img1.jpg", imageNumber:"1"},
- 	{name:"../img/mosaic-img2.jpg", imageNumber:"2"},
- 	{name:"../img/mosaic-img3.jpg", imageNumber:"3"},
- 	{name:"../img/mosaic-img4.jpg", imageNumber:"4"},
- 	{name:"../img/mosaic-img5.jpg", imageNumber:"5"},
- 	{name:"../img/mosaic-img6.jpg", imageNumber:"6"},
- 	{name:"../img/mosaic-img7.jpg", imageNumber:"7"},
- 	{name:"../img/mosaic-img8.jpg", imageNumber:"8"},
- 	{name:"../img/mosaic-img9.jpg", imageNumber:"9"}
+ 	{name:"../img/mosaic-img0.jpg", imageNumber:"1"},
+ 	{name:"../img/mosaic-img1.jpg", imageNumber:"2"},
+ 	{name:"../img/mosaic-img2.jpg", imageNumber:"3"},
+ 	{name:"../img/mosaic-img3.jpg", imageNumber:"4"},
+ 	{name:"../img/mosaic-img4.jpg", imageNumber:"5"},
+ 	{name:"../img/mosaic-img5.jpg", imageNumber:"6"},
+ 	{name:"../img/mosaic-img6.jpg", imageNumber:"7"},
+ 	{name:"../img/mosaic-img7.jpg", imageNumber:"8"},
+ 	{name:"../img/mosaic-img8.jpg", imageNumber:"9"}
  ];
 
 var Module = require('../abstract-module');
@@ -25,7 +25,7 @@ module.exports = Module.extend({
 	goto: function( imageNum ){
         var images = this.get('images');
 
-		console.log(images)
+		// console.log(images)
 
         while (imageNum < 0 ) {
             imageNum += images.length;
@@ -57,44 +57,35 @@ module.exports = Module.extend({
     	this.on('close', this.onCloseClick);
     },
 
-  	onImageClick: function(){
-  // 		console.log('test');
+  	onImageClick: function(e, imageNum){
+		var images = this.get('images');
+
+		console.log(images)
+
+        while (imageNum < 0 ) {
+            imageNum += images.length;
+        }
+
+        console.log(imageNum)
+
+        imageNum %= images.length;
+
+        this.set({
+            image: images[imageNum],
+            current: imageNum
+        });
+
+		// console.log(imageNum[i])
+
+
   		this.set('lightBox', true);
-  // 		console.log(this.get('lightBox'));
+		// this.set({
+		// 	image: images[imageNum]
+		// })
+  		console.log(this.get('lightBox'));
   	},
 
   	onCloseClick: function(){
   		this.set('lightBox', false);
   	}
 });
-
-
-
-
-
-		// function ( options ) {
-		//     this.on( 'goto', function ( event, index ) {
-		//       this.goto( index );
-		//     });
-
-		//     this.goto( 0 );
-
-
- 	// goto: function ( imageNum ) {
-  // 	 	var images = this.get( 'images' );
-  // 	 	console.log(imageNum);
-  // 	 	// console.log(current);
-
-  // 	 	while( imageNum < 0){
-  // 	 		imageNum += images.length;
-  // 	 		console.log(imageNum)
-  // 	 	}
-  // 	 	// ...and the maximum
-		// imageNum %= images.length;
-
-		// this.set({
-	 //      	images: images[ imageNum ],
-		//     current: imageNum
-		// });
-
-  // 	},

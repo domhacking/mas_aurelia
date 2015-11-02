@@ -11,7 +11,7 @@
 			<div class="burger--bar"></div>
 		</div>
 
-		<div class="navbar--container {{expanded ? 'activeBurger': ' '}}" id="nav-tab navpoint">
+		<div class="navbar--container {{expanded ? 'activeBurger': ' '}}" id="nav-tab navpoint" on-click="nav">
 			<li class="navButton nav-underline {{#if view == 'home'}} active{{/if}}" on-click="goToHome" id="#home">HOME</li>
 			<li class="navButton nav-underline {{#if view == 'gallery'}} active{{/if}}" on-click="goToGallery" id="#gallery">GALLERY</li>
 			<li class="navButton nav-underline {{#if view == 'info'}} active{{/if}}" on-click="goToInfo" id="#info">INFO</li>
@@ -19,6 +19,4 @@
 			<li class="navButton nav-underline {{#if view == 'contact'}} active{{/if}}" on-click="goToContact" id="#contact">CONTACT</li>
 		</div>
 	</div>
-	
 	<div class="stopthejump"></div>
-

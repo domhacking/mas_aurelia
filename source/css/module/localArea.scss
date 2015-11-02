@@ -119,35 +119,42 @@
 	  				-webkit-flex: 0.5;
     				-ms-flex: 0.5;
     				flex: 0.5;
+					max-height: 100%;
 
     				&.aix{
     					background: url("../img/img--village__aix.jpg") no-repeat;
-    					background-size: cover;
+    					background-size: 100% auto;
+						background-position: center;
     				}
 
     				&.arles{
-    					background: url("../img/img--village__arles.jpg") no-repeat;
-    					background-size: cover;
+    					background: url("../img/img--village__arles--cropped.jpg") no-repeat;
+						background-size: 100% auto;
+						background-position: center;
     				}
 
     				&.avignon{
-    					background: url("../img/img--village__avignon.jpg") no-repeat;
-    					background-size: cover;
+    					background: url("../img/img--village__avignon--cropped.jpg") no-repeat;
+						background-size: 100% auto;
+						background-position: center;
     				}
 
     				&.marseille{
-    					background: url("../img/img--village__marseille.jpg") no-repeat;
-    					background-size: cover;
+    					background: url("../img/img--village__marseille--cropped.jpg") no-repeat;
+						background-size: 100% auto;
+						background-position: center;
     				}
 
     				&.lesBaux{
-    					background: url("../img/img--village__lesBaux.jpg") no-repeat;
-    					background-size: cover;
+    					background: url("../img/img--village__lesBaux--cropped.jpg") no-repeat;
+						background-size: 100% auto;
+						background-position: center;
     				}
 
     				&.stRem{
-    					background: url("../img/img--village__stRem.jpg") no-repeat;
-    					background-size: cover;
+    					background: url("../img/img--village__stRemy--cropped.jpg") no-repeat;
+						background-size: 100% auto;
+						background-position: center;
     				}
 	  			}
 

@@ -11,6 +11,31 @@
 		max-width: 1000px;
 		margin: 0 auto;
 
+
+		.images{
+			height: 300px;
+			width: 300px;
+			display: inline-block;
+			margin: 10px;
+		}
+
+		.slider, .cross{
+			display: none;
+		}
+	}
+
+	.background{
+    	background-color: rgba(0,0,0,0.8);
+		position: fixed;
+		display: table;
+    	top: 0%;
+    	left: 0%;
+    	width: 100%;
+    	height: 100%;
+    	z-index:10;
+    	max-width: none;
+
+
 		.slider{
 			background: url("../img/arrow.png") no-repeat;
 			background-size: 100%;
@@ -32,11 +57,6 @@
 			}
 		}
 
-		.displayNone{
-			display: none;
-
-		}
-
 		.cross{
 			display: block;
 			position: absolute;
@@ -46,78 +66,55 @@
 			color: $white;
 		}
 
-		&.background{
-	    	background-color: rgba(0,0,0,0.8);
-			position: fixed;
-			display: table;
-	    	top: 0%;
-	    	left: 0%;
-	    	width: 100%;
-	    	height: 100%;
-	    	z-index:10;
-	    	max-width: none;
 
-			li{
-				display: inline-block;
+		li{
 
-				&.activeImage{
-					margin-top: 10%;
-					width: 100%;
-					height: 100%;
-					text-align: center;
-					z-index: 1002;
-					display: table-cell;
-					vertical-align: middle;
+			&.activeImage{
+				margin-top: 10%;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				z-index: 1002;
+				// display: table-cell;
+				// vertical-align: middle;
 
-					.mosiac--element{
-						height: 80%;
-						width: auto;
+				.mosiac--element{
+					height: 80%;
+					width: auto;
 
-						img{
-							&:hover{
-								opacity: 1;
-							}
+					img{
+						&:hover{
+							opacity: 1;
 						}
 					}
 				}
-		}
-
-
-
-		.noCross{
-			display: none;
-
-		}
-		.cross{
-			display: block;
-			position: absolute;
-			right: 30px;
-			top: 10px;
-			font-size: 40px;
-			color: $white;
-		}
-
-
-
-			.mosiac--element{
-				margin-left:30px;
-				height: 200px;
-				width: 200px;
-				background-color: black;
-				background-image: url('../img/magnifyingGlass.png');
-				background-repeat: no-repeat;
-				background-size: 35px 27px;
-				background-position: 47% center;
-				display: inline-block;
-
-				img{
-					height: 100%;
-					width: 100%;
-					&:hover{
-						opacity: 0.5;
-					}
-				}
 			}
+		}
+
+
+			// .mosiac--element{
+			// 	margin-left:30px;
+			// 	height: 200px;
+			// 	width: 200px;
+			// 	background-color: black;
+			// 	background-image: url('../img/magnifyingGlass.png');
+			// 	background-repeat: no-repeat;
+			// 	background-size: 35px 27px;
+			// 	background-position: 47% center;
+			// 	display: inline-block;
+			//
+			// 	img{
+			// 		height: 100%;
+			// 		width: 100%;
+			// 		&:hover{
+			// 			opacity: 0.5;
+			// 		}
+			// 	}
+			// }
+
+
+
+
 
 
 		}
@@ -161,7 +158,7 @@
 	// 		}
 	// 	}
 	// }
-}
+
 
 
 // .mosaic--container{

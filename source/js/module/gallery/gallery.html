@@ -17,91 +17,29 @@
 
 
 
-    <div class="photos {{lightBox ? 'background': ' '}}">
-        <div class="{{lightBox ? 'cross': 'displayNone'}}" on-click="close">X</div>
+    <div class="photos ">
 
-
-        <div class="slider__next {{lightBox ? 'slider' : 'displayNone'}}" on-click='goto:{{current + 1}}'></div>
-
-        {{#each images}}
-        <li class="images {{lightBox ? 'activeImage': ' '}} {{i}}" on-click="image">
+        {{#images:i}}
+        <li class="images {{i}}" on-click="image:{{i}}">
             <div class="mosiacelement">
                 <img src="{{name}}"  alt="">
             </div>
         </li>
-        {{/each}}
-
-        <div class="slider__prev {{lightBox ? 'slider' : 'displayNone'}}" on-click='goto:{{current - 1}}'></div>
+        {{/}}
 
     </div>
 
+    {{#lightBox}}
 
-	<!-- <div class="photos {{lightBox ? 'background': ' '}}" >
+    <div class="background">
+        <div class="cross" on-click="close">X</div>
+        <div class="slider__next slider" on-click='goto:{{current + 1}}'></div>
 
-		<div class="{{lightBox ? 'cross': 'noCross'}}" on-click="close">X</div>
+        <div class="activeImage"><img src="../img/mosaic-img{{current}}.jpg" alt=""></div>
 
+        <div class="slider__prev {{lightBox ? 'slider' : 'displayNone'}}" on-click='goto:{{current - 1}}'></div>
+    </div>
 
-		{{#galleryImages:i}}
-			<li class="images {{lightBox ? 'active': ' '}} {{i}}" on-click="image{{i}}">
-				<div class="mosiacelement">
-					<img src="{{src}}"  alt="">
-				</div>
-			</li>
-		{{/galleryImages}}
-
-	</div> -->
+    {{/}}
 
 </div>
-
-			<!-- <li class="images {{#if imageId == '1'}}active{{/if}}" on-click="image:{{id}}" id="{{id}}">
-				<div class="mosiacelement">
-					<img src="../img/mosaic-img2.jpg"   on-click="image" alt="">
-				</div>
-			</li>
-			<li class="images {{#if imageId == '2'}}active{{/if}}" on-click="image:{{id}}" id="{{id}}">
-				<div class="mosiacelement">
-					<img src="../img/mosaic-img3.jpg"   on-click="image" alt="">
-				</div>
-			</li>
-			<li class="images {{#if imageId == '1'}}active{{/if}}" on-click="image:{{id}}" id="{{id}}">
-				<div class="mosiacelement">
-					<img src="../img/mosaic-img4.jpg"   on-click="image" alt="">
-				</div>
-			</li>
-			<li class="images {{#if imageId == '1'}}active{{/if}}" on-click="image:{{id}}" id="{{id}}">
-				<div class="mosiacelement">
-					<img src="../img/mosaic-img5.jpg"   on-click="image" alt="">
-				</div>
-			</li>
-			<li class="images {{#if imageId == '1'}}active{{/if}}" on-click="image:{{id}}" id="{{id}}">
-				<div class="mosiacelement">
-					<img src="../img/mosaic-img6.jpg"   on-click="image" alt="">
-				</div>
-			</li>
-			<li class="images {{#if imageId == '1'}}active{{/if}}" on-click="image:{{id}}" id="{{id}}">
-				<div class="mosiacelement">
-					<img src="../img/mosaic-img7.jpg"   on-click="image" alt="">
-				</div>
-			</li>
-			<li class="images {{#if imageId == '1'}}active{{/if}}" on-click="image:{{id}}" id="{{id}}">
-				<div class="mosiacelement">
-					<img src="../img/mosaic-img8.jpg"   on-click="image" alt="">
-				</div>
-			</li>-->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="controls">
-	<div class="close" on-click="close">X</div>
-	<div class='prev' on-click='goto:{{current-1}}'><span style="font-size: 50px; padding-left: 20px;">&laquo;</span></div>
-	<div class='next' on-click='goto:{{current+1}}'><span style="font-size: 50px; padding-left: 20px;">&raquo;</div>
-</div> -->

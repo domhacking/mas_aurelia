@@ -1067,7 +1067,25 @@ h1, h2, h3, h4, p, li, a {
   width: 80%;
   max-width: 1000px;
   margin: 0 auto; }
-  .gallery .photos .slider {
+  .gallery .photos .images {
+    height: 300px;
+    width: 300px;
+    display: inline-block;
+    margin: 10px; }
+  .gallery .photos .slider, .gallery .photos .cross {
+    display: none; }
+
+.gallery .background {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  display: table;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  max-width: none; }
+  .gallery .background .slider {
     background: url("../img/arrow.png") no-repeat;
     background-size: 100%;
     height: 90px;
@@ -1076,74 +1094,34 @@ h1, h2, h3, h4, p, li, a {
     position: absolute;
     bottom: 50%;
     margin-bottom: -45px; }
-    .gallery .photos .slider__prev {
+    .gallery .background .slider__prev {
       left: 30px;
       -webkit-transform: rotate(90deg);
           -ms-transform: rotate(90deg);
               transform: rotate(90deg); }
-    .gallery .photos .slider__next {
+    .gallery .background .slider__next {
       right: 30px;
       -webkit-transform: rotate(-90deg);
           -ms-transform: rotate(-90deg);
               transform: rotate(-90deg); }
-  .gallery .photos .displayNone {
-    display: none; }
-  .gallery .photos .cross {
+  .gallery .background .cross {
     display: block;
     position: absolute;
     right: 30px;
     top: 10px;
     font-size: 40px;
     color: #ffffff; }
-  .gallery .photos.background {
-    background-color: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    display: table;
-    top: 0%;
-    left: 0%;
+  .gallery .background li.activeImage {
+    margin-top: 10%;
     width: 100%;
     height: 100%;
-    z-index: 10;
-    max-width: none; }
-    .gallery .photos.background li {
-      display: inline-block; }
-      .gallery .photos.background li.activeImage {
-        margin-top: 10%;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        z-index: 1002;
-        display: table-cell;
-        vertical-align: middle; }
-        .gallery .photos.background li.activeImage .mosiac--element {
-          height: 80%;
-          width: auto; }
-          .gallery .photos.background li.activeImage .mosiac--element img:hover {
-            opacity: 1; }
-    .gallery .photos.background .noCross {
-      display: none; }
-    .gallery .photos.background .cross {
-      display: block;
-      position: absolute;
-      right: 30px;
-      top: 10px;
-      font-size: 40px;
-      color: #ffffff; }
-    .gallery .photos.background .mosiac--element {
-      margin-left: 30px;
-      height: 200px;
-      width: 200px;
-      background-color: black;
-      background-image: url("../img/magnifyingGlass.png");
-      background-repeat: no-repeat;
-      background-size: 35px 27px;
-      background-position: 47% center;
-      display: inline-block; }
-      .gallery .photos.background .mosiac--element img {
-        height: 100%;
-        width: 100%; }
-        .gallery .photos.background .mosiac--element img:hover {
-          opacity: 0.5; }
+    text-align: center;
+    z-index: 1002; }
+    .gallery .background li.activeImage .mosiac--element {
+      height: 80%;
+      width: auto; }
+      .gallery .background li.activeImage .mosiac--element img:hover {
+        opacity: 1; }
 
 /**
  * @module:   home
@@ -1346,25 +1324,32 @@ h1, h2, h3, h4, p, li, a {
       .localArea .nearestVillage--info .tab-pane .content--main .content--main__img {
         -webkit-flex: 0.5;
         -ms-flex: 0.5;
-        flex: 0.5; }
+        flex: 0.5;
+        max-height: 100%; }
         .localArea .nearestVillage--info .tab-pane .content--main .content--main__img.aix {
           background: url("../img/img--village__aix.jpg") no-repeat;
-          background-size: cover; }
+          background-size: 100% auto;
+          background-position: center; }
         .localArea .nearestVillage--info .tab-pane .content--main .content--main__img.arles {
-          background: url("../img/img--village__arles.jpg") no-repeat;
-          background-size: cover; }
+          background: url("../img/img--village__arles--cropped.jpg") no-repeat;
+          background-size: 100% auto;
+          background-position: center; }
         .localArea .nearestVillage--info .tab-pane .content--main .content--main__img.avignon {
-          background: url("../img/img--village__avignon.jpg") no-repeat;
-          background-size: cover; }
+          background: url("../img/img--village__avignon--cropped.jpg") no-repeat;
+          background-size: 100% auto;
+          background-position: center; }
         .localArea .nearestVillage--info .tab-pane .content--main .content--main__img.marseille {
-          background: url("../img/img--village__marseille.jpg") no-repeat;
-          background-size: cover; }
+          background: url("../img/img--village__marseille--cropped.jpg") no-repeat;
+          background-size: 100% auto;
+          background-position: center; }
         .localArea .nearestVillage--info .tab-pane .content--main .content--main__img.lesBaux {
-          background: url("../img/img--village__lesBaux.jpg") no-repeat;
-          background-size: cover; }
+          background: url("../img/img--village__lesBaux--cropped.jpg") no-repeat;
+          background-size: 100% auto;
+          background-position: center; }
         .localArea .nearestVillage--info .tab-pane .content--main .content--main__img.stRem {
-          background: url("../img/img--village__stRem.jpg") no-repeat;
-          background-size: cover; }
+          background: url("../img/img--village__stRemy--cropped.jpg") no-repeat;
+          background-size: 100% auto;
+          background-position: center; }
       .localArea .nearestVillage--info .tab-pane .content--main .content--main__writingBottom p {
         padding-bottom: 20px; }
     .localArea .nearestVillage--info .tab-pane .content--second {
@@ -1449,7 +1434,7 @@ h1, h2, h3, h4, p, li, a {
   width: 100%;
   z-index: 2;
   height: 100px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4); }
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4); }
   .nav .burger {
     display: none; }
   .nav .navbar--container {

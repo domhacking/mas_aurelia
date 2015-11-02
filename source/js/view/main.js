@@ -23,8 +23,17 @@ module.exports = function() {
             this.setRouter();
         },
 
-        onrender: function() {
 
+        onrender: function() {
+            this.observe('view', this.scrollingPoint)
+        },
+
+        scrollingPoint: function(newValue, old){
+            console.log(newValue, old);
+            var navpoint = this.find('.homescreen');
+
+            document.body.scrollTop = navpoint.scrollHeight;
+            // console.log(navpoint.offsetTop);
         },
 
         setRouter: function(){
@@ -60,29 +69,6 @@ module.exports = function() {
     });
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $(document).ready(function(){
    $(window).bind('scroll', function() {
    var navHeight = $( window ).height();
@@ -98,20 +84,3 @@ $(document).ready(function(){
     });
 
 });
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-                $('html,body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-            return false;
-          }
-        }
-      });
-    });
-
-
-

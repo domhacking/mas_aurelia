@@ -6,7 +6,7 @@
 
 
 var Module 	= require('../abstract-module');
-var page 	  = require('page');
+var page 	= require('page');
 
 module.exports = Module.extend({
 
@@ -23,9 +23,9 @@ module.exports = Module.extend({
   		this.on('goToLocalArea', this.onGoLocalArea);
   		this.on('goToContact', this.onGoContact);
         this.on('burger', this.onBurgerClick);
-        this.observe('view', function(newValue, old){
-            console.log(old, newValue);
-        });
+        // this.observe('view', function(newValue, old){
+        //     // console.log(old, newValue);
+        // });
         // this.on('nav', this.onNavClick);
     },
 
@@ -53,7 +53,14 @@ module.exports = Module.extend({
         // name of attribute
         this.toggle('expanded')
         console.log(this.get('expanded'))
-    }
+    },
+
+    // onNavClick: function(){
+    //     var timeOut;
+    //     if (document.body.scrollTop!=0 || document.documentElement.scrollTop!=0){
+    //         window.scrollBy(0,-50);
+    //         timeOut=setTimeout('scrollToTop()',10);
+    //     } else clearTimeout(timeOut);
+    // }
+
 });
-
-
