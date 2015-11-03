@@ -26813,7 +26813,7 @@ module.exports = Ractive.extend({
 });
 
 },{"ractive":8}],11:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"contact","id":"contact"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Contact"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Please get in touch to find out more details on whether the house is available and the prices for rental."]}]}," ",{"t":7,"e":"div","a":{"class":"contactPanel"},"f":[{"t":7,"e":"h2","f":["How to book"]}," ",{"t":7,"e":"div","a":{"class":"contactPanel--container"},"f":[{"t":7,"e":"div","a":{"class":"contactPanel--container__right"},"f":[{"t":7,"e":"h3","f":["General Enquiry"]}," ",{"t":7,"e":"form","a":{"action":"MAILTO:dominichacking@gmail.com","method":"post","enctype":"text/plain"},"f":[{"t":7,"e":"input","a":{"type":"text","placeholder":"Name"}}," ",{"t":7,"e":"input","a":{"type":"text","placeholder":"E-mail address"}}," ",{"t":7,"e":"textarea","a":{"type":"text","class":"message","placeholder":"Your Message"}}," ",{"t":7,"e":"input","a":{"type":"submit","class":"submit","value":"Send Message"}}]}]}," ",{"t":7,"e":"div","a":{"class":"contactPanel--container__left"},"f":[{"t":7,"e":"h3","f":["Contact Info"]}," ",{"t":7,"e":"p","f":["Mas Aurelia"]}," ",{"t":7,"e":"p","a":{"class":"email"},"f":["jeanpayne@yahoo.com"]}," ",{"t":7,"e":"p","a":{"class":"number"},"f":["076338 564 945"]}]}]}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"contact","id":"contact"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Contact"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":["Please get in touch to find out more details on whether the house is available and the prices for rental."]}]}," ",{"t":7,"e":"div","a":{"class":"contactPanel"},"f":[{"t":7,"e":"h2","f":["How to book"]}," ",{"t":7,"e":"div","a":{"class":"contactPanel--container"},"f":[{"t":7,"e":"div","a":{"class":"contactPanel--container__left"},"f":[{"t":7,"e":"h3","f":["General Enquiry"]}," ",{"t":7,"e":"form","a":{"action":"MAILTO:dominichacking@gmail.com","method":"post","enctype":"text/plain"},"f":[{"t":7,"e":"input","a":{"type":"text","placeholder":"Name"}}," ",{"t":7,"e":"input","a":{"type":"text","placeholder":"E-mail address"}}," ",{"t":7,"e":"textarea","a":{"type":"text","class":"message","placeholder":"Your Message"}}," ",{"t":7,"e":"input","a":{"type":"submit","class":"submit","value":"Send Message"}}]}]}," ",{"t":7,"e":"div","a":{"class":"contactPanel--container__right"},"f":[{"t":7,"e":"h3","f":["Contact Info"]}," ",{"t":7,"e":"p","f":["Mas Aurelia"]}," ",{"t":7,"e":"p","a":{"class":"email"},"f":["jeanpayne@yahoo.com"]}," ",{"t":7,"e":"p","a":{"class":"number"},"f":["076338 564 945"]}]}]}]}]}]}
 },{}],12:[function(require,module,exports){
 /**
  * @module:   contact
@@ -26831,7 +26831,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":10,"./contact.html":11}],13:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Gallery"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":[]}]}," ",{"t":7,"e":"div","a":{"class":"photos "},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"class":["images ",{"t":2,"r":"i"}]},"v":{"click":{"n":"image","d":[{"t":2,"r":"i"}]}},"f":[{"t":7,"e":"div","a":{"class":"mosiacelement"},"f":[{"t":7,"e":"img","a":{"src":[{"t":2,"r":"name"}],"alt":""}}]}]}],"i":"i","r":"images"}]}," ",{"t":4,"f":[{"t":7,"e":"div","a":{"class":"background"},"f":[{"t":7,"e":"div","a":{"class":"cross"},"v":{"click":"close"},"f":["X"]}," ",{"t":7,"e":"div","a":{"class":"slider__next slider"},"v":{"click":{"n":"goto","d":[{"t":2,"x":{"r":["current"],"s":"_0+1"}}]}}}," ",{"t":7,"e":"div","a":{"class":"activeImage"},"f":[{"t":7,"e":"img","a":{"src":["../img/mosaic-img",{"t":2,"r":"current"},".jpg"],"alt":""}}]}," ",{"t":7,"e":"div","a":{"class":["slider__prev ",{"t":2,"x":{"r":["lightBox"],"s":"_0?\"slider\":\"displayNone\""}}]},"v":{"click":{"n":"goto","d":[{"t":2,"x":{"r":["current"],"s":"_0-1"}}]}}}]}],"r":"lightBox"}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery"},"f":[{"t":7,"e":"div","a":{"class":"intro--container"},"f":[{"t":7,"e":"h2","f":["Gallery"]}," ",{"t":7,"e":"p","a":{"class":"intro--container__content"},"f":[]}]}," ",{"t":7,"e":"div","a":{"class":"photos"},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"class":["images image",{"t":2,"r":"i"}]},"v":{"click":{"n":"image","d":[{"t":2,"r":"i"}]}},"f":[{"t":7,"e":"div","a":{"class":"images__img"},"f":[{"t":7,"e":"img","a":{"src":[{"t":2,"r":"name"}],"alt":""}}]}]}],"i":"i","r":"images"}]}," ",{"t":4,"f":[{"t":7,"e":"div","a":{"class":"background"},"f":[{"t":7,"e":"div","a":{"class":"cross"},"v":{"click":"close"},"f":["X"]}," ",{"t":7,"e":"div","a":{"class":"slider__next slider"},"v":{"click":{"n":"goto","d":[{"t":2,"x":{"r":["current"],"s":"_0+1"}}]}}}," ",{"t":7,"e":"div","a":{"class":"activeImage"},"f":[{"t":7,"e":"img","a":{"src":["../img/mosaic-img",{"t":2,"r":"current"},".jpg"],"alt":""}}]}," ",{"t":7,"e":"div","a":{"class":["slider__prev ",{"t":2,"x":{"r":["lightBox"],"s":"_0?\"slider\":\"displayNone\""}}]},"v":{"click":{"n":"goto","d":[{"t":2,"x":{"r":["current"],"s":"_0-1"}}]}}}]}],"r":"lightBox"}]}]}
 },{}],14:[function(require,module,exports){
 /**
  * @module:   gallery
@@ -27010,6 +27010,124 @@ module.exports = Module.extend({
                 zoom: 10,
                 scrollwheel: false,
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
+                styles: [
+                    {
+                        "featureType": "landscape",
+                        "stylers": [
+                            {
+                                "saturation": -100
+                            },
+                            {
+                                "lightness": 65
+                            },
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "stylers": [
+                            {
+                                "saturation": -100
+                            },
+                            {
+                                "lightness": 51
+                            },
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "stylers": [
+                            {
+                                "saturation": -100
+                            },
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "stylers": [
+                            {
+                                "saturation": -100
+                            },
+                            {
+                                "lightness": 30
+                            },
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "stylers": [
+                            {
+                                "saturation": -100
+                            },
+                            {
+                                "lightness": 40
+                            },
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "stylers": [
+                            {
+                                "saturation": -100
+                            },
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.province",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            },
+                            {
+                                "lightness": -25
+                            },
+                            {
+                                "saturation": -100
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "hue": "#ffff00"
+                            },
+                            {
+                                "lightness": -25
+                            },
+                            {
+                                "saturation": -97
+                            }
+                        ]
+                    }
+                ]
 
             }
         }
@@ -27023,6 +27141,12 @@ module.exports = Module.extend({
         var el = this.find('#map');
         var opts = this.get('mapOptions');
         var map = new google.maps.Map(el, opts);
+        var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(43.768741, 4.928654),
+                map: map,
+                icon: '../img/g-house.png'
+            });
+
     },
 
     onTabClick: function(event, area){
@@ -27033,8 +27157,6 @@ module.exports = Module.extend({
 
 
 });
-
-
 
 },{"../abstract-module":10,"./localArea.html":22}],24:[function(require,module,exports){
 module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"burger"},"v":{"click":"burger"},"f":[{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}," ",{"t":7,"e":"div","a":{"class":"burger--bar"}}]}," ",{"t":7,"e":"div","a":{"class":["navbar--container ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"activeBurger\":\" \""}}],"id":"nav-tab navpoint"},"v":{"click":"nav"},"f":[{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"home\""}}],"id":"#home"},"v":{"click":"goToHome"},"f":["HOME"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"gallery\""}}],"id":"#gallery"},"v":{"click":"goToGallery"},"f":["GALLERY"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"info\""}}],"id":"#info"},"v":{"click":"goToInfo"},"f":["INFO"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"localArea\""}}],"id":"#localArea"},"v":{"click":"goToLocalArea"},"f":["LOCAL AREA"]}," ",{"t":7,"e":"li","a":{"class":["navButton nav-underline ",{"t":4,"f":["active"],"n":50,"x":{"r":["view"],"s":"_0==\"contact\""}}],"id":"#contact"},"v":{"click":"goToContact"},"f":["CONTACT"]}]}]}," ",{"t":7,"e":"div","a":{"class":"stopthejump"}}]}

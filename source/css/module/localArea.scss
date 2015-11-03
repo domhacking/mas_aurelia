@@ -43,11 +43,13 @@
 
 		ul{
 			background-color: transparent;
-			box-shadow: none;
-			padding: 0 120px;
+			// box-shadow: none;
+			/* padding: 0 120px; */
 			margin: 0 auto;
 			text-align: center;
 			margin-bottom: 75px;
+			width: 80%;
+			max-width: 1060px;
 
 			li{
 				background-color: $mainGrey;
@@ -100,6 +102,7 @@
 	  		.content--main{
 				padding: 70px 0;
 				width: 80%;
+				max-width: 1000px;
 				margin: 0 auto;
 				display: flex;
 
@@ -124,7 +127,7 @@
     				&.aix{
     					background: url("../img/img--village__aix.jpg") no-repeat;
     					background-size: 100% auto;
-						background-position: center;
+						background-position: top;
     				}
 
     				&.arles{

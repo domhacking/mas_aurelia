@@ -979,26 +979,19 @@ h1, h2, h3, h4, p, li, a {
   padding: 100px 0; }
   .contact .contactPanel .contactPanel--container {
     width: 80%;
+    max-width: 1000px;
     margin: 0 auto;
-    padding-top: 60px;
-    text-align: center; }
+    padding-top: 60px; }
     .contact .contactPanel .contactPanel--container h3 {
       padding-bottom: 50px; }
     .contact .contactPanel .contactPanel--container .contactPanel--container__left {
       display: inline-block;
-      width: 40%;
-      vertical-align: top;
-      text-align: center;
-      padding-left: 20px; }
-      .contact .contactPanel .contactPanel--container .contactPanel--container__left p {
-        padding-top: 10px; }
-    .contact .contactPanel .contactPanel--container .contactPanel--container__right {
-      display: inline-block;
-      width: 40%;
-      padding-left: 20px; }
-      .contact .contactPanel .contactPanel--container .contactPanel--container__right h3 {
+      width: 50%;
+      padding-left: 0px;
+      margin-right: 190px; }
+      .contact .contactPanel .contactPanel--container .contactPanel--container__left h3 {
         text-align: left; }
-      .contact .contactPanel .contactPanel--container .contactPanel--container__right input, .contact .contactPanel .contactPanel--container .contactPanel--container__right textarea {
+      .contact .contactPanel .contactPanel--container .contactPanel--container__left input, .contact .contactPanel .contactPanel--container .contactPanel--container__left textarea {
         display: block;
         height: 40px;
         width: 100%;
@@ -1010,13 +1003,13 @@ h1, h2, h3, h4, p, li, a {
         font-family: "JosefinSans-SemiBold";
         font-style: italic;
         resize: none; }
-        .contact .contactPanel .contactPanel--container .contactPanel--container__right input label, .contact .contactPanel .contactPanel--container .contactPanel--container__right textarea label {
+        .contact .contactPanel .contactPanel--container .contactPanel--container__left input label, .contact .contactPanel .contactPanel--container .contactPanel--container__left textarea label {
           position: absolute;
           top: 2px; }
-        .contact .contactPanel .contactPanel--container .contactPanel--container__right input.message, .contact .contactPanel .contactPanel--container .contactPanel--container__right textarea.message {
+        .contact .contactPanel .contactPanel--container .contactPanel--container__left input.message, .contact .contactPanel .contactPanel--container .contactPanel--container__left textarea.message {
           height: 150px;
           border: #e1e1e1; }
-        .contact .contactPanel .contactPanel--container .contactPanel--container__right input.submit, .contact .contactPanel .contactPanel--container .contactPanel--container__right textarea.submit {
+        .contact .contactPanel .contactPanel--container .contactPanel--container__left input.submit, .contact .contactPanel .contactPanel--container .contactPanel--container__left textarea.submit {
           max-width: 50%;
           padding: 0 10px;
           text-align: center;
@@ -1026,35 +1019,42 @@ h1, h2, h3, h4, p, li, a {
           text-transform: uppercase;
           border: none; }
           @media screen and (min-width: 768px) and (max-width: 1120px) {
-            .contact .contactPanel .contactPanel--container .contactPanel--container__right input.submit, .contact .contactPanel .contactPanel--container .contactPanel--container__right textarea.submit {
+            .contact .contactPanel .contactPanel--container .contactPanel--container__left input.submit, .contact .contactPanel .contactPanel--container .contactPanel--container__left textarea.submit {
               max-width: 100%; } }
+    .contact .contactPanel .contactPanel--container .contactPanel--container__right {
+      display: inline-block;
+      width: 30%;
+      vertical-align: top;
+      text-align: center; }
+      .contact .contactPanel .contactPanel--container .contactPanel--container__right p {
+        padding-top: 10px; }
 
 @media screen and (max-width: 767px) {
   .contact .contactPanel {
     padding-top: 35px; }
     .contact .contactPanel .contactPanel--container {
       padding-top: 0px; }
-      .contact .contactPanel .contactPanel--container .contactPanel--container__left {
+      .contact .contactPanel .contactPanel--container .contactPanel--container__right {
         padding-top: 50px;
         padding-left: 0;
         display: block;
         width: 100%; }
-        .contact .contactPanel .contactPanel--container .contactPanel--container__left h3 {
+        .contact .contactPanel .contactPanel--container .contactPanel--container__right h3 {
           text-align: center;
           padding-bottom: 15px;
           font-size: 20px;
           font-weight: normal; }
-      .contact .contactPanel .contactPanel--container .contactPanel--container__right {
+      .contact .contactPanel .contactPanel--container .contactPanel--container__left {
         padding-left: 0;
         padding-top: 20px;
         display: block;
         width: 100%;
         text-align: center; }
-        .contact .contactPanel .contactPanel--container .contactPanel--container__right h3 {
+        .contact .contactPanel .contactPanel--container .contactPanel--container__left h3 {
           text-align: center;
           padding-bottom: 25px;
           font-size: 20px; }
-        .contact .contactPanel .contactPanel--container .contactPanel--container__right input.submit {
+        .contact .contactPanel .contactPanel--container .contactPanel--container__left input.submit {
           width: 100%;
           padding-top: 3px; } }
 
@@ -1068,15 +1068,52 @@ h1, h2, h3, h4, p, li, a {
   max-width: 1000px;
   margin: 0 auto; }
   .gallery .photos .images {
-    height: 300px;
-    width: 300px;
     display: inline-block;
-    margin: 10px; }
+    padding: 10px; }
+    .gallery .photos .images.image0 {
+      width: 36.5%;
+      float: left; }
+    .gallery .photos .images.image1 {
+      width: 32%;
+      vertical-align: top; }
+    .gallery .photos .images.image2 {
+      width: 32%;
+      vertical-align: top;
+      float: right; }
+    .gallery .photos .images.image3 {
+      width: 62%;
+      vertical-align: top;
+      float: right; }
+    .gallery .photos .images.image4 {
+      width: 33%; }
+    .gallery .photos .images.image5 {
+      width: 33%;
+      vertical-align: top; }
+    .gallery .photos .images.image6 {
+      width: 33%;
+      vertical-align: top; }
+    .gallery .photos .images.image7 {
+      width: 50%;
+      vertical-align: top; }
+    .gallery .photos .images.image8 {
+      width: 50%;
+      vertical-align: top; }
+    .gallery .photos .images .images__img {
+      background-color: black;
+      background-image: url("../img/magnifyingGlass.png");
+      background-repeat: no-repeat;
+      background-size: 35px 27px;
+      background-position: 47% center; }
+      .gallery .photos .images .images__img img {
+        width: 100%;
+        height: auto; }
+        .gallery .photos .images .images__img img:hover {
+          opacity: 0.4; }
   .gallery .photos .slider, .gallery .photos .cross {
     display: none; }
 
 .gallery .background {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   display: table;
   top: 0%;
@@ -1111,17 +1148,13 @@ h1, h2, h3, h4, p, li, a {
     top: 10px;
     font-size: 40px;
     color: #ffffff; }
-  .gallery .background li.activeImage {
-    margin-top: 10%;
+  .gallery .background .activeImage {
     width: 100%;
     height: 100%;
     text-align: center;
-    z-index: 1002; }
-    .gallery .background li.activeImage .mosiac--element {
-      height: 80%;
-      width: auto; }
-      .gallery .background li.activeImage .mosiac--element img:hover {
-        opacity: 1; }
+    z-index: 1002;
+    display: table-cell;
+    vertical-align: middle; }
 
 /**
  * @module:   home
@@ -1272,11 +1305,12 @@ h1, h2, h3, h4, p, li, a {
     margin-bottom: 60px; }
   .localArea .nearestVillage--panel ul {
     background-color: transparent;
-    box-shadow: none;
-    padding: 0 120px;
+    /* padding: 0 120px; */
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 75px; }
+    margin-bottom: 75px;
+    width: 80%;
+    max-width: 1060px; }
     .localArea .nearestVillage--panel ul li {
       background-color: #e1e1e1;
       display: inline-block;
@@ -1310,6 +1344,7 @@ h1, h2, h3, h4, p, li, a {
     .localArea .nearestVillage--info .tab-pane .content--main {
       padding: 70px 0;
       width: 80%;
+      max-width: 1000px;
       margin: 0 auto;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1329,7 +1364,7 @@ h1, h2, h3, h4, p, li, a {
         .localArea .nearestVillage--info .tab-pane .content--main .content--main__img.aix {
           background: url("../img/img--village__aix.jpg") no-repeat;
           background-size: 100% auto;
-          background-position: center; }
+          background-position: top; }
         .localArea .nearestVillage--info .tab-pane .content--main .content--main__img.arles {
           background: url("../img/img--village__arles--cropped.jpg") no-repeat;
           background-size: 100% auto;
@@ -1438,7 +1473,10 @@ h1, h2, h3, h4, p, li, a {
   .nav .burger {
     display: none; }
   .nav .navbar--container {
-    text-align: center; }
+    text-align: center;
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto; }
     .nav .navbar--container li {
       display: inline-block;
       width: 10%;
@@ -1446,7 +1484,7 @@ h1, h2, h3, h4, p, li, a {
       text-decoration: none;
       padding: 45px 0px 25px;
       margin: 0 20px;
-      min-width: 180px;
+      min-width: 160px;
       border-bottom: 10px solid #e1e1e1; }
       .nav .navbar--container li.nav-underline {
         position: relative; }

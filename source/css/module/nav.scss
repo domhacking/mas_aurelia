@@ -19,6 +19,9 @@
 
 	.navbar--container{
 		text-align: center;
+		width: 80%;
+		max-width: 1100px;
+		margin: 0 auto;
 
 		li{
 			display: inline-block;
@@ -27,7 +30,7 @@
 			text-decoration: none;
 			padding: 45px 0px 25px;
 			margin: 0 20px;
-			min-width: 180px;
+			min-width: 160px;
 			border-bottom: 10px solid $mainGrey;
 
 			&.nav-underline {
