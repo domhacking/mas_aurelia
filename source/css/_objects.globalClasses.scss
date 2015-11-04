@@ -9,10 +9,14 @@
 	// min-height: calc(100% - 103px);
 	min-height: 100%;
 	background-size: cover;
-	background-attachment: fixed;
+	// background-image: fixed;
 	background-repeat: no-repeat;
 	background-position: center center;
 	z-index: -1;
+
+   // edia (max-width: @iphone-screen) {
+   //  background-attachment: scroll;
+   // }
 	// z-index: index($bg-elements, fixed-bg);
 }
 

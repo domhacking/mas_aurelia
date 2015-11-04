@@ -62,6 +62,8 @@
 
 
 
+
+
 			.images__img{
 				background-color: black;
 				background-image: url('../img/magnifyingGlass.png');
@@ -78,7 +80,6 @@
 					}
 				}
 			}
-
 		}
 
 		.slider, .cross{
@@ -113,6 +114,7 @@
 			bottom: 50%;
 			margin-bottom: -45px;
 
+
 			&__prev{
 				left: 30px;
 				transform: rotate(90deg);
@@ -141,6 +143,57 @@
 			z-index: 1002;
 			display: table-cell;
 			vertical-align: middle;
+		}
+	}
+
+
+	@media #{$viewport-tablet}{
+		.background{
+			.activeImage{
+				width: 80%;
+			}
+		}
+	}
+
+	@media #{$viewport-mobile}{
+		.photos{
+			.images{
+				width: 100% !important;
+				display: block;
+				float: none !important;
+				margin-bottom: 10px;
+
+				.images__img{
+					margin-bottom: 10px;
+					background: none;
+				}
+			}
+		}
+
+		.background{
+
+			.slider{
+				bottom:10%;
+				height: 45px;
+				width: 30px;
+
+				&__prev{
+					left:20px;
+				}
+				&__next{
+					right:20px;
+				}
+			}
+
+			.cross{
+				right: 20px;
+				font-size: 30px;
+			}
+
+			.activeImage{
+				margin: 0 40px;
+				width: 80%;
+			}
 		}
 	}
 }

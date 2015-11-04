@@ -877,7 +877,6 @@ h1, h2, h3, h4, p, li, a {
 .fixed-bg {
   min-height: 100%;
   background-size: cover;
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
   z-index: -1; }
@@ -988,7 +987,7 @@ h1, h2, h3, h4, p, li, a {
       display: inline-block;
       width: 50%;
       padding-left: 0px;
-      margin-right: 190px; }
+      margin-right: 100px; }
       .contact .contactPanel .contactPanel--container .contactPanel--container__left h3 {
         text-align: left; }
       .contact .contactPanel .contactPanel--container .contactPanel--container__left input, .contact .contactPanel .contactPanel--container .contactPanel--container__left textarea {
@@ -1010,7 +1009,7 @@ h1, h2, h3, h4, p, li, a {
           height: 150px;
           border: #e1e1e1; }
         .contact .contactPanel .contactPanel--container .contactPanel--container__left input.submit, .contact .contactPanel .contactPanel--container .contactPanel--container__left textarea.submit {
-          max-width: 50%;
+          max-width: 100%;
           padding: 0 10px;
           text-align: center;
           font-family: "JosefinSans-Bold";
@@ -1155,6 +1154,34 @@ h1, h2, h3, h4, p, li, a {
     z-index: 1002;
     display: table-cell;
     vertical-align: middle; }
+
+@media screen and (min-width: 768px) and (max-width: 1120px) {
+  .gallery .background .activeImage {
+    width: 80%; } }
+
+@media screen and (max-width: 767px) {
+  .gallery .photos .images {
+    width: 100% !important;
+    display: block;
+    float: none !important;
+    margin-bottom: 10px; }
+    .gallery .photos .images .images__img {
+      margin-bottom: 10px;
+      background: none; }
+  .gallery .background .slider {
+    bottom: 10%;
+    height: 45px;
+    width: 30px; }
+    .gallery .background .slider__prev {
+      left: 20px; }
+    .gallery .background .slider__next {
+      right: 20px; }
+  .gallery .background .cross {
+    right: 20px;
+    font-size: 30px; }
+  .gallery .background .activeImage {
+    margin: 0 40px;
+    width: 80%; } }
 
 /**
  * @module:   home
@@ -1389,12 +1416,13 @@ h1, h2, h3, h4, p, li, a {
         padding-bottom: 20px; }
     .localArea .nearestVillage--info .tab-pane .content--second {
       width: 80%;
+      max-width: 1000px;
       margin: 0 auto; }
       .localArea .nearestVillage--info .tab-pane .content--second .content--second__block {
         vertical-align: top;
         display: inline-block;
         width: 30%;
-        padding: 40px 20px; }
+        padding: 40px 0px; }
         .localArea .nearestVillage--info .tab-pane .content--second .content--second__block p {
           line-height: 25px; }
 
@@ -1412,16 +1440,20 @@ h1, h2, h3, h4, p, li, a {
     .localArea .nearestVillage--info .tab-pane .content--main .content--main__writing {
       width: 100%;
       padding-right: 0px;
-      text-align: justify; }
+      text-align: justify;
+      -webkit-flex: none;
+          -ms-flex: none;
+              flex: none; }
       .localArea .nearestVillage--info .tab-pane .content--main .content--main__writing .no-padding {
         padding-bottom: 20px !important; }
     .localArea .nearestVillage--info .tab-pane .content--main .content--main__img {
       display: block;
-      -webkit-flex: 0;
-          -ms-flex: 0;
-              flex: 0;
+      flex: 0;
+      -webkit-flex: none;
+      -ms-flex: none;
+      flex: none;
       margin: 0 auto;
-      width: 30%; }
+      width: 100%; }
   .localArea .nearestVillage--info .tab-pane .content--second {
     width: 90%;
     margin: 0 auto; }
@@ -1448,10 +1480,16 @@ h1, h2, h3, h4, p, li, a {
     .localArea .nearestVillage--info .tab-pane .content--main .content--main__writing {
       width: 100%;
       padding-right: 0px;
-      text-align: justify; }
+      text-align: justify;
+      -webkit-flex: auto;
+          -ms-flex: auto;
+              flex: auto; }
     .localArea .nearestVillage--info .tab-pane .content--main .content--main__img {
       display: block;
-      margin: 0 auto; }
+      margin: 0 auto;
+      -webkit-flex: auto;
+          -ms-flex: auto;
+              flex: auto; }
   .localArea .nearestVillage--info .tab-pane .content--second {
     width: 90%;
     margin: 0 auto; }
@@ -1477,6 +1515,9 @@ h1, h2, h3, h4, p, li, a {
     width: 80%;
     max-width: 1100px;
     margin: 0 auto; }
+    @media screen and (max-width: 900px) {
+      .nav .navbar--container {
+        width: 100%; } }
     .nav .navbar--container li {
       display: inline-block;
       width: 10%;
