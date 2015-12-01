@@ -26840,15 +26840,15 @@ module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery","id":"gallery
  */
 
  images = [
- 	{name:"../img/mosaic-img0.jpg", imageNumber:"1"},
- 	{name:"../img/mosaic-img1.jpg", imageNumber:"2"},
- 	{name:"../img/mosaic-img2.jpg", imageNumber:"3"},
- 	{name:"../img/mosaic-img3.jpg", imageNumber:"4"},
- 	{name:"../img/mosaic-img4.jpg", imageNumber:"5"},
- 	{name:"../img/mosaic-img5.jpg", imageNumber:"6"},
- 	{name:"../img/mosaic-img6.jpg", imageNumber:"7"},
- 	{name:"../img/mosaic-img7.jpg", imageNumber:"8"},
- 	{name:"../img/mosaic-img8.jpg", imageNumber:"9"}
+ 	{name:"../img/mosaic-img0.jpg", imageNumber:"1", format: 'topleft'},
+ 	{name:"../img/mosaic-img1.jpg", imageNumber:"2", format: 'topright'},
+ 	{name:"../img/mosaic-img2.jpg", imageNumber:"3", format: 'topright'},
+ 	{name:"../img/mosaic-img3.jpg", imageNumber:"4", format: 'middleRigt'},
+ 	{name:"../img/mosaic-img4.jpg", imageNumber:"5", format: 'middle'},
+ 	{name:"../img/mosaic-img5.jpg", imageNumber:"6", format: 'middle'},
+ 	{name:"../img/mosaic-img6.jpg", imageNumber:"7", format: 'middle'},
+ 	{name:"../img/mosaic-img7.jpg", imageNumber:"8", format: 'bottom'},
+ 	{name:"../img/mosaic-img8.jpg", imageNumber:"9", format: 'bottom'}
  ];
 
 var Module = require('../abstract-module');
@@ -26859,8 +26859,6 @@ module.exports = Module.extend({
 
 	goto: function( imageNum ){
         var images = this.get('images');
-
-		// console.log(images)
 
         while (imageNum < 0 ) {
             imageNum += images.length;
@@ -26878,9 +26876,9 @@ module.exports = Module.extend({
 
 	data: {
 		images: images,
-		function(){
-			return {lightBox: false}
-		},
+		// function(){
+		// 	return {lightBox: false}
+		// },
 	},
 
 	oninit: function() {
@@ -26896,12 +26894,15 @@ module.exports = Module.extend({
 		var images = this.get('images');
 
 		console.log(images)
+        // console.log(e);
+        // console.log(imageNum)
+
 
         while (imageNum < 0 ) {
             imageNum += images.length;
+            // console.log(imageNum);
         }
 
-        console.log(imageNum)
 
         imageNum %= images.length;
 
@@ -26917,7 +26918,7 @@ module.exports = Module.extend({
 		// this.set({
 		// 	image: images[imageNum]
 		// })
-  		console.log(this.get('lightBox'));
+  // 		console.log(this.get('lightBox'));
   	},
 
   	onCloseClick: function(){
@@ -27264,7 +27265,7 @@ module.exports = function (props, cb) {
 
 }
 },{}],28:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"ui-homescreen"}," ",{"t":7,"e":"ui-nav","a":{"view":[{"t":2,"r":"view"}]}}," ",{"t":4,"f":[{"t":7,"e":"ui-home"}],"x":{"r":["view"],"s":"_0==\"home\""}},{"t":4,"f":[{"t":7,"e":"ui-gallery"}],"x":{"r":["view"],"s":"_0==\"gallery\""}},{"t":4,"f":[{"t":7,"e":"ui-info"}],"x":{"r":["view"],"s":"_0==\"info\""}},{"t":4,"f":[{"t":7,"e":"ui-localArea"}],"x":{"r":["view"],"s":"_0==\"localArea\""}},{"t":4,"f":[{"t":7,"e":"ui-contact"}],"x":{"r":["view"],"s":"_0==\"contact\""}},{"t":7,"e":"div","a":{"class":"blueStripe"}}]}
+module.exports={"v":3,"t":[{"t":7,"e":"ui-homescreen"}," ",{"t":7,"e":"ui-nav","a":{"view":[{"t":2,"r":"view"}]}}," ",{"t":4,"f":[{"t":7,"e":"ui-home"}],"x":{"r":["view"],"s":"_0==\"home\""}},{"t":4,"f":[{"t":7,"e":"ui-gallery"}],"x":{"r":["view"],"s":"_0==\"gallery\""}},{"t":4,"f":[{"t":7,"e":"ui-info"}],"x":{"r":["view"],"s":"_0==\"info\""}},{"t":4,"f":[{"t":7,"e":"ui-localArea"}],"x":{"r":["view"],"s":"_0==\"localArea\""}},{"t":4,"f":[{"t":7,"e":"ui-contact"}],"x":{"r":["view"],"s":"_0==\"contact\""}},{"t":7,"e":"div","a":{"class":"whiteStripe"}}," ",{"t":7,"e":"div","a":{"class":"blueStripe"}}]}
 },{}],29:[function(require,module,exports){
 var Ractive     = require('ractive');
 var page        = require('page');
@@ -27293,15 +27294,46 @@ module.exports = function() {
 
 
         onrender: function() {
-            this.observe('view', this.scrollingPoint)
+            this.observe('view', this.scrollingPoint);
+            $(window).bind('scroll', function() {
+                var navHeight = $( window ).height();
+                 if ($(window).scrollTop() > navHeight) {
+                     $('.nav').addClass('fixed');
+                     $(".stopthejump").css('display','block');
+
+                 } else {
+                     $('.nav').removeClass('fixed');
+                     $(".stopthejump").css('display','none');
+                 }
+            });
         },
 
         scrollingPoint: function(newValue, old){
-            console.log(newValue, old);
+            if(!old){
+                return;
+            }
             var navpoint = this.find('.homescreen');
 
             document.body.scrollTop = navpoint.scrollHeight;
-            // console.log(navpoint.offsetTop);
+
+            // var endPoint = navpoint.offsetTop;
+            // var inc = 30;
+            // var scrollY = window.scrollY;
+            // console.log(endPoint);
+            //
+            // function step(ts){
+            //
+            //     var scrollY = window.scrollY;
+            //     window.scroll(0, scrollY - inc);
+            //
+            //     if(scrollY > endPoint){
+            //         window.requestAnimationFrame(step);
+            //     }
+            // }
+            //
+            // if(scrollY > endPoint){
+            //     window.requestAnimationFrame(step);
+            // }
         },
 
         setRouter: function(){
@@ -27336,22 +27368,6 @@ module.exports = function() {
         }
     });
 };
-
-$(document).ready(function(){
-   $(window).bind('scroll', function() {
-   var navHeight = $( window ).height();
-         if ($(window).scrollTop() > navHeight) {
-             $('.nav').addClass('fixed');
-             $(".stopthejump").css('display','block');
-
-         }
-         else {
-             $('.nav').removeClass('fixed');
-             $(".stopthejump").css('display','none');
-         }
-    });
-
-});
 
 },{"../module":19,"./main.html":28,"jquery":4,"page":5,"ractive":8}]},{},[1])
 

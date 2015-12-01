@@ -5,7 +5,9 @@
  */
 
 
-@include module("home") { 
+@include module("home") {
+	// background-color: $color-background;
+
 	.imageContainer{
 		.leftImage{
 			background-image: url('../img/left-home-img.jpg');
@@ -78,12 +80,3 @@
 
 	}
 }
-
-
-
-
-
-
-
-
-

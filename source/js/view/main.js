@@ -25,15 +25,46 @@ module.exports = function() {
 
 
         onrender: function() {
-            this.observe('view', this.scrollingPoint)
+            this.observe('view', this.scrollingPoint);
+            $(window).bind('scroll', function() {
+                var navHeight = $( window ).height();
+                 if ($(window).scrollTop() > navHeight) {
+                     $('.nav').addClass('fixed');
+                     $(".stopthejump").css('display','block');
+
+                 } else {
+                     $('.nav').removeClass('fixed');
+                     $(".stopthejump").css('display','none');
+                 }
+            });
         },
 
         scrollingPoint: function(newValue, old){
-            console.log(newValue, old);
+            if(!old){
+                return;
+            }
             var navpoint = this.find('.homescreen');
 
             document.body.scrollTop = navpoint.scrollHeight;
-            // console.log(navpoint.offsetTop);
+
+            // var endPoint = navpoint.offsetTop;
+            // var inc = 30;
+            // var scrollY = window.scrollY;
+            // console.log(endPoint);
+            //
+            // function step(ts){
+            //
+            //     var scrollY = window.scrollY;
+            //     window.scroll(0, scrollY - inc);
+            //
+            //     if(scrollY > endPoint){
+            //         window.requestAnimationFrame(step);
+            //     }
+            // }
+            //
+            // if(scrollY > endPoint){
+            //     window.requestAnimationFrame(step);
+            // }
         },
 
         setRouter: function(){
@@ -68,19 +99,3 @@ module.exports = function() {
         }
     });
 };
-
-$(document).ready(function(){
-   $(window).bind('scroll', function() {
-   var navHeight = $( window ).height();
-         if ($(window).scrollTop() > navHeight) {
-             $('.nav').addClass('fixed');
-             $(".stopthejump").css('display','block');
-
-         }
-         else {
-             $('.nav').removeClass('fixed');
-             $(".stopthejump").css('display','none');
-         }
-    });
-
-});

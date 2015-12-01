@@ -4,65 +4,19 @@
  * @html:     ./source/js/module/gallery/gallery.html
  */
 
+
+
 @include module("gallery") {
+	// background-color: $color-background;
 
 	.photos{
-		width: 80%;
-		max-width: 1000px;
+		max-width: 950px;
 		margin: 0 auto;
-
 
 		.images{
 			display: inline-block;
 			padding: 10px;
-
-			&.image0{
-				width: 36.5%;
-				float: left;
-			}
-
-
-			&.image1{
-				width: 32%;
-				vertical-align: top;
-			}
-			&.image2{
-				width: 32%;
-				vertical-align: top;
-				float: right;
-
-			}
-			&.image3{
-				width: 62%;
-				vertical-align: top;
-				float: right;
-
-			}
-			&.image4{
-				width: 33%;
-
-			}
-			&.image5{
-				width: 33%;
-				vertical-align: top;
-				// float: left;
-			}
-			&.image6{
-				width: 33%;
-				vertical-align: top;
-			}
-			&.image7{
-				width: 50%;
-				vertical-align: top;
-			}
-			&.image8{
-				width: 50%;
-				vertical-align: top;
-			}
-
-
-
-
+			height: auto;
 
 			.images__img{
 				background-color: black;
@@ -73,10 +27,110 @@
 
 				img{
 					width: 100%;
-					height: auto;
+					height: 100%;
 
 					&:hover{
 						opacity: 0.4;
+					}
+				}
+			}
+
+			&.image0{
+				float: left;
+				width: 350px;
+				height: 400px;
+
+			}
+
+			&.image1{
+				width: 300px;
+				vertical-align: top;
+				height: 200px;
+
+				.images__img{
+
+					img{
+						height: 200px;
+					}
+				}
+			}
+
+			&.image2{
+				width: 300px;
+				height: 200px;
+				vertical-align: top;
+
+				.images__img{
+
+					img{
+						height: 200px;
+					}
+				}
+			}
+
+			&.image3{
+				width: 600px;
+				vertical-align: top;
+				margin-top: 20px;
+
+				img{
+					height: 200px;
+				}
+			}
+
+			&.image4{
+				width: 350px;
+				float:left;
+
+				.images__img{
+
+					img{
+						height: 300px;
+					}
+				}
+			}
+
+			&.image5{
+				width: 300px;
+				vertical-align: top;
+				.images__img{
+
+					img{
+						height: 300px;
+					}
+				}
+			}
+
+			&.image6{
+				width: 300px;
+				vertical-align: top;
+				.images__img{
+
+					img{
+						height: 300px;
+					}
+				}
+			}
+
+			&.image7{
+				width: 475px;
+				vertical-align: top;
+
+				.images__img{
+
+					img{
+						height: 250px;
+					}
+				}
+			}
+
+			&.image8{
+				width: 475px;
+				vertical-align: top;
+
+				.images__img{
+					img{
+						height: 250px;
 					}
 				}
 			}
@@ -86,10 +140,6 @@
 			display: none;
 		}
 	}
-
-
-
-
 
 
 	.background{
@@ -153,19 +203,138 @@
 				width: 80%;
 			}
 		}
+
+		.photos{
+			max-width: 720px;
+
+			.images{
+
+				&.image0{
+					float: left;
+					width: 280px;
+					height: 310px;
+					// height: 400px;
+
+				}
+
+				&.image1{
+					width: 220px;
+					height: auto;
+
+					.images__img{
+
+						img{
+							height: 160px ;
+						}
+					}
+				}
+
+				&.image2{
+					width: 220px;
+					height: auto;
+
+					.images__img{
+
+						img{
+							height: 160px ;
+						}
+					}
+				}
+
+				&.image3{
+					width: 440px;
+					height: auto;
+					margin-top: 0;
+
+					.images__img{
+
+						img{
+							height: 150px ;
+						}
+					}
+				}
+
+				&.image4{
+					width: 280px;
+					height: auto;
+					margin-top: 0;
+
+					.images__img{
+
+						img{
+							height: 230px ;
+						}
+					}
+				}
+				&.image5{
+					width: 220px;
+					height: auto;
+					margin-top: 0;
+
+					.images__img{
+
+						img{
+							height: 230px ;
+						}
+					}
+				}
+
+				&.image6{
+					width: 220px;
+					height: auto;
+					margin-top: 0;
+
+					.images__img{
+						img{
+							height: 230px ;
+						}
+					}
+				}
+
+				&.image7{
+					width: 360px;
+					height: auto;
+					margin-top: 0;
+
+					.images__img{
+
+						img{
+							height: 230px ;
+						}
+					}
+				}
+
+				&.image8{
+					width: 360px;
+					height: auto;
+					margin-top: 0;
+
+					.images__img{
+
+						img{
+							height: 230px ;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	@media #{$viewport-mobile}{
 		.photos{
 			.images{
 				width: 100% !important;
+				height: auto !important;
 				display: block;
 				float: none !important;
-				margin-bottom: 10px;
+				padding: 10px 40px;
 
 				.images__img{
-					margin-bottom: 10px;
 					background: none;
+
+					img{
+						height: auto !important;
+					}
 				}
 			}
 		}
@@ -197,245 +366,3 @@
 		}
 	}
 }
-
-// .images{
-// 	display: inline-block;
-// 	padding: 10px;
-// 	height: 100%;
-// 	// position: absolute;
-//
-// 	&.image0{
-// 		position: absolute;
-// 		width: 32%;
-// 	}
-// 	&.image1{
-// 		width: 32%;
-// 		vertical-align: top;
-// 		position: absolute;
-// 		left: 32%;
-// 	}
-// 	&.image2{
-// 		width: 33%;
-// 		vertical-align: top;
-// 		position: absolute;
-// 		right: 0;
-// 	}
-// 	&.image3{
-// 		width: 66%;
-// 		vertical-align: top;
-// 		align: right;
-// 		position: absolute;
-// 		right: 10px;
-// 		top: 250px;
-// 		padding: 0;
-// 	}
-// 	&.image4{
-// 		width: 35%;
-// 		position: absolute;
-// 		left: 0;
-// 		top: 70%;
-// 	}
-// 	&.image5{
-// 		width: 32%;
-// 		position: absolute;
-// 		left: 30%;
-// 	}
-// 	&.image6{
-// 		width: 33%;
-// 		vertical-align: top;
-// 		position: absolute;
-// 		right: 0;
-// 		top: 400px;
-// 	}
-// 	&.image7{
-// 		width: 50%;
-// 		vertical-align: top;
-// 	}
-// 	&.image8{
-// 		width: 50%;
-// 		vertical-align: top;
-// 	}
-//
-
-
-
-
-
-
-
-	// @media #{$viewport-mobile} {
-	// 	.mosaic--container{
-	// 		width: 100%;
-	// 		height: 100%;
-	// 		margin: 0;
-	// 		padding:0;
-
-	// 		.mosaic--container__top, .mosaic--container__middle{
-	// 			height: auto;
-	// 			margin: 0;
-	// 			padding:0;
-
-	// 			.mosaic--block{
-	// 				display: block;
-	// 				width: 100%;
-
-	// 				margin: 0;
-	// 				padding:0;
-	// 			}
-	// 		}
-
-
-	// 		.mobileView{
-	// 			width: 90% !important;
-	// 			margin: 0 auto;
-	// 			margin-top: 5px;
-	// 			margin-bottom: 5px;
-	// 			height: 200px !important;
-	// 			display: block !important;
-	// 			float: none !important;
-	// 		}
-	// 	}
-	// }
-
-
-
-// .mosaic--container{
-	// 	// border: solid 1px black;
-	// 	margin: 0 auto;
-	// 	margin-bottom: 75px;
-	// 	width: 94%;
-	// 	max-width: 1290px;
-	// 	height: 1380px;
-
-	// 	.mosaic--element{
-	// 		display: inline-block;
-	// 		height: 100%;
-	// 		width:  100%;
-	// 		background-color: black;
-
-	// 	}
-
-
-		// img{
-		// 	width: 100%;
-		// 	height: 100%;
-
-
-		// 	&:hover{
-		// 		opacity: 0.4;
-		// 	}
-		// }
-
-
-		// .mosaic--container__top{
-		// 	display: block;
-		// 	height: 600px;
-		// 	padding-bottom: 20px;
-
-		// 	.mosaic--top__left{
-		// 		// background: url('../img/mosaic-img1.jpg') no-repeat;
-		// 		// background-size: cover;
-		// 		width: 32%;
-		// 		margin-right: 20px;
-		// 	}
-
-		// 	.mosaic--block{
-		// 		display: inline-block;
-		// 		height: 100%;
-		// 		vertical-align: top;
-		// 		width: 64%;
-
-		// 		.mosaic--top__topMiddle{
-		// 			// background: url('../img/mosaic-img2.jpg') no-repeat;
-		// 			// background-size: cover;
-		// 			display: inline-block;
-		// 			height: 45%;
-		// 			width: 48%;
-		// 			margin-bottom: 20px;
-		// 			margin-right:20px;
-		// 		}
-
-		// 		.mosaic--top__topRight{
-		// 			// background: url('../img/mosaic-img3.jpg') no-repeat;
-		// 			// background-size: cover;
-		// 			height: 45%;
-		// 			display: inline-block;
-		// 			width: 49%;
-		// 			margin-bottom: 20px;
-		// 		}
-
-
-		// 		.mosaic--top__bottomRight{
-		// 			// background: url('../img/mosaic-img4.jpg') no-repeat;
-		// 			// background-size: cover;
-		// 			display: block;
-		// 			height: 50%;
-		// 			width: 100%;
-		// 			float: right;
-		// 		}
-		// 	}
-		// }
-
-		// .mosaic--container__middle{
-		// 	height: 420px;
-		// 	display: block;
-		// 	margin-bottom: 20px;
-
-		// 	.mosaic--middle__left{
-		// 		// background: url('../img/mosaic-img5.jpg') no-repeat;
-		// 		// background-size: cover;
-		// 		width: 32%;
-		// 		margin-right: 20px;
-		// 	}
-		// 	.mosaic--middle__middle{
-		// 		// background: url('../img/mosaic-img6.jpg') no-repeat;
-		// 		// background-size: cover;
-		// 		width: 32%;
-		// 		margin-right: 20px;
-		// 	}
-		// 	.mosaic--middle__right{
-		// 		// background: url('../img/mosaic-img7.jpg') no-repeat;
-		// 		// background-size: cover;
-		// 		width: 32%;
-		// 	}
-		// }
-
-		// .mosaic--container__bottom{
-		// 	height: 320px;
-		// 	display: block;
-
-		// 	.mosaic--bottom__left{
-		// 		// background: url('../img/mosaic-img8.jpg') no-repeat;
-		// 		// background-size: cover;
-		// 		width: 49%;
-		// 		margin-right: 20px;
-		// 	}
-
-		// 	.mosaic--bottom__right{
-		// 		// background: url('../img/mosaic-img9.jpg') no-repeat;
-		// 		// background-size: cover;
-		// 		width: 49%;
-
-		// 	}
-		// }
-
-	// 	<div class="mosaic--container">
-	// 	<div class="mosaic--container__top">
-	// 		<li class="mosaic--element mosaic--top__left mobileView"><img src="img/mosaic-img1.jpg" alt=""></li>
-	// 		<div class="mosaic--block">
-	// 			<li class="mosaic--element mosaic--top__topMiddle mobileView"><img src="img/mosaic-img2.jpg" alt=""></li>
-	// 			<li class="mosaic--element mosaic--top__topRight mobileView"><img src="img/mosaic-img3.jpg" alt=""></li>
-	// 			<li class="mosaic--element mosaic--top__bottomRight mobileView"><img src="img/mosaic-img4.jpg" alt=""></li>
-	// 		</div>
-	// 	</div>
-	// 	<div class="mosaic--container__middle">
-	// 		<li class="mosaic--element mosaic--middle__left mobileView"><img src="img/mosaic-img5.jpg" alt=""></li>
-	// 		<li class="mosaic--element mosaic--middle__middle mobileView"><img src="img/mosaic-img6.jpg" alt=""></li>
-	// 		<li class="mosaic--element mosaic--middle__right mobileView"><img src="img/mosaic-img7.jpg" alt=""></li>
-	// 	</div>
-	// 	<div class="mosaic--container__bottom">
-	// 		<li class="mosaic--element mosaic--bottom__left mobileView"><img src="img/mosaic-img8.jpg" alt=""></li>
-	// 		<li class="mosaic--element mosaic--bottom__right mobileView"><img src="img/mosaic-img9.jpg" alt=""></li>
-
-	// 	</div>
-	// </div>

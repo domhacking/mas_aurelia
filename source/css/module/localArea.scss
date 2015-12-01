@@ -6,6 +6,8 @@
 
 
 @include module("localArea") {
+	background-color: $color-background;
+
 	.imageContainer{
 		.leftImage{
 			background-image: url('../img/img--eygalieres__left.jpg');
@@ -190,7 +192,7 @@
 	@media #{$viewport-tablet} {
 		.nearestVillage--panel{
 			ul{
-				padding: 0 100px;
+				padding: 0 0px;
 
 				li{
 					width: 46%;
@@ -259,10 +261,15 @@
 				text-align: center;
 
 				li{
-					width: 80%;
+					width: 100%;
 					padding: 15px;
 					margin: 5px;
 				}
+			}
+
+			#nav-tab{
+				width: 90%;
+				text-align: center;
 			}
 		}
 
