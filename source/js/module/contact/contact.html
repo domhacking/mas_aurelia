@@ -17,11 +17,13 @@
 		<div class="contactPanel--container">
 			<div class="contactPanel--container__left">
 				<h3>General Enquiry</h3>
-				<form action="MAILTO:dominichacking@gmail.com" method="post" enctype="text/plain">
-					<input type="text" placeholder="Name" >
-					<input type="text" placeholder="E-mail address">
-					<textarea type="text" class="message" placeholder="Your Message"></textarea>
-					<input type="submit" class="submit" value="Send Message" >
+				<form action="http://formspree.io/dominichacking@gmail.com" method="post">
+					<input type="text" name="name" placeholder="Name" >
+                    <input type="hidden" name="_next" value="http://masaurelia.com/contact" />
+                    <input type="hidden" name="_subject" value="Mas Aurelia Request" />
+					<input type="email" name="_replyto" placeholder="E-mail address">
+					<textarea type="text" name="message" class="message" placeholder="Your Message"></textarea>
+					<input name="submit" type="submit" class="submit" value="Send Message" >
 				</form>
 			</div>
 			<div class="contactPanel--container__right">
