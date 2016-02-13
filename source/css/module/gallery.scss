@@ -8,10 +8,19 @@
 
 @include module("gallery") {
 	// background-color: $color-background;
+	.intro--container{
+		padding-bottom: 0px;
+	}
+
+	.intro--container__content{
+		padding-bottom: 20px;
+	}
 
 	.photos{
 		max-width: 950px;
 		margin: 0 auto;
+		margin-bottom: 0px;
+		padding-bottom: 40px;
 
 		.images{
 			display: inline-block;
@@ -39,7 +48,6 @@
 				float: left;
 				width: 350px;
 				height: 400px;
-
 			}
 
 			&.image1{
