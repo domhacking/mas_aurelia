@@ -26,14 +26,14 @@
 
 
     {{#lightBox}}
-        <div class="background">
-            <div class="cross" on-click="close">X</div>
-            <div class="slider__next slider" on-click='goto:{{current + 1}}'></div>
+    <div class="background">
+        <div class="cross" on-click="close">X</div>
+        <div class="slider__next slider" on-click='goto:{{current + 1}}'></div>
 
-            <div class="activeImage"><img src="../img/mosaic-img{{current}}.jpg" alt=""></div>
+        <div class="activeImage"><img src="../img/mosaic-img{{current}}.jpg" alt=""></div>
 
-            <div class="slider__prev {{lightBox ? 'slider' : 'displayNone'}}" on-click='goto:{{current - 1}}'></div>
-        </div>
+        <div class="slider__prev {{lightBox ? 'slider' : 'displayNone'}}" on-click='goto:{{current - 1}}'></div>
+    </div>
     {{/}}
 
 </div>

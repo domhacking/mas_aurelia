@@ -41,9 +41,6 @@ module.exports = Module.extend({
 
 	data: {
 		images: images,
-		// function(){
-		// 	return {lightBox: false}
-		// },
 	},
 
 	oninit: function() {
@@ -59,15 +56,10 @@ module.exports = Module.extend({
 		var images = this.get('images');
 
 		console.log(images)
-        // console.log(e);
-        // console.log(imageNum)
-
 
         while (imageNum < 0 ) {
             imageNum += images.length;
-            // console.log(imageNum);
         }
-
 
         imageNum %= images.length;
 
@@ -76,14 +68,7 @@ module.exports = Module.extend({
             current: imageNum
         });
 
-		// console.log(imageNum[i])
-
-
   		this.set('lightBox', true);
-		// this.set({
-		// 	image: images[imageNum]
-		// })
-  // 		console.log(this.get('lightBox'));
   	},
 
   	onCloseClick: function(){
