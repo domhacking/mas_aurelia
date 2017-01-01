@@ -26841,15 +26841,25 @@ module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"gallery scrolling-bg",
  */
 
  images = [
- 	{name:"../img/mosaic-img0.jpg", imageNumber:"1", format: 'topleft'},
- 	{name:"../img/mosaic-img1.jpg", imageNumber:"2", format: 'topright'},
- 	{name:"../img/mosaic-img2.jpg", imageNumber:"3", format: 'topright'},
- 	{name:"../img/mosaic-img3.jpg", imageNumber:"4", format: 'middleRigt'},
- 	{name:"../img/mosaic-img4.jpg", imageNumber:"5", format: 'middle'},
- 	{name:"../img/mosaic-img5.jpg", imageNumber:"6", format: 'middle'},
- 	{name:"../img/mosaic-img6.jpg", imageNumber:"7", format: 'middle'},
- 	{name:"../img/mosaic-img7.jpg", imageNumber:"8", format: 'bottom'},
- 	{name:"../img/mosaic-img8.jpg", imageNumber:"9", format: 'bottom'}
+    {name:"../img/new-mosaic-14.jpg", imageNumber:"1", format: 'topleft'},
+    {name:"../img/new-mosaic-3.jpg", imageNumber:"2", format: 'topright'},
+    {name:"../img/new-mosaic-7.jpg", imageNumber:"7", format: 'topleft'},
+    {name:"../img/new-mosaic-6.jpg", imageNumber:"6", format: 'topleft'},
+    {name:"../img/new-mosaic-8.jpg", imageNumber:"4", format: 'topleft'},
+    {name:"../img/new-mosaic-1.jpg", imageNumber:"3", format: 'topleft'},
+    {name:"../img/new-mosaic-2.jpg", imageNumber:"3", format: 'topleft'},
+    {name:"../img/new-mosaic-9.jpg", imageNumber:"5", format: 'topleft'},
+    {name:"../img/new-mosaic-11.jpg", imageNumber:"3", format: 'topleft'},
+    {name:"../img/new-mosaic-12.jpg", imageNumber:"3", format: 'topleft'},
+    {name:"../img/mosaic-img0.jpg", imageNumber:"1", format: 'topleft'},
+    {name:"../img/mosaic-img1.jpg", imageNumber:"2", format: 'topright'},
+    {name:"../img/mosaic-img2.jpg", imageNumber:"3", format: 'topright'},
+    {name:"../img/mosaic-img3.jpg", imageNumber:"4", format: 'middleRigt'},
+    {name:"../img/mosaic-img4.jpg", imageNumber:"5", format: 'middle'},
+    {name:"../img/mosaic-img5.jpg", imageNumber:"6", format: 'middle'},
+    {name:"../img/mosaic-img6.jpg", imageNumber:"7", format: 'middle'},
+    {name:"../img/mosaic-img7.jpg", imageNumber:"8", format: 'bottom'},
+    {name:"../img/mosaic-img8.jpg", imageNumber:"9", format: 'bottom'}
  ];
 
 var Module = require('../abstract-module');

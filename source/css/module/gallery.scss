@@ -46,11 +46,43 @@
 
 			&.image0{
 				float: left;
+				width: 50%;
+			}
+
+			&.image1{
+				width: 50%;
+				vertical-align: top;
+			}
+
+			&.image2{
+				width: 28%;
+			}
+
+			&.image3{
+				width: 28%;
+			}
+
+			&.image4{
+				vertical-align: top;
+				width: 44%;
+			}
+
+			&.image5,&.image6{
+				width: 50%;
+			}
+
+			&.image7, &.image8, &.image9{
+				width: 33%;
+			}
+
+			// Old styles and indexing
+			&.image10{
+				float: left;
 				width: 350px;
 				height: 400px;
 			}
 
-			&.image1{
+			&.image11{
 				width: 300px;
 				vertical-align: top;
 				height: 200px;
@@ -63,7 +95,7 @@
 				}
 			}
 
-			&.image2{
+			&.image12{
 				width: 300px;
 				height: 200px;
 				vertical-align: top;
@@ -76,7 +108,7 @@
 				}
 			}
 
-			&.image3{
+			&.image13{
 				width: 600px;
 				vertical-align: top;
 				margin-top: 20px;
@@ -86,7 +118,7 @@
 				}
 			}
 
-			&.image4{
+			&.image14{
 				width: 350px;
 				float:left;
 
@@ -98,7 +130,7 @@
 				}
 			}
 
-			&.image5{
+			&.image15{
 				width: 300px;
 				vertical-align: top;
 				.images__img{
@@ -109,7 +141,7 @@
 				}
 			}
 
-			&.image6{
+			&.image16{
 				width: 300px;
 				vertical-align: top;
 				.images__img{
@@ -120,7 +152,7 @@
 				}
 			}
 
-			&.image7{
+			&.image17{
 				width: 475px;
 				vertical-align: top;
 
@@ -132,7 +164,7 @@
 				}
 			}
 
-			&.image8{
+			&.image18{
 				width: 475px;
 				vertical-align: top;
 
@@ -217,7 +249,7 @@
 
 			.images{
 
-				&.image0{
+				&.image10{
 					float: left;
 					width: 280px;
 					height: 310px;
@@ -225,7 +257,7 @@
 
 				}
 
-				&.image1{
+				&.image11{
 					width: 220px;
 					height: auto;
 
@@ -237,7 +269,7 @@
 					}
 				}
 
-				&.image2{
+				&.image12{
 					width: 220px;
 					height: auto;
 
@@ -249,7 +281,7 @@
 					}
 				}
 
-				&.image3{
+				&.image13{
 					width: 440px;
 					height: auto;
 					margin-top: 0;
@@ -262,7 +294,7 @@
 					}
 				}
 
-				&.image4{
+				&.image14{
 					width: 280px;
 					height: auto;
 					margin-top: 0;
@@ -274,7 +306,7 @@
 						}
 					}
 				}
-				&.image5{
+				&.image15{
 					width: 220px;
 					height: auto;
 					margin-top: 0;
@@ -287,7 +319,7 @@
 					}
 				}
 
-				&.image6{
+				&.image16{
 					width: 220px;
 					height: auto;
 					margin-top: 0;
@@ -299,7 +331,7 @@
 					}
 				}
 
-				&.image7{
+				&.image17{
 					width: 360px;
 					height: auto;
 					margin-top: 0;
@@ -312,7 +344,7 @@
 					}
 				}
 
-				&.image8{
+				&.image18{
 					width: 360px;
 					height: auto;
 					margin-top: 0;
