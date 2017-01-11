@@ -1111,9 +1111,11 @@ h1, h2, h3, h4, p, li, a {
       background-position: 47% center; }
       .gallery .photos .images .images__img img {
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        cursor: pointer; }
         .gallery .photos .images .images__img img:hover {
-          opacity: 0.4; }
+          opacity: 0.4;
+          transition: opacity 0.2s ease-in; }
     .gallery .photos .images.image0 {
       float: left;
       width: 50%; }
@@ -1199,7 +1201,8 @@ h1, h2, h3, h4, p, li, a {
     display: inline-block;
     position: absolute;
     bottom: 50%;
-    margin-bottom: -45px; }
+    margin-bottom: -45px;
+    cursor: pointer; }
     .gallery .background .slider__prev {
       left: 30px;
       -webkit-transform: rotate(90deg);
@@ -1210,20 +1213,37 @@ h1, h2, h3, h4, p, li, a {
       -webkit-transform: rotate(-90deg);
           -ms-transform: rotate(-90deg);
               transform: rotate(-90deg); }
+    .gallery .background .slider:hover {
+      opacity: 0.6; }
   .gallery .background .cross {
     display: block;
     position: absolute;
     right: 30px;
     top: 10px;
     font-size: 40px;
-    color: #ffffff; }
+    color: #ffffff;
+    cursor: pointer; }
+    .gallery .background .cross:hover {
+      opacity: 0.6; }
   .gallery .background .activeImage {
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 85%;
     text-align: center;
     z-index: 1002;
-    display: table-cell;
-    vertical-align: middle; }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+    .gallery .background .activeImage img {
+      max-height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
 
 @media screen and (min-width: 768px) and (max-width: 1120px) {
   .gallery .background .activeImage {
@@ -1459,7 +1479,8 @@ h1, h2, h3, h4, p, li, a {
         margin: 10px;
         text-align: center; }
         .localArea .nearestVillage--panel ul li.active, .localArea .nearestVillage--panel ul li:hover {
-          background-color: #8dc2d5; }
+          background-color: #8dc2d5;
+          transition: 0.3s background-color ease-in; }
         .localArea .nearestVillage--panel ul li a {
           font-size: 20px;
           text-decoration: none;
