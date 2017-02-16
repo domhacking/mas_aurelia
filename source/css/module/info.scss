@@ -13,7 +13,7 @@
 		}
 
 		.rightImage{
-			background-image: url('../img/right-info-img.jpg');
+			background-image: url('../img/right-info-img-2.jpg');
 		}
 	}
 
@@ -35,6 +35,38 @@
 		background-color: $mainGrey;
 		width: 100%;
 	}
+
+    .list{
+        margin: 0;
+    }
+
+    .list-item{
+        margin: 5px 0 5px 0px;
+        // padding-left: 00px;
+        list-style-type: none;
+        list-style-position: inside;
+        text-indent: -1em;
+        padding-left: 1em;
+        text-transform: none;
+        font-family: $content-font;
+
+        &:before{
+            content: "";
+          display: inline-block;
+          width: 7px;
+          height: 7px;
+          margin-right: 0.7em;
+          margin-bottom: 3px;
+            // position: absolute;
+            // content: "-";
+            // height: 8px;
+            // width: 8px;
+        // vertical-align: middle;
+            // margin-right: 0px;
+            background-color: #8dc2d5;
+            color: #8dc2d5;
+        }
+    }
 
 	@media #{$viewport-mobile}{
 		.floorPlanPanel{

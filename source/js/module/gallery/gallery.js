@@ -48,9 +48,10 @@ module.exports = Module.extend({
             current: imageNum
         });
     },
-
-	data: {
-		images: images,
+    data: function () {
+      return {
+          images: images,
+	     }
 	},
 
 	oninit: function() {

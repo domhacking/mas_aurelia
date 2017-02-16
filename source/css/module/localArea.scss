@@ -8,6 +8,21 @@
 @include module("localArea") {
 	background-color: $color-background;
 
+	.intro--container__content{
+
+		span{
+			position: relative;
+			&:before{
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				bottom: 1px;
+				border-bottom: 3px solid $mainBlue;
+			}
+		}
+	}
+
 	.imageContainer{
 		.leftImage{
 			background-image: url('../img/img--eygalieres__left.jpg');

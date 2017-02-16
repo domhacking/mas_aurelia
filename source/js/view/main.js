@@ -27,7 +27,7 @@ module.exports = function() {
         onrender: function() {
             this.observe('view', this.scrollingPoint);
             $(window).bind('scroll', function() {
-                var navHeight = $( window ).height();
+                var navHeight = $(window ).height();
                  if ($(window).scrollTop() > navHeight) {
                      $('.nav').addClass('fixed');
                      $(".stopthejump").css('display','block');
@@ -37,7 +37,19 @@ module.exports = function() {
                      $(".stopthejump").css('display','none');
                  }
             });
+
+            $('.arrow').on('click', function(e) {
+                e.preventDefault();
+                var target = $(this).attr('href');
+                $('html, body').animate({
+
+                    scrollTop: $(window ).height()
+                }, 800)
+            })
+
         },
+
+
 
         scrollingPoint: function(newValue, old){
             if(!old){

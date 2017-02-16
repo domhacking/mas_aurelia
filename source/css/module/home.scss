@@ -10,7 +10,7 @@
 
 	.imageContainer{
 		.leftImage{
-			background-image: url('../img/left-home-img.jpg');
+			background-image: url('../img/left-home-img-2.jpg');
 		}
 
 		.rightImage{
@@ -64,6 +64,18 @@
 		.number{
 			padding-top:10px;
 		}
+
+		a{
+			text-transform: none;
+			font-weight: normal;
+			font-family: $content-font;
+			text-decoration: none;
+			cursor: pointer;
+
+			&:hover{
+				border-bottom: 2px solid $mainBlue;
+			}
+		}
 	}
 
 
@@ -76,6 +88,12 @@
 					padding-right: 10px;
 				}
 			}
+		}
+
+		a{
+			font-size: 15px;
+			width: 100%;
+			text-align: center;
 		}
 
 	}

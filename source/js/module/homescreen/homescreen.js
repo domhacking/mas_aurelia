@@ -4,11 +4,12 @@
  * @html:     ./source/js/module/homescreen/homescreen.html
  */
 
+var $ = require('jquery');
 
 var Module = require('../abstract-module');
 
 module.exports = Module.extend({
 
-  template: require('./homescreen.html')
+  template: require('./homescreen.html'),
 
 });

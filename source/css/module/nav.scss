@@ -36,6 +36,7 @@
 			margin: 0 20px;
 			min-width: 160px;
 			border-bottom: 10px solid $mainGrey;
+			cursor: pointer;
 
 			&.nav-underline {
   				position: relative;
@@ -95,6 +96,7 @@
 			position: fixed;
 			left: 10px;
 			top: 10px;
+			z-index: 2;
 
 
 			.burger--bar{
@@ -108,13 +110,19 @@
 
 		.navbar--container{
 			text-align: left;
-			width: 90%;
+			width: 100%;
 			margin: 0 auto;
-			margin-left: 35px;
-			display: none;
+			padding-left: 35px;
+			display: block;
+			position: absolute;
+			background-color: $mainBlue;
+			transform: translateY(-100%);
+			transition: transform 0.3s ease;
 
 			&.activeBurger{
 				display: block;
+				transition: transform 0.5s ease;
+				transform: translateY(0%);
 			}
 
 			li{
@@ -125,6 +133,10 @@
 				padding: 15px 10px;
 				text-align: left;
 				border-bottom: solid 1px $mainGrey;
+
+				&:nth-last-child(1){
+					border-bottom: solid 1px transparent;
+				}
 
 				&.nav-underline{
 					&:after{
