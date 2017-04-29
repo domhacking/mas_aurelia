@@ -160,9 +160,5 @@ module.exports = Module.extend({
 
     onTabClick: function(event, area){
         this.set("area", area)
-        console.log('test')
     }
-
-
-
 });

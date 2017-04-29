@@ -34,7 +34,7 @@ module.exports = function() {
 
                  } else {
                      $('.nav').removeClass('fixed');
-                     $(".stopthejump").css('display','none');
+                     $(".stopthejump").css('display', 'none');
                  }
             });
 
@@ -46,18 +46,20 @@ module.exports = function() {
                     scrollTop: $(window ).height()
                 }, 800)
             })
-
         },
 
 
 
         scrollingPoint: function(newValue, old){
+            console.log(old, newValue);
             if(!old){
                 return;
             }
             var navpoint = this.find('.homescreen');
 
-            document.body.scrollTop = navpoint.scrollHeight;
+            var navpointHeight = navpoint.scrollHeight;
+
+            window.scrollTo(0, navpointHeight)
 
             // var endPoint = navpoint.offsetTop;
             // var inc = 30;

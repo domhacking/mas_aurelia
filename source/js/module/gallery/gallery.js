@@ -39,8 +39,6 @@ module.exports = Module.extend({
             imageNum += images.length;
         }
 
-        console.log(imageNum)
-
         imageNum %= images.length;
 
         this.set({

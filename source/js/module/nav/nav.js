@@ -52,7 +52,7 @@ module.exports = Module.extend({
     onBurgerClick: function(){
         // name of attribute
         this.toggle('expanded')
-        console.log(this.get('expanded'))
+        // console.log(this.get('expanded'))
     },
 
     // onNavClick: function(){
