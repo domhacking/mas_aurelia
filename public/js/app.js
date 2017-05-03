@@ -28267,7 +28267,7 @@ module.exports = function (props, cb) {
 
 }
 },{}],28:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"ui-homescreen"}," ",{"t":7,"e":"ui-nav","a":{"view":[{"t":2,"r":"view"}]}}," ",{"t":4,"f":[{"t":7,"e":"ui-home"}],"x":{"r":["view"],"s":"_0==\"home\""}},{"t":4,"f":[{"t":7,"e":"ui-gallery"}],"x":{"r":["view"],"s":"_0==\"gallery\""}},{"t":4,"f":[{"t":7,"e":"ui-info"}],"x":{"r":["view"],"s":"_0==\"info\""}},{"t":4,"f":[{"t":7,"e":"ui-localArea"}],"x":{"r":["view"],"s":"_0==\"localArea\""}},{"t":4,"f":[{"t":7,"e":"ui-contact"}],"x":{"r":["view"],"s":"_0==\"contact\""}},{"t":7,"e":"div","a":{"class":"whiteStripe"}}," ",{"t":7,"e":"div","a":{"class":"blueStripe"}}]}
+module.exports={"v":3,"t":[{"t":7,"e":"ui-homescreen"}," ",{"t":7,"e":"ui-nav","a":{"view":[{"t":2,"r":"view"}]}}," ",{"t":7,"e":"div","a":{"class":"white-background"},"f":[{"t":4,"f":[{"t":7,"e":"ui-home"}],"x":{"r":["view"],"s":"_0==\"home\""}},{"t":4,"f":[{"t":7,"e":"ui-gallery"}],"x":{"r":["view"],"s":"_0==\"gallery\""}},{"t":4,"f":[{"t":7,"e":"ui-info"}],"x":{"r":["view"],"s":"_0==\"info\""}},{"t":4,"f":[{"t":7,"e":"ui-localArea"}],"x":{"r":["view"],"s":"_0==\"localArea\""}},{"t":4,"f":[{"t":7,"e":"ui-contact"}],"x":{"r":["view"],"s":"_0==\"contact\""}}]}," ",{"t":7,"e":"div","a":{"class":"whiteStripe"}}," ",{"t":7,"e":"div","a":{"class":"blueStripe"}}]}
 },{}],29:[function(require,module,exports){
 var Ractive     = require('ractive');
 var page        = require('page');
@@ -28328,39 +28328,9 @@ module.exports = function() {
             }
             var navpoint = this.find('.homescreen');
 
-            console.log(navpoint);
-
-            console.log('scrollHeight',navpoint.scrollHeight);
-
-            console.log('scrollTop', document.body.scrollTop);
-            // var miLastHeight = document.body.scrollHeight;
-            // window.parent.document.getElementById("myiframe").style.height = miLastHeight + "px";
-
             var navpointHeight = navpoint.scrollHeight;
 
             window.scrollTo(0, navpointHeight)
-            // document.body.scrollTop = navpoint.scrollHeight;
-
-            // console.log('hello');
-
-            // var endPoint = navpoint.offsetTop;
-            // var inc = 30;
-            // var scrollY = window.scrollY;
-            // console.log(endPoint);
-            //
-            // function step(ts){
-            //
-            //     var scrollY = window.scrollY;
-            //     window.scroll(0, scrollY - inc);
-            //
-            //     if(scrollY > endPoint){
-            //         window.requestAnimationFrame(step);
-            //     }
-            // }
-            //
-            // if(scrollY > endPoint){
-            //     window.requestAnimationFrame(step);
-            // }
         },
 
         setRouter: function(){

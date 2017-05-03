@@ -60,25 +60,6 @@ module.exports = function() {
             var navpointHeight = navpoint.scrollHeight;
 
             window.scrollTo(0, navpointHeight)
-
-            // var endPoint = navpoint.offsetTop;
-            // var inc = 30;
-            // var scrollY = window.scrollY;
-            // console.log(endPoint);
-            //
-            // function step(ts){
-            //
-            //     var scrollY = window.scrollY;
-            //     window.scroll(0, scrollY - inc);
-            //
-            //     if(scrollY > endPoint){
-            //         window.requestAnimationFrame(step);
-            //     }
-            // }
-            //
-            // if(scrollY > endPoint){
-            //     window.requestAnimationFrame(step);
-            // }
         },
 
         setRouter: function(){
