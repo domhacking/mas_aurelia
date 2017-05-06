@@ -24,4 +24,3 @@ var app = {
 domready(function() {
   app.init();
 });
-
