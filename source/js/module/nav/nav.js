@@ -31,36 +31,31 @@ module.exports = Module.extend({
 
     onGoHome: function(){
         page('/');
+        this.toggle('expanded')
     },
 
   	onGoGallery: function(){
           page('/gallery');
+          this.toggle('expanded')
     },
 
     onGoInfo: function(){
         page('/info');
+        this.toggle('expanded')
     },
 
 	onGoLocalArea: function(){
         page('/localarea');
+        this.toggle('expanded')
     },
 
 	onGoContact: function(){
         page('/contact');
+        this.toggle('expanded')
     },
 
     onBurgerClick: function(){
-        // name of attribute
-        this.toggle('expanded')
-        // console.log(this.get('expanded'))
-    },
-
-    // onNavClick: function(){
-    //     var timeOut;
-    //     if (document.body.scrollTop!=0 || document.documentElement.scrollTop!=0){
-    //         window.scrollBy(0,-50);
-    //         timeOut=setTimeout('scrollToTop()',10);
-    //     } else clearTimeout(timeOut);
-    // }
+        this.toggle('expanded');
+    }
 
 });

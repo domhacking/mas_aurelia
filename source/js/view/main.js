@@ -48,10 +48,8 @@ module.exports = function() {
             })
         },
 
-
-
         scrollingPoint: function(newValue, old){
-            console.log(old, newValue);
+            // console.log(old, newValue);
             if(!old){
                 return;
             }
@@ -64,7 +62,6 @@ module.exports = function() {
 
         setRouter: function(){
             var self = this;
-
 
             page('/', function () {
                 self.set('view', 'home');
