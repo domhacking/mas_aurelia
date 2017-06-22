@@ -104,6 +104,28 @@
 				margin: 3px 0;
 				height: 4px;
 				width: 25px;
+				transition: all 0.5s ease;
+			}
+
+			&.activeBurger{
+				.burger--bar{
+					display: none;
+				}
+
+				.burger--bar:first-child{
+					transition: all 0.5s ease;
+					transform: rotate(45deg);
+    				transform-origin: 9px 1px;
+					display: block;
+				}
+
+
+				.burger--bar:last-child{
+					transition: all 0.5s ease;
+					transform: rotate(-45deg);
+    				transform-origin: 5px 3px;
+					display: block;
+				}
 			}
 		}
 

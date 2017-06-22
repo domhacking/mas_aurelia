@@ -1,6 +1,7 @@
 var Ractive     = require('ractive');
 var page        = require('page');
 var $           = require('jquery');
+Ractive.DEBUG = false;
 // var bootstrap   = require('bootstrap');
 
 Ractive.components = require('../module');
@@ -86,7 +87,8 @@ module.exports = function() {
             page({
                 click: false,
                 dispatch: true,
-                hashbang: false,
+                hashbang: true,
+                decodeURLComponents: true
             });
         }
     });
